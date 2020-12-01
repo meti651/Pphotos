@@ -1,0 +1,30 @@
+@import 'config';
+
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    height: 85px;
+    width: 100vw;
+    background-color: $primary-color;
+
+}
+
+.image {
+    height: 85px;
+
+    img{
+        height: inherit;
+    }
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 50px;
+}
+
+#placeholder {
+    width: 85px;
+}
