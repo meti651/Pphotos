@@ -1,8 +1,8 @@
-$primary-color: #fbf9d9;
+$header-color: #fbf9d9;
+$primary-color: #ffffd6;
 $secondary-color: #caaf88;
 $primary-font-color:#caaf88;
 $secondary-font-color: #666666;
-$font-size: 16px;
 
 html, body {
     margin: 0;
@@ -11,5 +11,4 @@ html, body {
 
 * {
     font-family: 'Merriweather';
-    font-size: $font-size;
 }
