@@ -23,9 +23,7 @@ const Slider = () => {
 
     return(
         <div id={Styles.container}>
-            <Arrow direction="left" />
             {slidesElements.current.map((image, index) => <Slide key={index} image={image} index={index}/>)}
-            <Arrow direction="right" />
         </div>
     )
 }

@@ -1,0 +1,22 @@
+@import "../config";
+
+$font-size: 24px;
+
+#container {
+    width: 100vw;
+    height: 120px;
+    background-color: $primary-color;
+    overflow: hidden;
+    display: flex;
+
+    p {
+        display: grid;
+        place-items: center;
+        font-size: $font-size;
+        font-weight: lighter;
+        font-style: italic;
+        color: $primary-font-color;
+        flex: 1;
+        min-width: 100vw;
+    }
+}
