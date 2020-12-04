@@ -21,7 +21,7 @@ const AboutMe = () =>{
                 <div>
                     Különösen kedves számomra mikor egy család életútját ísérhetem végig, ezért
                 </div>
-                <div class={Styles.strong}>
+                <div className={Styles.strong}>
                     a kedvenc témáim közé tartozik az esküvő, a kismama fotózás, az újszülött fotózás és a családi képek, portrék megörökítése.
                 </div>
             </div>
@@ -29,7 +29,7 @@ const AboutMe = () =>{
                 <div>
                     A különböző témák sokszínűsége és váltakozása adja meg számomra a szenvedélyt a munkám iránt és számodra a biztonságot, hogy nem befásult tömegszalag fotókat fogsz látni magadról, hanem
                 </div>
-                <div class={Styles.strong}>
+                <div className={Styles.strong}>
                     élettel teli, valódi, pózmentes képeid lesznek.
                 </div>
             </div>
