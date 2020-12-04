@@ -4,6 +4,7 @@ import Header from "../components/header";
 import AboutMe from "../components/about-me";
 import Slider from "../components/slider/photo-slider";
 import Quotes from "../components/slider/quotes";
+import Opinions from "../components/opinions";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Slider/>
       <Quotes/>
       <AboutMe/>
+      <Opinions/>
       <Footer/>
     </>
   )
