@@ -1,0 +1,23 @@
+@import "../config";
+
+.container {
+    width: 90px;
+    height: 170px;
+    font-weight: bold;
+    font-size: 3em;
+    display: grid;
+    place-items: center;
+    border: 2px solid $third-color;
+    color: $third-color;
+    background-color: transparent;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 1000;
+    margin: 20px;
+    cursor: default;
+}
+
+#right {
+    right: 0;
+}

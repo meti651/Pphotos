@@ -1,0 +1,8 @@
+@import "../config";
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary-color;
+    overflow: hidden;
+}

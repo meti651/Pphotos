@@ -1,0 +1,19 @@
+@import "../config";
+
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    color: $third-color;
+    font-weight: lighter;
+    font-style: italic;
+    img {
+        height: 100vh;
+    }
+
+    #caption {
+        place-self: end center;
+        margin-bottom: 20px;
+    }
+}
+
