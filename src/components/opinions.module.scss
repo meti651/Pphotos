@@ -1,0 +1,30 @@
+@import "config";
+
+$font-size: 24px;
+
+#container {
+    width: 100vw;
+    height: 400px;
+    font-size: $font-size;
+    font-weight: lighter;
+    font-style: italic;
+    color: $primary-font-color;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    div {
+        width: 30%
+    }
+
+    p {
+        margin:0;
+    }
+
+    .message {
+
+    }
+}
