@@ -1,6 +1,6 @@
 @import 'config';
 
-
+$font-size: 24px;
 
 header {
     display: grid;
@@ -11,10 +11,18 @@ header {
     position: fixed;
     z-index: 1000;
     transition: opacity 0.5s;
+    font-size: $font-size;
+    color: $primary-font-color;
+    font-weight: bold;
 
     .scrolled {
         opacity: 100%;
     }
+}
+
+a {
+    text-decoration: none;
+    color: $primary-font-color;
 }
 
 .image {
@@ -36,4 +44,18 @@ header {
 
 #placeholder {
     width: 85px;
+}
+
+#dropdownMenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: $header-color;
+    top: 85px;
+    padding: 10px 20px;
+    z-index: -1;
+
+    a {
+        margin: $font-size * 0.25 0;
+    }
 }

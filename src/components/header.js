@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Link } from "gatsby";
 
 import Logo from "../images/pphotos-logo.png";
@@ -6,6 +6,14 @@ import Styles from "./header.module.scss";
 
 const Header = ({onTop}) => {
     const [open, setOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
+    const [isDisplayed, setIsDisplayed] = useState(false);
+
+    useEffect(() => {
+        if(!onTop || isHovered) setIsDisplayed(true);
+        else setIsDisplayed(false);
+    }, [onTop, isHovered])
+
     const handleHover = (_) => {
         setOpen(true);
     }
@@ -14,23 +22,34 @@ const Header = ({onTop}) => {
         setOpen(false);
     }
 
+    const handleHeaderHovering = () => {
+        setIsHovered(true);
+    }
+
+    const handleHeaderBlur = () => {
+        setIsHovered(false);
+    }
+
     return (
-        <header style={{"opacity": onTop ? "20%" : "100%"}}>
-            <div className={Styles.image}>
-                <img src={Logo} alt="Logo"/>
+        <header style={{"opacity": isDisplayed ? "100%" : "20%"}} onMouseEnter={handleHeaderHovering} onMouseLeave={handleHeaderBlur}>
+            <div className={Styles.image} >
+                <img src={Logo} alt="Logo" />
             </div>
-            <div id={Styles.links}>
+            <div id={Styles.links} >
                 <Link to="/">Kezdőlap</Link>
-                <div onMouseEnter={handleHover} onMouseLeave={handleBlur}>Árak/Szolgáltatások</div>
-                {open && 
-                <div>
-                   <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
-                   <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 
-                   <Link to="/szolgaltatasok/gyerek-fotozas">Gyerek fotózás</Link> 
-                   <Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link> 
-                   <Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link> 
-                   <Link to="/szolgaltatasok/portré-fotozas">Portré fotózás</Link>
-                </div>}
+                <div onMouseEnter={handleHover} onMouseLeave={handleBlur}>
+                    Árak/Szolgáltatások
+                    {open &&
+                    <div id={Styles.dropdownMenu}>
+                        <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
+                        <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 
+                        <Link to="/szolgaltatasok/gyerek-fotozas">Gyerek fotózás</Link> 
+                        <Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link> 
+                        <Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link> 
+                        <Link to="/szolgaltatasok/portré-fotozas">Portré fotózás</Link>
+                    </div>
+                    }   
+                </div>
                 <Link to="/galeria">Galéria</Link>
                 <Link to="/kapcsolatok">Kapcsolatok</Link>
             </div>
