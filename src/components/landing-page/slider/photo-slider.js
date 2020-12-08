@@ -26,8 +26,8 @@ const Slider = () => {
     useEffect(() => {
         let slideNum = slide;
         slideNum += 1;
-        if(slideNum > 5) setTimeout(() => setSlide(0), 5000);
-        else setTimeout(() => setSlide(slideNum), 5000);
+        if(slideNum > 5) setTimeout(() => setSlide(0), 6500);
+        else setTimeout(() => setSlide(slideNum), 6500);
     }, [slide])
 
     return(
