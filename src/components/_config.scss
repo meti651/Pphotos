@@ -4,17 +4,4 @@ $secondary-color: #caaf88;
 $primary-font-color:#caaf88;
 $secondary-font-color: #666666;
 $third-color: #999999;
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-}
-
-html::-webkit-scrollbar {
-    width: 0;
-}
-
-* {
-    font-family: 'Merriweather';
-}
+$border-color: #FFFF98;
