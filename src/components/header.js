@@ -37,18 +37,16 @@ const Header = ({onTop}) => {
             </div>
             <div id={Styles.links} >
                 <Link to="/">Kezdőlap</Link>
-                <div onMouseEnter={handleHover} onMouseLeave={handleBlur}>
-                    Árak/Szolgáltatások
-                    {open &&
-                    <div id={Styles.dropdownMenu}>
+                <div onMouseEnter={handleHover} onMouseLeave={handleBlur} id={Styles.dropdown}>
+                    <p>Árak/Szolgáltatások</p>
+                    <div id={Styles.dropdownMenu} className={open && Styles.open}>
                         <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
                         <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 
                         <Link to="/szolgaltatasok/gyerek-fotozas">Gyerek fotózás</Link> 
                         <Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link> 
                         <Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link> 
                         <Link to="/szolgaltatasok/portré-fotozas">Portré fotózás</Link>
-                    </div>
-                    }   
+                    </div>   
                 </div>
                 <Link to="/galeria">Galéria</Link>
                 <Link to="/kapcsolatok">Kapcsolatok</Link>

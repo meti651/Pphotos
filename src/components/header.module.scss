@@ -15,8 +15,8 @@ header {
     color: $primary-font-color;
     font-weight: bold;
 
-    .scrolled {
-        opacity: 100%;
+    a:hover {
+        color: $secondary-font-color;
     }
 }
 
@@ -40,21 +40,41 @@ a {
     justify-content: space-around;
     align-items: center;
     margin: 0 50px;
+    background-color: $header-color;
 }
 
 #placeholder {
     width: 85px;
 }
 
-#dropdownMenu {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: $header-color;
-    top: 85px;
-    padding: 10px 20px;
-    z-index: -1;
-    a {
-        margin: $font-size * 0.25 0;
+#dropdown {
+    cursor: default;
+
+    p {
+        margin: 25px 0;
+    }
+
+    #dropdownMenu {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background-color: $header-color;
+        top: 85px;
+        padding: 10px 20px;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: transform 0.5s;
+        cursor: pointer;
+        a {
+            margin: $font-size * 0.25 0;
+        }
+    
+        &.open{
+            transform: translateY(0);
+            box-shadow: 2px 2px 5px #000000;
+            border-radius: 2px;
+        }
     }
 }
+
+
