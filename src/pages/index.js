@@ -21,17 +21,17 @@ export default function Home() {
   return (
     <>
         <Layout onTop={onTop}>
-      <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
-          <Slider/>
-          <Quotes/>
-          <section className="section parallax parallax-one"></section>
-          <AboutMe/>
-          <section className="section parallax parallax-two"></section>
-          <Opinions/>
-          <section className="section parallax parallax-three"></section>
-          <NavigationBoxes/>
-          <Charity/>
-      </main>
+          <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
+              <Slider/>
+              <Quotes/>
+              <section className="section parallax parallax-one"></section>
+              <AboutMe/>
+              <section className="section parallax parallax-two"></section>
+              <Opinions/>
+              <section className="section parallax parallax-three"></section>
+              <NavigationBoxes/>
+              <Charity/>
+          </main>
         </Layout>
     </>
   )
