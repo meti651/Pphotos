@@ -1,4 +1,4 @@
-@import "config";
+@import "../config";
 
 $font-size: 24px;
 
@@ -6,6 +6,7 @@ $font-size: 24px;
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
+    padding-top: $font-size;
 
     h1 {
         margin-top: 0;
@@ -50,7 +51,7 @@ $font-size: 24px;
 #end_description {
     background-color: $primary-color;
     margin-top: -10px;
-    padding-bottom: 0.5 * $font-size;
+    padding-bottom: $font-size;
     font-size: $font-size;
     display: grid;
     place-items: center;

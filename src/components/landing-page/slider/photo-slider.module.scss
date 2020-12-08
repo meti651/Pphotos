@@ -1,8 +1,10 @@
-@import "../config";
+@import "../../config";
 
 #container {
     width: 100vw;
     height: 100vh;
     background-color: $primary-color;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
 }

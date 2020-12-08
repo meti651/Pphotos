@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AboutMeBack from "../images/about-me.png";
+import AboutMeBack from "../../images/about-me.png";
 import Styles from "./about-me.module.scss";
 
 const AboutMe = () =>{

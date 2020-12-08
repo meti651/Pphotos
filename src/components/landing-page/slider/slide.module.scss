@@ -1,7 +1,7 @@
-@import "../config";
+@import "../../config";
 
 .container{
-    width: 100vw;
+    min-width: 100vw;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     color: $third-color;

@@ -1,15 +1,15 @@
-@import "config";
+@import "../config";
 
 $font-size: 24px;
 
 #container {
     width: 100vw;
-    height: 400px;
+    height: 600px;
     font-size: $font-size;
     font-weight: lighter;
     font-style: italic;
-    color: $primary-font-color;
-    background-color: $primary-color;
+    color: $primary-color;
+    background-color: $primary-font-color;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,9 +22,5 @@ $font-size: 24px;
 
     p {
         margin:0;
-    }
-
-    .message {
-
     }
 }

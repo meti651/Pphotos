@@ -1,0 +1,37 @@
+@import "../config";
+
+$font-size: 24px;
+
+#container {
+    width: 520px;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 5px solid $border-color;
+    box-shadow: 5px 5px 10px #808080;
+    font-style: normal;
+    text-decoration: none;
+    color: $secondary-font-color;
+    font-size: $font-size;
+    cursor: default;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    img{
+        max-width: 520px;
+    }
+
+    #image_wrapper {
+        border-bottom: 2px solid $border-color;
+    }
+
+    #title {
+        flex: 1;
+        display: grid;
+        place-items: center;
+    }
+}

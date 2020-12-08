@@ -1,0 +1,12 @@
+@import "../config";
+
+#container {
+    width: 100vw;
+    height: 1300px;
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
