@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    font-family: 'Merriweather';
+}
+
+.main {
+    height: 100vh;
+    perspective: 2px;
+    overflow-x: hidden;
+  }
+  
+  /* General styling, not necessarily related to parallax effect  */
+  .section {
+    position: relative;
+    height: 100vh;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .parallax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    transform: translateZ(-1px) scale(1.7);
+    z-index: -1;
+  }
+  
+  .parallax-one::after {
+    background-image: url("../images/background/background-1.jpg");
+  }
+  
+  .parallax-two::after {
+    background-image: url("../images/background/background-3.jpg");
+  }
+
+  .parallax-three::after {
+    background-image: url("../images/background/background-2.jpg");
+  }
+  
