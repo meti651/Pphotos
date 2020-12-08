@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from "gatsby";
 
 import Logo from "../images/pphotos-logo.png";
 import Styles from "./header.module.scss";
 
-const Header = () => {
+const Header = ({onTop}) => {
     const [open, setOpen] = useState(false);
-
     const handleHover = (_) => {
         setOpen(true);
     }
@@ -16,13 +15,13 @@ const Header = () => {
     }
 
     return (
-        <header>
+        <header style={{"opacity": onTop ? "20%" : "100%"}}>
             <div className={Styles.image}>
                 <img src={Logo} alt="Logo"/>
             </div>
             <div id={Styles.links}>
                 <Link to="/">Kezdőlap</Link>
-                <div onMouseEnter={handleHover} onMouseLeave={handleBlur}>Árak/Szolgáltatások V</div>
+                <div onMouseEnter={handleHover} onMouseLeave={handleBlur}>Árak/Szolgáltatások</div>
                 {open && 
                 <div>
                    <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
