@@ -2,7 +2,6 @@ import React, {useState, useRef} from "react";
 import Layout from "../components/layout";
 import AboutMe from "../components/landing-page/about-me";
 import Slider from "../components/landing-page/slider/photo-slider";
-import Quotes from "../components/landing-page/slider/quotes";
 import Opinions from "../components/landing-page/opinions";
 import NavigationBoxes from "../components/landing-page/navigationBoxes";
 import Charity from "../components/landing-page/charity";
@@ -23,7 +22,6 @@ export default function Home() {
         <Layout onTop={onTop}>
           <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
               <Slider/>
-              <Quotes/>
               <section className="section parallax parallax-one"></section>
               <AboutMe/>
               <section className="section parallax parallax-two"></section>
