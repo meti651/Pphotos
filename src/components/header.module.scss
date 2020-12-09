@@ -9,6 +9,8 @@ header {
     width: 100vw;
     background-color: $header-color;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 1000;
     transition: opacity 0.5s;
     font-size: $font-size;
