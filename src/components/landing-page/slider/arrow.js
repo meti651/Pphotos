@@ -11,7 +11,7 @@ const Arrow = ({direction}) => {
     }, [])
 
     return (
-        <div className={Styles.container} id={direction === "right" && Styles.right}>
+        <div className={Styles.container} id={direction === "right" ? Styles.right : undefined}>
             {arrow}
         </div>
     )
