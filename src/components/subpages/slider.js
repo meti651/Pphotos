@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Arrow from "../landing-page/slider/arrow";
+import Arrow from "./arrow";
 
 import Styles from "./slider.module.scss";
 
