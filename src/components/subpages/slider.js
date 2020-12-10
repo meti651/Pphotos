@@ -10,7 +10,13 @@ const Slider = ({images}) => {
         <div id={Styles.container}>
             <Arrow direction="left" translate={translate} setTranslate={setTranslate}/>
             <div id={Styles.images_container}>
-                {images.map((image,index) => <img style={{transform: `translateX(-${30 * translate}vw)`}} key={index} src={image} alt={index}/>)}
+                {images.map((image,index) => {
+                    return(
+                        <div style={{transform: `translateX(-${30 * translate}vw)`}} className={Styles.image_wrapper}>
+                            <img key={index} src={image} alt={index}/>
+                        </div>
+                    )
+                })}
             </div>
             <Arrow direction="right" translate={translate} setTranslate={setTranslate}/>
         </div>
