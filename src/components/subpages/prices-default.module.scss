@@ -1,0 +1,89 @@
+@import "../config";
+
+$font-size:24px;
+
+#container {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size;
+
+    h1 {
+        font-size: 2 * $font-size;
+    }
+
+    h2{
+        font-size: 1.5 * $font-size;
+    }
+
+    .description {
+        width: 420px;
+        padding-left: 0.5 * $font-size;
+
+        div {
+            margin: $font-size 0;
+        }
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #middle_image_wrapper{
+        display: grid;
+        flex-direction: row;
+        justify-content: center;
+        align-content: flex-end;
+    }
+
+    .package {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+
+        .price {
+            align-self: flex-end;
+            justify-self: center;
+            margin-left: $font-size;
+            margin-bottom: $font-size;
+            font-size: 1.5*$font-size;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+.package {
+    background-color: $secondary-color;
+    height: 855px;
+    padding: 0 $font-size;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px $third-color;
+    color: $primary-color;
+}
+
+#middle_image {
+    background-image: url("../../images/portrait-middle.png");
+    opacity: 80%;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 810px;
+    width: 810px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 30px 40px $primary-color, 
+                inset -1px -1px 0 0 $primary-color,
+                inset -2px -2px 0 0 $primary-color,
+                inset -3px -3px 0 0 $primary-color,
+                inset -4px -4px 0 0 $primary-color,
+                inset -5px -5px 0 0 $primary-color,
+                inset -6px -6px 0 0 $primary-color,
+                inset 5px 5px 0 0 $primary-color,
+                inset 6px 6px 0 0 $primary-color,
+                5px 5px 0 0 $primary-color;
+}
+
+#studio {
+    text-align: center;
+    margin: $font-size 0;
+}
