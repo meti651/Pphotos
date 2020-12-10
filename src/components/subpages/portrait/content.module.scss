@@ -1,0 +1,79 @@
+@import "../../config";
+
+$font-size: 24px;
+
+#container {
+    position: relative;
+    z-index: 1;
+    font-size: $font-size;
+    color: $primary-font-color;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        width: 100vw;
+        text-align: center;
+        font-size: 1.5 * $font-size;
+    }
+
+    .part_wrapper{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .image_wrapper {
+            margin: 0 $font-size;
+        }
+
+        #first_paragraph, #second_paragraph {
+            width: 550px;
+        }
+    
+        #third_paragraph {
+            width: 840px;
+            align-self: center;
+        }
+    }
+
+    
+
+    .strong {
+        padding-left: 1.5*$font-size;
+        font-weight: bold;
+        border-left: 6px solid #ffd488;
+        border-radius: 5px;
+    }
+
+}
+
+.image_wrapper{
+    position: relative;
+    width: max-content;
+    height: max-content;
+
+    img {
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+
+    .narrow_image {
+        height: 525px;
+    }
+    
+    .wide_image {
+        height: 350px;
+    }
+    
+    .blur_border {
+        display: inline-block;
+        box-shadow: inset 0 0px 4px 4px $primary-color;
+        z-index: 1;
+    }
+}
