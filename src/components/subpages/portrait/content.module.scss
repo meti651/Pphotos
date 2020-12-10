@@ -38,6 +38,9 @@ $font-size: 24px;
         #third_paragraph {
             width: 840px;
             align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
         }
     }
 

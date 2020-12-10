@@ -32,14 +32,14 @@ const Content = () => {
                 </div>
                 <div id={Styles.third_paragraph}>
                     <p className={Styles.strong}>Én abban szeretnék neked segíteni, hogy ezeket az emlékeket megtöltsük élettel és tartalommal, nem elfeledve a legfontosabb dolgot: A TE személyiségedet.</p>
+                    <p >Fotózásaim során a legszebb, de egybe a legvalódibb oldaladat örökítem meg, hiszen ez az, amitől Te kitűnhetsz a tömegből és az lehetsz, aki igazából vagy.</p>
                 </div>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
                         <img src={NarrowRight} className={Styles.narrow_image} alt="portrait" />
                     </div>
                 </div>
-            </div>        
-            <p >Fotózásaim során a legszebb, de egybe a legvalódibb oldaladat örökítem meg, hiszen ez az, amitől Te kitűnhetsz a tömegből és az lehetsz, aki igazából vagy.</p>
+            </div>
             <p>Keress bizalommal, és nem feledem a felelősséget, hogy ezek a képek pár év elteltével is ilyen fontosak lesznek Te és a családod számára</p>
         </div>
     )
