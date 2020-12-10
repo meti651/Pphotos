@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Wedding from "../../../images/slider/1.jpg";
 import Family from "../../../images/slider/2.jpg";
@@ -9,7 +9,6 @@ import Portrait from "../../../images/slider/6.jpg";
 
 import Styles from "./photo-slider.module.scss";
 import Slide from './slide';
-import Arrow from "./arrow";
 
 const slidesElements = [
     {"image": Wedding, "caption": "esküvői", "quote": "A házasság 3 dologról szól: Emlékezni az összetartozásra, elfelejteni egymás hibáit és kitartani egymás mellett mindvégig."}, 
