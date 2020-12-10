@@ -1,12 +1,12 @@
 import React from 'react';
 import SubLayout from "../../components/subpages/subLayout";
 
-import SlideImage1 from "../../images/navigationBox/children.jpg";
-import SlideImage2 from "../../images/navigationBox/couple.jpg";
-import SlideImage3 from "../../images/navigationBox/family.jpg";
-import SlideImage4 from "../../images/navigationBox/mum.jpg";
-import SlideImage5 from "../../images/navigationBox/portrait.jpg";
-import SlideImage6 from "../../images/navigationBox/wedding.jpg";
+import SlideImage1 from "../../images/slider/family/slide1.jpg";
+import SlideImage2 from "../../images/slider/family/slide2.jpg";
+import SlideImage3 from "../../images/slider/family/slide3.jpg";
+import SlideImage4 from "../../images/slider/family/slide4.jpg";
+import SlideImage5 from "../../images/slider/family/slide5.jpg";
+import SlideImage6 from "../../images/slider/family/slide6.jpg";
 
 const images = [
     SlideImage1,
