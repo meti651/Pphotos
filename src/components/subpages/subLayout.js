@@ -6,13 +6,13 @@ import Styles from "./subLayout.module.scss";
 
 const SubLayout = ({children, title, slideImages}) => {
     return (
-        <div id={Styles.container}>
             <Layout onTop={false}>
-                <h1>{title}</h1>
-                <Slider images={slideImages}/>
-
+                <div id={Styles.container}>
+                    <h1>{title}</h1>
+                    <Slider images={slideImages}/>
+                    {children}
+                </div>
             </Layout>
-        </div>
     )
 }
 

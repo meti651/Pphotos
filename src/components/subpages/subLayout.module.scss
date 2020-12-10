@@ -1,6 +1,17 @@
 @import "../config";
 
+$font-size: 24px;
+
 #container {
     margin-top: 85px;
     background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        place-self: center;
+        padding-top: $font-size;
+        margin-bottom: 2 * $font-size;
+        font-size: 1.5 * $font-size;
+    }
 }
