@@ -12,8 +12,10 @@ const Arrow = ({direction, translate, setTranslate}) => {
 
     const handleClick = () => {
         let resultTranslate = translate;
+        
         if(direction === "left") resultTranslate--;
         else resultTranslate++;
+
         if(resultTranslate > 3 || resultTranslate < 0) resultTranslate = 0;
         setTranslate(resultTranslate);
     }
