@@ -1,0 +1,13 @@
+@import "../../config";
+
+#middle_image {
+    opacity: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 810px;
+    height: 550px;
+    box-shadow: inset 0 0 20px 30px $primary-color,
+                inset 1px 1px 0 0 $primary-color,
+                inset 2px 2px 0 0 $primary-color,
+                inset 3px 3px 0 0 $primary-color,;
+}
