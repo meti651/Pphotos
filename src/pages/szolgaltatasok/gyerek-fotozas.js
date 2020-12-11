@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from '../../components/subpages/child/image';
+import Prices from "../../components/subpages/prices-default";
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -13,15 +15,15 @@ const images = [
     Slide1,
     Slide2,
     Slide3,
-    Slide4,
     Slide5,
+    Slide4,
     Slide6,
 ]
 
 const Child = () => {
     return (
         <SubLayout title={"Gyerek, baba fotozás"} slideImages={images}>
-            
+            <Prices Image={Image}/>
         </SubLayout>
     )
 }
