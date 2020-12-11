@@ -2,7 +2,7 @@ import React from 'react';
 
 import Styles from "./prices-default.module.scss";
 
-const Prices = () => {
+const Prices = ({Image}) => {
     return(
         <div id={Styles.container}>
             <h1>Árak</h1>
@@ -17,9 +17,7 @@ const Prices = () => {
                     <div className={Styles.price}>25.000 Ft/-</div>
                 </div>
                 <div id={Styles.middle_image_wrapper}>
-                    <div id={Styles.middle_image}>
-
-                    </div>
+                    <Image/>
                 </div>
                 <div className={Styles.package}>
                     <h2>Extra csomag</h2>
