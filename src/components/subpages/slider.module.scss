@@ -2,7 +2,7 @@
 
 #container {
     width: 100vw;
-    height: 410px;
+    height: 470px;
     box-shadow: 0 20px 30px $slider-color, 0 -20px 30px $slider-color;
     background-color: $slider-color;
     margin: 20px 0;
@@ -18,13 +18,12 @@
 
         .image_wrapper{
             min-width: 30vw;
-            height: 350px;
             transition: transform 0.5s;
             text-align: center;
         }
 
         img{
-            height: inherit;  
+            height: 370px;
         }
     }
 }

@@ -12,8 +12,8 @@ const Slider = ({images}) => {
             <div id={Styles.images_container}>
                 {images.map((image,index) => {
                     return(
-                        <div style={{transform: `translateX(-${30 * translate}vw)`}} className={Styles.image_wrapper}>
-                            <img key={index} src={image} alt={index}/>
+                        <div key={index} style={{transform: `translateX(-${30 * translate}vw)`}} className={Styles.image_wrapper}>
+                            <img  src={image} alt={index} />
                         </div>
                     )
                 })}
