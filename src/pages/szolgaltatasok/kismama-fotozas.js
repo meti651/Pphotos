@@ -1,4 +1,7 @@
 import React from 'react';
+import Content from '../../components/subpages/mum/content';
+import Image from '../../components/subpages/mum/image';
+import Prices from '../../components/subpages/prices-default';
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -21,7 +24,8 @@ const images = [
 const Mum = () => {
     return (
         <SubLayout title={"Kismama fotozás"} slideImages={images}>
-            
+            <Content/>
+            <Prices Image={Image} />
         </SubLayout>
     )
 }
