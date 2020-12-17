@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Logo from "../images/pphotos-logo.png";
 import Styles from "./header.module.scss";
 
-const Header = ({onTop}) => {
+const Header = ({onTop, setOnTop}) => {
     const [open, setOpen] = useState(false);
 
     const handleHover = (_) => {

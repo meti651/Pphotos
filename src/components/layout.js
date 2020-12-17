@@ -3,7 +3,7 @@ import Footer from './footer';
 
 import Header from "./header";
 
-const Layout = ({children, onTop, setOnTop}) => {
+const Layout = ({children, onTop}) => {
     return (
         <>
             <Header onTop={onTop}/>
