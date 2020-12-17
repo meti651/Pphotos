@@ -3,7 +3,12 @@
 #container {
     width: 100vw;
     background-color: $primary-color;
-    overflow: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
+}
+#placeholder_image {
+    width: 100vw;
+    height: 100px;
+    overflow: hidden;
 }
