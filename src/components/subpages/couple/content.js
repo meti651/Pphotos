@@ -7,7 +7,7 @@ import Styles from "./content.module.scss";
 const Content = () => {
     return (
         <div id={Styles.container}>
-            <div>Lepkék, első csók, titkos helyszínek, összenézések, viták, a nagy kibékülés, elfogadás és szeretet…</div>
+            <div className={Styles.strong}>Lepkék, első csók, titkos helyszínek, összenézések, viták, a nagy kibékülés, elfogadás és szeretet…</div>
             <div id={Styles.content}>
                 <div className={Styles.paragraph}>
                     <p>Úgy gondolom most eszedbe jutott valami ezekről a szavakról a saját kapcsolatodból, de a legszebb az, hogy mindenkinek teljesen mást-és mást jelentenek.</p>
@@ -23,7 +23,7 @@ const Content = () => {
                     <p>A fotózások lehetnek a szabadban vagy stúdióban is, bár a személyes kedvenceim páros fotózásnál inkább a kintiek, hiszen ott sok sétálós, pados, és természetközeli képet tudunk készíteni. Ruházat szempontjából pedig az összhangot tartsátok szem előtt.</p>
                 </div>
             </div>
-            <div>Akár egy laza romantikus fotózásra vágytok, akár a boldogító igen előtt vagytok szeretettel várlak benneteket!</div>
+            <div className={Styles.strong}>Akár egy laza romantikus fotózásra vágytok, akár a boldogító igen előtt vagytok szeretettel várlak benneteket!</div>
         </div>
     )
 }

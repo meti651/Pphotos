@@ -4,6 +4,30 @@ $font-size: 24px;
 
 #container {
     font-size: $font-size;
+    text-align: center;
+    &>div{
+        margin: 2 * $font-size 0;
+    }
+
+    .strong {
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    #content{
+        display: flex;
+        flex-direction: row;
+        
+        .paragraph{
+            flex: 1;
+            padding: 1.5 * $font-size;
+            text-align: start;
+        }
+
+        .image_container {
+            flex: 1;
+        }
+    }
 }
 
 .image_container{
