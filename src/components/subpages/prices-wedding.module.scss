@@ -1,0 +1,73 @@
+@import "../config";
+
+$font-size: 24px;
+
+#container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    font-size: $font-size;
+    padding: $font-size 0;
+
+    h1{
+        font-size: 1.5 * $font-size;
+    }
+
+    h2{
+        font-size: 1.25 * $font-size;
+    }
+
+    #packages{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-shadow: -1px -1px $third-color;
+        gap: $font-size;
+
+        #silver{
+            background-color: #C0C0C0;
+            color: $secondary-font-color;
+        }
+
+        #gold{
+            background-color: #FFD700;
+            color: $secondary-font-color;
+        }
+
+        #diamond{
+            background-color: #b9f2ff;
+            color: $secondary-font-color;
+        }
+
+        .package{
+            flex: 1;
+            width: 27vw;
+            height: 1000px;
+            display: grid;
+            grid-template-rows: auto auto 1fr;
+            padding: $font-size;
+            border-radius: 5px;
+            box-shadow: 5px 5px 10px $third-color;
+        
+            h2{
+                justify-self: center;
+            }
+
+            ul {
+                align-self: flex-start;
+
+                li{
+                    margin: $font-size 0;
+                    list-style: none;
+                }
+            }
+
+            .price {
+                align-self: flex-end;
+                justify-self: center;
+                font-weight: bold;
+                font-size: 1.5 * $font-size;
+            }
+        }
+    }
+}
