@@ -7,7 +7,7 @@ $font-size: 24px;
   grid-template-columns: 1fr auto 1fr;
   color: $primary-font-color;
   font-style: italic;
-  padding: 70px 0;
+  padding: 100px 0;
   backdrop-filter: blur(15px);
   
 
@@ -28,7 +28,7 @@ $font-size: 24px;
     left: 0;
     right: 0;
     width: 80vw;
-    animation: scale linear 13s infinite running;
+    animation: scale 13s linear running infinite;
   }
 
   #caption {
