@@ -5,6 +5,10 @@ body {
   width: 100vw;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *::-webkit-scrollbar {
   width: 0;
 }
