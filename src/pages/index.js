@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-        <Layout onTop={onTop} setOnTop={setOnTop}>
+        <Layout onTop={onTop}>
           <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
               <Slider/>
               <section className="section parallax parallax-one"></section>
