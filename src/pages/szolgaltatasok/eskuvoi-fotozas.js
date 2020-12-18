@@ -1,4 +1,5 @@
 import React from 'react';
+import Prices from '../../components/subpages/prices-wedding';
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -21,7 +22,7 @@ const images = [
 const Wedding = () => {
     return (
         <SubLayout title={"Esküvői fotozás"} slideImages={images}>
-            
+            <Prices/>
         </SubLayout>
     )
 }
