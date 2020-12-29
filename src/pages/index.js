@@ -4,7 +4,6 @@ import AboutMe from "../components/landing-page/about-me";
 import Slider from "../components/landing-page/slider/photo-slider";
 import Opinions from "../components/landing-page/opinions";
 import NavigationBoxes from "../components/landing-page/navigationBoxes";
-import Charity from "../components/landing-page/charity";
 
 import "./index.scss";
 import Album from "../components/landing-page/album";
@@ -31,7 +30,6 @@ export default function Home() {
               <section className="section parallax parallax-three"></section>
               <NavigationBoxes/>
               <Album />
-              <Charity/>
           </main>
         </Layout>
     </>

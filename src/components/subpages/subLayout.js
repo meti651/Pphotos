@@ -1,4 +1,5 @@
 import React from 'react'
+import Charity from '../landing-page/charity';
 import Layout from "../layout";
 import Slider from "./slider";
 
@@ -11,6 +12,7 @@ const SubLayout = ({children, title, slideImages}) => {
                     <h1>{title}</h1>
                     <Slider images={slideImages}/>
                     {children}
+                    <Charity/>
                 </div>
             </Layout>
     )
