@@ -1,5 +1,5 @@
 import React from 'react'
-import Charity from '../landing-page/charity';
+import Charity from './charity';
 import Layout from "../layout";
 import Slider from "./slider";
 
