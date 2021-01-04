@@ -1,0 +1,108 @@
+@import "../../config";
+
+$font-size: 24px;
+
+#container {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size;
+
+    h1{
+        font-size: 1.5 * $font-size;
+    }
+
+    h2{
+        font-size: 1.2 * $font-size;
+    }
+
+    #lined {
+        position: relative;
+
+        .blur_border {
+            box-shadow: inset 0 4px 4px $primary-color,
+                inset 0 -4px 4px $primary-color;
+        }
+
+        img{
+            width: 100vw;
+        }
+
+        #phrases{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            p{
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+                padding: 2px 0;
+                background-color: $primary-color;
+                box-shadow: 0 8px 8px $primary-color,
+                            0 -8px 8px $primary-color;
+            }
+        }
+    }
+
+    #second_part{
+        display: flex;
+        flex-direction: row;
+        place-items: center;
+
+        #text{
+            display: grid;
+            place-items: center;
+            p{
+                width: 80%;
+            }
+        }
+
+        img{
+            height: 400px;
+        }
+    }
+
+    #third_part {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 600px;
+        margin: 50px 0;
+
+        p{
+            width: 80%;
+        }
+
+        .image_wrapper {
+            position: absolute;
+
+            img {
+                height: 600px;
+            }
+        }
+    }
+}
+
+.image_wrapper{
+    position: relative;
+    width: max-content;
+    height: max-content;
+
+    img {
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+    
+    .blur_border {
+        display: inline-block;
+        box-shadow: inset 0 0px 4px 4px $primary-color;
+        z-index: 1;
+    }
+}
