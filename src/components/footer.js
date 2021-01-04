@@ -6,6 +6,7 @@ import Instagram from "../images/instagram.svg";
 import Facebook from "../images/facebook.svg";
 
 import Styles from "./footer.module.scss";
+import { Link } from 'gatsby';
 
 const Footer = () => {
     return (
@@ -23,8 +24,8 @@ const Footer = () => {
             </div>
             <div id={Styles.placeholder}></div>
             <div id={Styles.icons}>
-                <img id={Styles.icon} src={Facebook} alt="Facebook" />
-                <img id={Styles.icon} src={Instagram} alt="Instagram" />
+                <Link to={"https://www.facebook.com/pphotosofficial"} target="_blank"><img id={Styles.icon} src={Facebook} alt="Facebook" /></Link>
+                <Link to={"https://www.instagram.com/pphotosofficial"} target="_blank"><img id={Styles.icon} src={Instagram} alt="Instagram" /></Link>
             </div>
         </footer>
     )

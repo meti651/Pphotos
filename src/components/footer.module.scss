@@ -8,6 +8,7 @@ footer {
     display: flex;
     flex-direction: row;
     background-color: $secondary-color;
+    border-top: 2px solid $primary-color;
 }
 
 #icons {
