@@ -17,6 +17,10 @@ html {
   font-family: "Merriweather";
 }
 
+p, div {
+  cursor: default;
+}
+
 .main {
   height: 100vh;
   perspective: 2px;
