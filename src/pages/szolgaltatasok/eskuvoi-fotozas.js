@@ -2,6 +2,7 @@ import React from 'react';
 import Prices from '../../components/subpages/prices-wedding';
 
 import SubLayout from "../../components/subpages/subLayout";
+import Content from '../../components/subpages/wedding/content';
 
 import Slide1 from "../../images/slider/wedding/slide1.jpg";
 import Slide2 from "../../images/slider/wedding/slide2.jpg";
@@ -22,6 +23,7 @@ const images = [
 const Wedding = () => {
     return (
         <SubLayout title={"Esküvői fotozás"} slideImages={images}>
+            <Content/>
             <Prices/>
         </SubLayout>
     )
