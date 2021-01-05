@@ -25,18 +25,15 @@ $font-size: 24px;
         gap: $font-size;
 
         #silver{
-            background-color: #C0C0C0;
-            color: $secondary-font-color;
+            background: $package-color1;
         }
 
         #gold{
-            background-color: #FFD700;
-            color: $secondary-font-color;
+            background-color: $package-color2;
         }
 
         #diamond{
-            background-color: #b9f2ff;
-            color: $secondary-font-color;
+            background-color: $package-color3;
         }
 
         .package{
@@ -48,6 +45,7 @@ $font-size: 24px;
             padding: $font-size;
             border-radius: 5px;
             box-shadow: 5px 5px 10px $third-color;
+            color: $primary-color;
         
             h2{
                 justify-self: center;
