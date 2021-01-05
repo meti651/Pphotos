@@ -104,6 +104,10 @@ $font-size: 24px;
     #photo_given {
         display: grid;
         place-items: center;
+        background-color: $secondary-color;
+        color: $primary-color;
+        padding-bottom: 2 * $font-size;
+        text-shadow: -2px -2px $third-color;
 
         h2{
             margin: 2 * $font-size 0;
