@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Styles from "./prices-wedding.module.scss";
+import AlbumStyles from "../landing-page/album.module.scss";
 
 const Prices = () => {
     return(
@@ -42,7 +43,7 @@ const Prices = () => {
                         <li>Kb. 12 óra rendelkezésre állás</li>
                         <li>Kb. 500db retusált kép</li>
                         <li>30db prémium előhívatott fotó</li>
-                        <li>Fotóalbum (Extra nagy)</li>
+                        <li><a href={`#${AlbumStyles.container}`}>Fotóalbum</a> (Extra nagy)</li>
                         <li>Slideshow a legjobb képekből (általatok választott zenék)</li>
                         <li><strong>EXTRA AJÁNDÉK:</strong> Egyedi készítésű díszdoboz + pendrive</li>
                     </ul>

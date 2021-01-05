@@ -57,6 +57,10 @@ $font-size: 24px;
                 li{
                     margin: $font-size 0;
                     list-style: none;
+
+                    a {
+                        color: $primary-color;
+                    }
                 }
             }
 
