@@ -35,7 +35,7 @@ const Header = ({onTop, setOnTop}) => {
                 <div className={Styles.image} >
                     <div id={Styles.presentation} style={{opacity: onTop ? "100%" : "0"}}>
                         <h1>Baracskai Petra</h1>
-                        <h2>Photography</h2>
+                        <h2>Pphotos</h2>
                     </div>
                     <img src={Logo} alt="Logo" />
                 </div>
