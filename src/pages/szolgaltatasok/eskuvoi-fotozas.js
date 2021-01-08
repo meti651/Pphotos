@@ -13,11 +13,11 @@ import Slide5 from "../../images/slider/wedding/slide5.jpg";
 import Slide6 from "../../images/slider/wedding/slide6.jpg";
 
 const images = [
-    Slide1,
-    Slide3,
     Slide2,
-    Slide4,
     Slide5,
+    Slide1,
+    Slide4,
+    Slide3,
     Slide6,
 ]
 

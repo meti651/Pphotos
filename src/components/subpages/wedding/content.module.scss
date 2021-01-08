@@ -54,13 +54,15 @@ $font-size: 24px;
     #second_part{
         display: flex;
         flex-direction: row;
-        place-items: center;
+        justify-content: space-around;
+        align-items: center;
 
         #text{
             display: grid;
             place-items: center;
+            width: 40%;
             p{
-                width: 80%;
+                width: 90%;
             }
         }
 
