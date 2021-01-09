@@ -15,7 +15,7 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
-    "gatsby": "^2.26.1",
+    "gatsby": "^2.30.1",
     "gatsby-image": "^2.9.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sass": "^2.6.0",
