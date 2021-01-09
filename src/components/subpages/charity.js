@@ -2,8 +2,6 @@ import React from 'react';
 
 import Styles from "./charity.module.scss";
 
-import CharityImage from "../../images/charity.jpg";
-
 const Charity = () => {
     return (
         <div id={Styles.container}>

@@ -1,10 +1,10 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import { Link } from "gatsby";
 
 import Logo from "../images/pphotos-logo.png";
 import Styles from "./header.module.scss";
 
-const Header = ({onTop, setOnTop}) => {
+const Header = ({onTop}) => {
     const [open, setOpen] = useState(false);
 
     const handleHover = (_) => {

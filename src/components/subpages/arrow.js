@@ -8,7 +8,7 @@ const Arrow = ({direction, translate, setTranslate}) => {
     useEffect(() => {
         if(direction === "left") setArrow("<");
         else setArrow(">");
-    }, [])
+    }, [direction])
 
     const handleClick = () => {
         let resultTranslate = translate;
@@ -21,9 +21,9 @@ const Arrow = ({direction, translate, setTranslate}) => {
     }
 
     return (
-        <div className={Styles.container} id={direction === "right" ? Styles.right : undefined} onClick={handleClick}>
+        <button className={Styles.container} id={direction === "right" ? Styles.right : undefined} onClick={handleClick}>
             {arrow}
-        </div>
+        </button>
     )
 }
 
