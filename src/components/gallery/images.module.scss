@@ -1,0 +1,23 @@
+@import "../config";
+
+#images{
+    column-count: 3;
+    column-gap: 2px;
+    line-height: 0;
+    column-fill: auto;
+
+    .image_container{
+        width: 100% !important;
+        height: auto !important;
+        margin: 1px;
+        display: inline-block;
+        overflow: hidden;
+        &:hover .image_wrapper{
+            transform: scale(1.1);
+            transition: transform 0.5s;
+        }
+    }
+}
+
+
+

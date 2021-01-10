@@ -5,10 +5,10 @@ import Styles from "./images.module.scss";
 import Img from "gatsby-image";
 
 const Images = ({images}) => {
-    console.log(images);
+
     return (
-        <div>
-            {images?.map((image, index) => <Img key={index} fluid={image.node.childImageSharp?.fluid} alt={`${index}`} />)}
+        <div id={Styles.images}>
+            {images?.map((image, index) => <div key={index} className={`${Styles.image_container}`}><div className={Styles.image_wrapper}><Img fluid={image.node.childImageSharp?.fluid} alt={`${index}`} /></div></div>)}
         </div>
     )
 }

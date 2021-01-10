@@ -32,6 +32,7 @@ const Gallery = () => {
 
     return (
         <div id={Styles.container}>
+            <h1>Galéria</h1>
             <div id={Styles.filter}>
                 <span>Szűrő: </span>
                 <select onChange={filterChangeHandler}>
@@ -44,9 +45,7 @@ const Gallery = () => {
                     <option value="porrtrait">Portré</option>
                 </select>
             </div>
-            <div id={Styles.images}>
-                <Images images={imagesShown}/>
-            </div>
+            <Images images={imagesShown}/>
         </div>
     )
 }

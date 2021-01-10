@@ -1,0 +1,37 @@
+@import "../config";
+
+$font-size: 24px;
+
+#container{
+    margin-top: 85px;
+    background-color: $primary-color;
+    font-size: $font-size;
+    color: $primary-font-color;
+    padding: 0.5 * $font-size;
+
+    h1{
+        font-size: 1.5 * $font-size;
+        width: 100%;
+        text-align: center;
+    }
+
+    #filter{
+        text-align: start;
+        margin: $font-size;
+
+        :active, :focus{
+            outline: 0;
+        }
+
+        select{
+            height: 2 * $font-size;
+            font-size: $font-size;
+            font: 400 $font-size "Merriweather";
+            color: $secondary-font-color;
+            background-color: $secondary-color;
+            text-align: center;
+            border: 0;
+            border-radius: 2px;
+        }
+    }
+}
