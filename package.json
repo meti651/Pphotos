@@ -12,7 +12,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "gatsby": "^2.30.1",
