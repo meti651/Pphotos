@@ -42,7 +42,7 @@ const Gallery = () => {
                     <option value="child">Gyerek, baba</option>
                     <option value="mum">Kismama</option>
                     <option value="couple">Páros</option>
-                    <option value="porrtrait">Portré</option>
+                    <option value="portrait">Portré</option>
                 </select>
             </div>
             <Images images={imagesShown}/>
