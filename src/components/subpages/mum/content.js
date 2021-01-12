@@ -2,12 +2,40 @@ import React from 'react';
 
 import Styles from "./content.module.scss";
 
-import FirstImage from "../../../images/content/mum/1.jpg";
-import SecondImage from "../../../images/content/mum/2.jpg";
-import ThirdImage from "../../../images/content/mum/3.jpg";
-import FourthImage from "../../../images/content/mum/4.jpg";
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from "gatsby-image";
 
 const Content = () => {
+    const images = useStaticQuery(graphql`{
+        first: file(relativePath: {eq: "content/mum/1.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          second: file(relativePath: {eq: "content/mum/2.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          third: file(relativePath: {eq: "content/mum/3.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          fourth: file(relativePath: {eq: "content/mum/4.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+    }`)
     return (
         <div id={Styles.container}>
             <h1>Kedves Kismamák!</h1>
@@ -19,20 +47,20 @@ const Content = () => {
                     Kismamákkal képeket alkotni mindig nagy öröm számomra, hiszen egy olyan ősi erőt érzek bennük, mely semmihez sem fogható. Ekkor teszik meg első lépéseiket az édesanyává válásuk útján és látom rajtuk a szeretetet melyet a még meg nem született gyermekük iránt éreznek.
                 </div>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border}>
-                        <img src={FirstImage} alt="mum" />
+                    <div className={Styles.blur_border} style={{width: `${450 * images.fourth.childImageSharp.fluid.aspectRatio}px`}}>
+                        <Img fluid={images.first.childImageSharp.fluid} alt="mum" />
                     </div>
                 </div>
             </div>
             <div id={Styles.second_part}>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border}>
-                        <img src={SecondImage} alt="mum" />
+                    <div className={Styles.blur_border} style={{width: `${450 * images.fourth.childImageSharp.fluid.aspectRatio}px`}}>
+                        <Img fluid={images.second.childImageSharp.fluid} alt="mum" />
                     </div>
                 </div>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border}>
-                        <img src={ThirdImage} alt="mum" />
+                    <div className={Styles.blur_border} style={{width: `${450 * images.fourth.childImageSharp.fluid.aspectRatio}px`}}>
+                        <Img fluid={images.third.childImageSharp.fluid} alt="mum" />
                     </div>
                 </div>
             </div>
@@ -54,8 +82,8 @@ const Content = () => {
                     <div>Természetesen! Örömmel várom őt is! De ha nem sikerül rávenni, akkor az is lehet egy kompromisszumos megoldás, ha a fotózás közben egy 10 percre „ugrik csak be”. Ennyi elegendő is pár apás fotó elkészítéséhez is.</div>
                 </div>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border}>
-                        <img src={FourthImage} alt="mum" />
+                    <div className={Styles.blur_border} style={{width: `${450 * images.fourth.childImageSharp.fluid.aspectRatio}px`}}>
+                        <Img fluid={images.fourth.childImageSharp.fluid} alt="mum" />
                     </div>
                 </div>
             </div>

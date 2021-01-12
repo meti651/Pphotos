@@ -3,8 +3,19 @@ import React from 'react';
 import ContentImage from "../../../images/content/couple/1.jpg";
 
 import Styles from "./content.module.scss";
+import Img from "gatsby-image";
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Content = () => {
+    const image = useStaticQuery(graphql`{
+        first: file(relativePath: {eq: "content/couple/1.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+    }`)
     return (
         <div id={Styles.container}>
             <div className={Styles.strong}>Lepkék, első csók, titkos helyszínek, összenézések, viták, a nagy kibékülés, elfogadás és szeretet…</div>
@@ -15,8 +26,8 @@ const Content = () => {
                     <p>Ezt az egyediséget és a kettőtök közötti köteléket örökítem én meg.</p>
                 </div>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border}>
-                        <img src={ContentImage} alt="couple" />
+                    <div className={Styles.blur_border} style={{width: `${image.first.childImageSharp.fluid.aspectRatio * 450}px`}}>
+                        <Img fluid={image.first.childImageSharp.fluid} alt="couple" />
                     </div>
                 </div>
                 <div className={Styles.paragraph}>
