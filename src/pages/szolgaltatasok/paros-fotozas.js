@@ -11,17 +11,62 @@ import Slide3 from "../../images/slider/couple/slide3.jpg";
 import Slide4 from "../../images/slider/couple/slide4.jpg";
 import Slide5 from "../../images/slider/couple/slide5.jpg";
 import Slide6 from "../../images/slider/couple/slide6.jpg";
-
-const images = [
-    Slide1,
-    Slide2,
-    Slide3,
-    Slide4,
-    Slide6,
-    Slide5,
-]
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Couple = () => {
+    const data = useStaticQuery(graphql`{
+        first: file(relativePath: {eq: "slider/couple/slide1.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        second: file(relativePath: {eq: "slider/couple/slide2.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        third: file(relativePath: {eq: "slider/couple/slide3.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        fourth: file(relativePath: {eq: "slider/couple/slide4.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        fifth: file(relativePath: {eq: "slider/couple/slide5.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sixth: file(relativePath: {eq: "slider/couple/slide6.jpg"}) {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }`)
+    
+      const images = [
+        data.first,
+        data.second,
+        data.third,
+        data.fourth,
+        data.fifth,
+        data.sixth
+      ];
     return (
         <SubLayout title={"Páros fotozás"} slideImages={images}>
             <Content/>

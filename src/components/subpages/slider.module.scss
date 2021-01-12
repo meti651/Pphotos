@@ -19,14 +19,16 @@
         .image_wrapper{
             min-width: 30vw;
             transition: transform 0.5s;
-            text-align: center;
-            
-        }
+            padding: 5px 0;
 
-        img{
-            height: 370px;
-            box-shadow: 2px 2px 3px $third-color;
-            border-radius: 5px;
+            *{
+                border-radius: 5px;
+            }
+            
+            &>div {
+                margin: auto;
+                box-shadow: 2px 2px 3px $third-color;                
+            }
         }
     }
 }
