@@ -1,5 +1,7 @@
 @import "../../config";
 
+$font-size: 24px;
+
 #container {
     width: 100vw;
     background-color: $primary-color;
@@ -11,4 +13,15 @@
     width: 100vw;
     height: 100px;
     overflow: hidden;
+}
+
+#quote{
+    width: 100%;
+    font-size: 1.25 * $font-size;
+    font-weight: bold;
+    color: $primary-font-color;
+    background-color: $primary-color;
+    text-align: center;
+    margin: 0;
+    padding: $font-size 0;
 }
