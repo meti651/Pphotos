@@ -78,11 +78,7 @@ const Content = () => {
                 </div>
             </div>
             <div id={Styles.third_part}>
-                <div className={Styles.text}>
-                    <p>Kizárólag minőségi, szerkesztett fotókat adok át Nektek. Csak olyan képet adok ki a kezemből, amilyet én is látni szeretnék.</p>
-                    <p>Az esküvő után pedig ezek a képek emlékeztetnek majd Titeket a napra, amikor kimondtátok azt a bizonyos igent.</p>
-                </div>
-                <div className={Styles.image_wrapper}>
+            <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
                         <div className={Styles.image} style={{width: `${images.content3.childImageSharp.fluid.aspectRatio * 30}vw`}}>
                             <Img fluid={images.content3.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
@@ -90,7 +86,11 @@ const Content = () => {
                     </div>
                 </div>
                 <div className={Styles.text}>
-                    <p>Szeretném, ha a képeket nézegetve azt éreznétek, mintha épp az esküvőtökön lennétek, hogy újra átélhessétek a legszebb pillanatokat családotok, szeretteitek körében, és majd büszkén mutathassátok akár gyermekeiteknek.</p>
+                    <div id={Styles.top}>
+                        <p>Kizárólag minőségi, szerkesztett fotókat adok át Nektek. Csak olyan képet adok ki a kezemből, amilyet én is látni szeretnék.</p>
+                        <p>Az esküvő után pedig ezek a képek emlékeztetnek majd Titeket a napra, amikor kimondtátok azt a bizonyos igent.</p>
+                    </div>    
+                    <p id={Styles.bottom}>Szeretném, ha a képeket nézegetve azt éreznétek, mintha épp az esküvőtökön lennétek, hogy újra átélhessétek a legszebb pillanatokat családotok, szeretteitek körében, és majd büszkén mutathassátok akár gyermekeiteknek.</p>
                 </div>
             </div>
             <p><strong>Szeretettel várlak Titeket, s megtiszteltek vele, ha életetek egyik legszebb napját én örökíthetem meg.</strong></p>

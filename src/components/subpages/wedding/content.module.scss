@@ -79,29 +79,38 @@ $font-size: 24px;
         justify-content: space-between;
         align-items: center;
         height: max-content;
+        width: 100%;
         margin: 50px 0;
-
-        .image_wrapper {
-            position: absolute;
-
-            img {
-                height: 600px;
-            }
-        }
-
+    
         .text{
-            width: 80%;
+            width: 80vw;
             z-index: 100;
-            margin: 15px 0;
-            background-color: $primary-color;
-            box-shadow: 0 15px 13px $primary-color,
-            0 -15px 13px $primary-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             p{
+                max-width: 80vw;
                 margin: 0;
-                
+                background-color: $primary-color;
+                box-shadow: 0 15px 13px $primary-color,
+                0 -15px 13px $primary-color;
+            }
+
+            #top{
+                position: absolute;
+                top: 0;
+                transform: translateY(50%);
+            }
+            #bottom{
+                position: absolute;
+                bottom: 0;
+                transform: translateY(-50%);
             }
         }
+
+
+        
     }
 
     #photo_given {
