@@ -2,12 +2,42 @@ import React from 'react';
 
 import Styles from "./content.module.scss";
 
-import Lined from "../../../images/content/wedding/lined.jpg";
-import Content1 from "../../../images/content/wedding/content1.jpg";
-import Content2 from "../../../images/content/wedding/content2.jpg";
-import Content3 from "../../../images/content/wedding/content3.jpg";
+import Img from "gatsby-image";
+
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Content = () => {
+    const images = useStaticQuery(graphql`{
+        lined: file(relativePath: {eq: "content/wedding/lined.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        content1: file(relativePath: {eq: "content/wedding/content1.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        content2: file(relativePath: {eq: "content/wedding/content2.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        content3: file(relativePath: {eq: "content/wedding/content3.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+    }`)
+
     return (
         <div id={Styles.container}>
             <h1>Kedves Menyasszonyok, Vőlegények!</h1>
@@ -21,14 +51,18 @@ const Content = () => {
                 </div>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <img src={Lined} className={Styles.wide_image} alt="portrait"/>
+                        <div className={Styles.image}>
+                            <Img fluid={images.lined.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id={Styles.second_part}>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <img src={Content1} className={Styles.wide_image} alt="portrait"/>
+                        <div className={Styles.image} style={{width: `${images.content1.childImageSharp.fluid.aspectRatio * 20}vw`}}>
+                            <Img fluid={images.content1.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
+                        </div>
                     </div>
                 </div>
                 <div id={Styles.text}>
@@ -37,7 +71,9 @@ const Content = () => {
                 </div>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <img src={Content2} className={Styles.wide_image} alt="portrait"/>
+                        <div className={Styles.image} style={{width: `${images.content2.childImageSharp.fluid.aspectRatio * 20}vw`}}>
+                            <Img fluid={images.content2.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,7 +84,9 @@ const Content = () => {
                 </div>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <img src={Content3} className={Styles.wide_image} alt="portrait"/>
+                        <div className={Styles.image} style={{width: `${images.content3.childImageSharp.fluid.aspectRatio * 30}vw`}}>
+                            <Img fluid={images.content3.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
+                        </div>
                     </div>
                 </div>
                 <div className={Styles.text}>
