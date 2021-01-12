@@ -33,7 +33,7 @@ const Header = ({onTop}) => {
                     </div>
                 </div>
                 <div className={Styles.image} >
-                    <div id={Styles.presentation} style={{opacity: onTop ? "100%" : "0"}}>
+                    <div id={Styles.presentation} style={{opacity: onTop ? "1" : "0"}}>
                         <h1>Baracskai Petra</h1>
                         <h2>Pphotos</h2>
                     </div>
