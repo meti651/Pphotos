@@ -23,8 +23,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/1.jpg"}) {
               relativePath
               childImageSharp {
-                fluid(maxWidth: 1600) {
-                  srcSet
+                fluid(maxWidth: 1600, quality: 90) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -33,8 +33,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/2.jpg"}) {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1600) {
-                    srcSet
+                  fluid(maxWidth: 1600, quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -43,8 +43,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/3.jpg"}) {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1600) {
-                    srcSet
+                  fluid(maxWidth: 1600, quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -53,8 +53,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/4.jpg"}) {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1600) {
-                    srcSet
+                  fluid(maxWidth: 1600,quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -63,8 +63,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/5.jpg"}) {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1600) {
-                    srcSet
+                  fluid(maxWidth: 1600, quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -73,8 +73,8 @@ const Slider = () => {
             file(relativePath: {eq: "slider/6.jpg"}) {
                 relativePath
                 childImageSharp {
-                  fluid(maxWidth: 1600) {
-                    srcSet
+                  fluid(maxWidth: 1600, quality: 90) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

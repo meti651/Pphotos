@@ -1,9 +1,21 @@
-import React from 'react'
+import React from 'react';
+import Img from "gatsby-image";
 
 import AboutMeBack from "../../images/about-me.png";
 import Styles from "./about-me.module.scss";
+import { graphql, useStaticQuery } from 'gatsby';
 
 const AboutMe = () =>{
+    const backgroundImage = useStaticQuery(graphql`{
+        data: file(relativePath: {eq: "about-me.png"}) {
+            childImageSharp {
+              fluid(maxWidth: 2000, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+    }`)
+
     return (
         <div id={Styles.container}>
             <div id={Styles.description}>
@@ -33,7 +45,7 @@ const AboutMe = () =>{
                     élettel teli, valódi, pózmentes képeid lesznek.
                 </div>
             </div>
-            <img src={AboutMeBack} alt="About me"/>
+            <div id={Styles.background_image_container}><Img fluid={backgroundImage.data.childImageSharp.fluid} alt="About me"/></div>
             <div id={Styles.end_description}>
                 <div>
                     Egy fotósnak szerencséje, hogy beszélnek helyette a képei is, úgyhogy további információt rólam a Galériában találhatsz.<br/>
