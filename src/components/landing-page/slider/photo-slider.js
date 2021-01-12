@@ -1,13 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React, {useState, useEffect} from 'react';
 
-import Wedding from "../../../images/slider/1.jpg";
-import Family from "../../../images/slider/2.jpg";
-import Mum from "../../../images/slider/3.jpg";
-import Children from "../../../images/slider/4.jpg";
-import Couple from "../../../images/slider/5.jpg";
-import Portrait from "../../../images/slider/6.jpg";
-
 import Styles from "./photo-slider.module.scss";
 import Slide from './slide';
 

@@ -1,13 +1,6 @@
 import React from 'react';
 import NavigationBox from "./navigationBox";
 
-import Wedding from "../../images/navigationBox/wedding.jpg";
-import Family from "../../images/navigationBox/family.jpg";
-import Mum from "../../images/navigationBox/mum.jpg";
-import Children from "../../images/navigationBox/children.jpg";
-import Couple from "../../images/navigationBox/couple.jpg";
-import Portrait from "../../images/navigationBox/portrait.jpg";
-
 import Styles from "./navigationBoxes.module.scss";
 import { graphql, useStaticQuery } from 'gatsby';
 

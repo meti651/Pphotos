@@ -1,7 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
 
-import AboutMeBack from "../../images/about-me.png";
 import Styles from "./about-me.module.scss";
 import { graphql, useStaticQuery } from 'gatsby';
 
