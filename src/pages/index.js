@@ -50,9 +50,9 @@ export default function Home() {
               <Slider/>
               <section className="section parallax parallax-one"><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>
               <AboutMe/>
-              <section className="section parallax parallax-two"><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 1"/></section>
+              <section className="section parallax parallax-two"><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 2"/></section>
               <Opinions/>
-              <section className="section parallax parallax-three"><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 1"/></section>
+              <section className="section parallax parallax-three"><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 3"/></section>
               <NavigationBoxes/>
               <Album />
           </main>
