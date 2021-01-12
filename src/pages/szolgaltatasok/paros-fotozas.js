@@ -5,12 +5,6 @@ import Content from "../../components/subpages/couple/content";
 
 import SubLayout from "../../components/subpages/subLayout";
 
-import Slide1 from "../../images/slider/couple/slide1.jpg";
-import Slide2 from "../../images/slider/couple/slide2.jpg";
-import Slide3 from "../../images/slider/couple/slide3.jpg";
-import Slide4 from "../../images/slider/couple/slide4.jpg";
-import Slide5 from "../../images/slider/couple/slide5.jpg";
-import Slide6 from "../../images/slider/couple/slide6.jpg";
 import { graphql, useStaticQuery } from 'gatsby';
 
 const Couple = () => {
