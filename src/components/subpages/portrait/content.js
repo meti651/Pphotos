@@ -1,12 +1,37 @@
 import React from 'react';
+import Img from "gatsby-image";
 
 import WideCenter from "../../../images/content/portrait/wide.jpg";
 import NarrowLeft from "../../../images/content/portrait/narrow-left.jpg";
 import NarrowRight from "../../../images/content/portrait/narrow-right.jpg";
 
 import Styles from "./content.module.scss";
+import { graphql, useStaticQuery } from 'gatsby';
 
 const Content = () => {
+    const images = useStaticQuery(graphql`{
+        wideCenter: file(relativePath: {eq: "content/portrait/wide.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        narrowLeft: file(relativePath: {eq: "content/portrait/narrow-left.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        narrowRight: file(relativePath: {eq: "content/portrait/narrow-right.jpg"}) {
+            childImageSharp {
+              fluid(maxWidth: 1920, quality: 90) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+    }`)
     return(
         <div id={Styles.container}>
             <h1>Kedves leendő Modellem!</h1>
@@ -16,8 +41,8 @@ const Content = () => {
                     <p className={Styles.strong}>Ezért is fontos, hogy milyen tartalmakat osztunk meg, milyen kép szerepel az önéletrajzunkban hiszen az első benyomás ereje megismételhetetlen.</p>
                 </div>
                 <div className={Styles.image_wrapper}>
-                    <div className={Styles.blur_border}>
-                        <img src={WideCenter} className={Styles.wide_image} alt="portrait"/>
+                    <div className={`${Styles.blur_border}`}  style={{width: `${images.wideCenter.childImageSharp.fluid.aspectRatio * 350}px`}}>
+                        <Img fluid={images.wideCenter.childImageSharp.fluid} alt="portrait"/>
                     </div>
                 </div>
                 <div id={Styles.second_paragraph}>
@@ -26,8 +51,8 @@ const Content = () => {
             </div>
             <div className={Styles.part_wrapper}>
                 <div className={Styles.image_wrapper}>
-                    <div className={Styles.blur_border}>
-                        <img src={NarrowLeft} className={Styles.narrow_image} alt="portrait"/>
+                    <div className={`${Styles.blur_border}`} style={{width: `${images.wideCenter.childImageSharp.fluid.aspectRatio * 350}px`}}>
+                        <Img fluid={images.narrowLeft.childImageSharp.fluid} className={Styles.narrow_image} alt="portrait"/>
                     </div>
                 </div>
                 <div id={Styles.third_paragraph}>
@@ -35,8 +60,8 @@ const Content = () => {
                     <p >Fotózásaim során a legszebb, de egybe a legvalódibb oldaladat örökítem meg, hiszen ez az, amitől Te kitűnhetsz a tömegből és az lehetsz, aki igazából vagy.</p>
                 </div>
                 <div className={Styles.image_wrapper}>
-                    <div className={Styles.blur_border}>
-                        <img src={NarrowRight} className={Styles.narrow_image} alt="portrait" />
+                    <div className={`${Styles.blur_border}`} style={{width: `${525/images.wideCenter.childImageSharp.fluid.aspectRatio}px`}}>
+                        <Img fluid={images.narrowRight.childImageSharp.fluid} alt="portrait" />
                     </div>
                 </div>
             </div>
