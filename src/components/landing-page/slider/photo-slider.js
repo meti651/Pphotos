@@ -9,7 +9,6 @@ import Slide from './slide';
 const Slider = () => {
     
     const [slide, setSlide] = useState(0);
-    // const [slidesElements, setSlidesElements] = useState();
     const images = useStaticQuery(graphql`
     {
         first: 
@@ -74,7 +73,6 @@ const Slider = () => {
         
     }
       `);
-        console.log(images);
       const slidesElements = [
         {"image": images.first, "caption": "esküvői"}, 
         {"image": images.second, "caption": "családi"}, 

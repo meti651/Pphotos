@@ -2,9 +2,6 @@ import React from 'react'
 
 import Styles from "./content.module.scss";
 
-import ContentImage1 from "../../../images/content/family/1.jpg";
-import ContentImage2 from "../../../images/content/family/2.jpg";
-import ContentImage3 from "../../../images/content/family/3.jpg";
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from "gatsby-image";
 

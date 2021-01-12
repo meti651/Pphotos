@@ -1,10 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
 
-import WideCenter from "../../../images/content/portrait/wide.jpg";
-import NarrowLeft from "../../../images/content/portrait/narrow-left.jpg";
-import NarrowRight from "../../../images/content/portrait/narrow-right.jpg";
-
 import Styles from "./content.module.scss";
 import { graphql, useStaticQuery } from 'gatsby';
 

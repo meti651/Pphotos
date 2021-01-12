@@ -3,10 +3,6 @@ import React from "react";
 import Styles from "./content.module.scss";
 import Img from "gatsby-image";
 
-import ContentImage1 from "../../../images/content/child/1.jpg";
-import ContentImage2 from "../../../images/content/child/2.jpg";
-import ContentImage3 from "../../../images/content/child/3.jpg";
-import ContentImage4 from "../../../images/content/child/4.jpg";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Content = () => {

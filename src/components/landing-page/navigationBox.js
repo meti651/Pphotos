@@ -6,7 +6,7 @@ import Styles from "./navigationBox.module.scss"
 
 const NavigationBox = ({link, image}) => {
     return (
-        <Link href={`/szolgaltatasok${link}`} id={Styles.container}>
+        <Link to={`/szolgaltatasok${link}`} id={Styles.container}>
             <div id={Styles.image_wrapper}>
                 <Img fluid={image.image.childImageSharp.fluid} alt={image.title}/>
             </div>

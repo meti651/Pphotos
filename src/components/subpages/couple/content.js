@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ContentImage from "../../../images/content/couple/1.jpg";
-
 import Styles from "./content.module.scss";
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from 'gatsby';
