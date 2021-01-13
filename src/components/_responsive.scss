@@ -1,27 +1,32 @@
+@import "config";
 $desktop: 1024px;
 $tablet: 768px;
 $phone: 420px;
+$header-menu-breakpoint: 920px;
 
 @mixin phone {
-    @media (max-width: #{$phone}) {
+    @media (max-width: #{$phone - 1px}) {
+        $font-size: 16px;
         @content;
     }
 }
 
 @mixin tablet {
     @media (min-width: #{$phone}) and (max-width: #{$tablet - 1px}) {
+        $font-size: 18px;
         @content;
     }
 }
 
 @mixin sided{
     @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}){
+        $font-size: 20px;
         @content;
     }
 }
 
-@mixin desktop {
-    @media (min-width: #{$desktop}){
+@mixin menuBreakDown{
+    @media (max-width: #{$header-menu-breakpoint}) {
         @content;
     }
 }
