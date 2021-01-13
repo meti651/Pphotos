@@ -1,10 +1,11 @@
 @import "../config";
 
-
 #container{
     margin-top: 85px;
     font-size: $font-size;
     padding: 0.5 * $font-size;
+    background-color: $primary-color;
+    color: $primary-font-color;
 
     h1{
         font-size: 1.5 * $font-size;
