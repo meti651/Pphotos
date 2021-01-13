@@ -93,7 +93,7 @@ const Slider = () => {
         <div id={Styles.container}>
             {slidesElements.map((image, index) => <Slide key={index} image={image} slide={slide}/>)}
         </div>
-        <p id={Styles.quote}>Élmény alapú fotózás</p>
+        <p id={Styles.quote}>Élményközpontú fotózás</p>
         </>
     )
 }
