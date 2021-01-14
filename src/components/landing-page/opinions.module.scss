@@ -1,10 +1,11 @@
 @import "../config";
+@import "../responsive";
 
 
 #container {
     width: 100vw;
-    height: 600px;
     font-size: $font-size;
+    padding: $font-size 0;
     font-weight: lighter;
     font-style: italic;
     color: $primary-color;
@@ -16,10 +17,52 @@
     
 
     div {
-        width: 30%
+        width: 40%;
     }
 
     p {
         margin:0;
     }
 }
+
+@include sided{
+    $font-size: 20px;
+
+    #container{
+        font-size: $font-size;
+        padding: $font-size 0;
+    }
+}
+@include tablet{
+    $font-size: 18px;
+
+    #container{
+        font-size: $font-size;
+        padding: $font-size 0;
+
+        :nth-child(2){
+            display: none;
+        }
+
+        div{
+            width: 70%;
+        }
+    }
+}
+@include phone{
+    $font-size: 16px;
+
+    #container{
+        font-size: $font-size;
+        padding: $font-size 0;
+
+        :nth-child(2){
+            display: none;
+        }
+
+        div{
+            width: 70%;
+        }
+    }
+}
+

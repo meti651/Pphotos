@@ -1,9 +1,9 @@
-import React, {useRef, useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 
 import Styles from "./opinions.module.scss";
 
 const Opinions = () => {
-    const opinions = useRef([
+    const opinions = [
         {message:"\"Petrához kismamafotózásra mentem, ahol gyönyörű, kreatív, de mégis meghitt képeket készített rólam. Szuperül tudtunk együtt dolgozni, nyitott volt az én ötleteimre is, amiket profin valósított meg. Örülök, hogy ő örökítette meg ezt a különleges időszakot.\"", person:"- Irtzl Eszti"},
         {message:"\"Petra nagyon belevaló, pörgős csaj, az időnyomás ellenére is tökéletes hangulatot biztosított az esküvőnk kreatív fotózásán! Jó érzéke van a beállításokhoz, hogy mindenki előnyös oldalát láthassa viszont az elkészült képeken! Szeretem azt a színvilágot, amit a fotói visszaadnak! Szuper élmény volt vele dolgozni, köszönjük szépen!\"", person: "- Molnár Petra"},
         {message:"\"Esküvői fotózásunkat Petra készítette. Az utolsó előtti hétben mentett meg minket, mivel az eredeti fotósunk lemondta, mostanra már úgy gondolom, hogy ennél nem is alakulhatott volna jobban. Nagyon aranyos és rendkívül ügyes, teljesen megvagyunk elégedve az eredménnyel. Őszintén tudom ajánlani Őt. Még egyszer mindent köszönünk\"", person:"- Görzsöny Orsolya"},
@@ -11,13 +11,13 @@ const Opinions = () => {
         {message:"\"Szuper hangulatban telt a fotózás, Petra rugalmas volt és a képeket nagyon gyorsan elkészítette, várjuk a jövő évi fotózásunkat is!\"", person: "- Kiss Berni"},
         {message:"\"Petra két gyermekemet fotózta. A képek gyönyörűek lettek Petra rendkívül türelmes, kreatív és nagyszerű érzékkel fényképezett. A kis két évesem izgő-mozgó volt, de csodás képek készültek. Mindenkinek csak ajánlani tudom Hamarosan újra találkozunk ebben biztos vagyok köszönjük.\"", person: "- Tuba Krisztina"},
         {message:"\"Csak nézem a képeket csak nézem és mindet imádom. Évekkel ezelőtt sose gondoltam volna, hogy néhány buli után életem fontos pillanataiban te leszel a legnagyobb segítség, a hála szó kevés ide azt hiszem. Köszönöm.\"", person:"- Simon-Fülöp Melinda"}
-    ])
+    ];
 
     const [displayedOpinions, setDisplayedOpinions] = useState([]);
 
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * Math.floor(6));
-        setDisplayedOpinions(displayedOpinions => randomIndex === 5 ? [opinions.current[randomIndex], opinions.current[0]] : [opinions.current[randomIndex], opinions.current[randomIndex + 1]])
+        setDisplayedOpinions(() => randomIndex === 5 ? [opinions[randomIndex], opinions[0]] : [opinions[randomIndex], opinions[randomIndex + 1]])
     }, [])
 
     return(
