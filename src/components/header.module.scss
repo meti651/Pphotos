@@ -292,6 +292,8 @@ header {
 
     a, p{
       margin: 10px 0;
+      margin-left: $font-size;
+
     }
 
     &.viewable{
