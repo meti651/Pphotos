@@ -1,4 +1,5 @@
 @import "../config";
+@import "../responsive";
 
 
 #description {
@@ -24,9 +25,9 @@
 
 #in_image_description_1, #in_image_description_2 {
     position: absolute;
-    
     font-size: $font-size;
-    margin-top: 160px;
+    margin-top: 5%;
+    z-index: 1;
 
     .strong {
         font-weight: bold;
@@ -38,32 +39,153 @@
 
 #in_image_description_1 {
     left: 40px;
-    max-width: 600px;
+    max-width: 31%;
 }
 
 #in_image_description_2 {
     right: 80px;
-    max-width: 640px;
+    max-width: 33%;
 
 }
 
 #end_description {
     background-color: $primary-color;
-    margin-top: -10px;
-    padding-bottom: $font-size;
+    padding: 0.5*$font-size 0;
     font-size: $font-size;
     display: grid;
     place-items: center;
+    z-index: 1000;
+    &>div{
+        max-width: 80%;
+    }
 }
 
 #container {
     color: $primary-font-color;
 
     #background_image_container{
+        box-shadow: inset 0px 10px $primary-color,inset 0px -10px $primary-color;
         width: 100vw;
-
-        &>div{
-            z-index: -1;
-        }
+        z-index: 0;
     }
 }
+
+@include betweenDesktops{
+    $font-size: 20px;
+    #in_image_description_1, #in_image_description_2{
+        font-size: $font-size - 2px;
+    }
+    
+}
+
+@include sided{
+    $font-size: 20px;
+    #in_image_description_1, #in_image_description_2{
+        position: relative;
+        display: inline-block;
+        margin: $font-size 40px;
+        font-size: $font-size;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+    }
+    #in_image_descriptions{
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+    }
+    #description {
+        padding-top: $font-size;
+    
+        h1 {
+            margin-bottom: 2 * $font-size;
+            font-size: 2 * $font-size;
+        }
+    
+        div{
+            margin: $font-size 40px;
+            font-size: $font-size;
+        } 
+    }
+    #end_description {
+        padding: $font-size 0;
+        font-size: $font-size;
+    }
+}
+@include tablet{
+    $font-size: 18px;
+    #in_image_description_1, #in_image_description_2{
+        position: relative;
+        display: inline-block;
+        margin: $font-size 40px;
+        font-size: $font-size;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+
+    }
+    #in_image_descriptions{
+        background-color: $primary-color;
+        display: flex;
+        justify-content: space-between;
+    }
+    #description {
+        padding-top: $font-size;
+    
+        h1 {
+            margin-bottom: 2 * $font-size;
+            font-size: 2 * $font-size;
+        }
+    
+        div{
+            margin: $font-size 40px;
+            font-size: $font-size;
+        }
+    
+          
+    }
+    #end_description {
+        padding: $font-size 0;
+        font-size: $font-size;
+    }
+}
+@include phone{
+    $font-size: 16px;
+    
+    #in_image_description_1, #in_image_description_2{
+        position: relative;
+        display: inline-block;
+        margin: $font-size 40px;
+        font-size: $font-size;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+
+    }
+    #in_image_descriptions{
+        background-color: $primary-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #description {
+        padding-top: $font-size;
+    
+        h1 {
+            margin-bottom: 2 * $font-size;
+            font-size: 2 * $font-size;
+        }
+    
+        div{
+            margin: $font-size 40px;
+            font-size: $font-size;
+        }
+    
+          
+    }
+    #end_description {
+        padding: $font-size 0;
+        font-size: $font-size;
+    }
+}
+
