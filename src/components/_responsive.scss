@@ -19,7 +19,7 @@ $header-menu-breakpoint: 920px;
 }
 
 @mixin sided{
-    @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}){
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop}){
         $font-size: 20px;
         @content;
     }

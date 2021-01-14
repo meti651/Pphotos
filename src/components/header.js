@@ -6,13 +6,14 @@ import Styles from "./header.module.scss";
 
 const Header = ({onTop}) => {
     const [open, setOpen] = useState(false);
+    const [sideBarOpen, setSideBarOpen] = useState(false);
 
-    const handleHover = (_) => {
-        setOpen(true);
+    const handleSideBarOpen = () => {
+        setSideBarOpen(isOpen => !isOpen);
     }
 
-    const handleBlur = (_) => {
-        setOpen(false);
+    const handleServicesOpen = () => {
+        setOpen(isOpen => !isOpen);
     }
 
     return (
@@ -20,7 +21,7 @@ const Header = ({onTop}) => {
             <div id={Styles.links} >
                 <div className={Styles.part} id={Styles.left_side}>
                     <Link to="/">Kezdőlap</Link>
-                    <div onMouseEnter={handleHover} onMouseLeave={handleBlur} id={Styles.dropdown}>
+                    <div onClick={handleServicesOpen} id={Styles.dropdown}>
                         <p>Árak/Szolgáltatások</p>
                         <div id={Styles.dropdownMenu} className={open ? Styles.open : undefined}>
                             <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
@@ -43,6 +44,27 @@ const Header = ({onTop}) => {
                     <Link to="/galeria">Galéria</Link>
                     <Link to="/kapcsolatok">Kapcsolatok</Link>
                 </div>
+            </div>
+            <div id={Styles.hamburger} onClick={handleSideBarOpen}>
+                <div className={Styles.line} id={Styles.up}></div>
+                <div className={Styles.line} id={Styles.middle}></div>
+                <div className={Styles.line} id={Styles.down}></div>
+            </div>
+            <div id={Styles.sideBar} className={sideBarOpen ? Styles.viewable : undefined}>
+                <Link to="/">Kezdőlap</Link>
+                <div onClick={handleServicesOpen} id={Styles.dropdown}>
+                    <p>Árak/Szolgáltatások</p>
+                    <div id={Styles.services} className={open ? Styles.open : undefined}>
+                        <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
+                        <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 
+                        <Link to="/szolgaltatasok/gyerek-fotozas">Gyerek fotózás</Link> 
+                        <Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link> 
+                        <Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link> 
+                        <Link to="/szolgaltatasok/portre-fotozas">Portré fotózás</Link>
+                    </div>   
+                </div>
+                <Link to="/galeria">Galéria</Link>
+                <Link to="/kapcsolatok">Kapcsolatok</Link>
             </div>
         </header>
     )
