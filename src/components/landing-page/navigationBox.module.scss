@@ -1,9 +1,10 @@
 @import "../config";
+@import "../responsive";
 
 
 #container {
-    width: 520px;
-    height: 485px;
+    width: 30vw;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -21,10 +22,6 @@
         transform: scale(1.2);
     }
 
-    img{
-        max-width: 520px;
-    }
-
     #image_wrapper {
         border-bottom: 2px solid $border-color;
     }
@@ -33,5 +30,43 @@
         flex: 1;
         display: grid;
         place-items: center;
+        margin: $font-size 0;
+    }
+}
+
+@include sided{
+    $font-size: 20px;
+    #container{
+        width: 40vw;
+        font-size: $font-size;
+        margin: $font-size 0;
+
+        #title{
+            margin: $font-size 0;
+        }
+    }
+}
+@include tablet{
+    $font-size: 18px;
+    #container{
+        width: 70vw;
+        font-size: $font-size;
+        margin: $font-size 0;
+
+        #title{
+            margin: $font-size 0;
+        }
+    }
+}
+@include phone{
+    $font-size: 16px;
+    #container{
+        width: 70vw;
+        font-size: $font-size;
+        margin: $font-size 0;
+
+        #title{
+            margin: $font-size 0;
+        }
     }
 }
