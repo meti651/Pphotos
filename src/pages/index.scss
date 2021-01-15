@@ -37,11 +37,11 @@ p, div {
 
   &>div{
     position: absolute;
-    top: 15vh;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateZ(-1px) scale(2.2);
+    transform: translateZ(-1px) scale(2);
     z-index: -2;
   }
 }
@@ -52,3 +52,18 @@ p, div {
     display: none;
   }
 }
+@include tablet{
+  .section {
+    &>div{
+      transform: translateZ(-1px) scale(2.2);
+    }
+  }
+}
+@include sided{
+  .section {
+    &>div{
+      transform: translateZ(-1px) scale(2.2);
+    }
+  }
+}
+
