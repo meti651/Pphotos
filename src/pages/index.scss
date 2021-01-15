@@ -1,3 +1,5 @@
+@import "../components/responsive";
+
 html,
 body {
   margin: 0;
@@ -30,7 +32,6 @@ p, div {
 
 .section {
   position: relative;
-  height: 100vh;
 
   &>div{
     position: absolute;
@@ -38,9 +39,32 @@ p, div {
     right: 0;
     bottom: 0;
     left: 0;
-    background-size: cover;
     transform: translateZ(-1px) scale(1.7);
     z-index: -2;
   }
 }
 
+@include phone{
+  .section {
+    &>div{
+      transform: translateZ(-1px) scale(3);
+      z-index: -2;
+    }
+  }
+}
+@include tablet{
+  .section {
+    &>div{
+      transform: translateZ(-1px) scale(2.2);
+      z-index: -2;
+    }
+  }
+}
+@include sided{
+  .section {
+    &>div{
+      transform: translateZ(-1px) scale(2.2);
+      z-index: -2;
+    }
+  }
+}
