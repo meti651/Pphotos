@@ -1,0 +1,9 @@
+@import "./config";
+
+#container{
+    max-width: 1400px;
+    width: 100%;
+    margin: auto;
+    border-left: 2px solid $secondary-font-color;
+    border-right: 2px solid $secondary-font-color;
+}

@@ -9,6 +9,7 @@ import Img from "gatsby-image";
 import "./index.scss";
 import Album from "../components/landing-page/album";
 import { graphql, useStaticQuery } from "gatsby";
+import Header from "../components/header";
 
 export default function Home() {
   const [onTop, setOnTop] = useState(true);
@@ -48,11 +49,11 @@ export default function Home() {
         <Layout onTop={onTop}>
           <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
               <Slider/>
-              <section className="section parallax parallax-one" style={{height: `${100/backgroundImages.first.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>
+              <section className="section parallax" style={{height: `${100/backgroundImages.first.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>
               <AboutMe/>
-              <section className="section parallax parallax-two" style={{height: `${100/backgroundImages.second.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 2"/></section>
+              <section className="section parallax" style={{height: `${100/backgroundImages.second.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 2"/></section>
               <Opinions/>
-              <section className="section parallax parallax-three" style={{height: `${100/backgroundImages.third.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 3"/></section>
+              <section className="section parallax" style={{height: `${100/backgroundImages.third.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 3"/></section>
               <NavigationBoxes/>
               <Album />
           </main>

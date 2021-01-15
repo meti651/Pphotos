@@ -10,11 +10,13 @@ header {
   display: grid;
   place-items: center;
   height: 85px;
-  width: 100vw;
+  width: 100%;
+  max-width: 1400px;
   background-color: $header-color;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
   transition: height 0.5s, background-color 0.5s;
 
