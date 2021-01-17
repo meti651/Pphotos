@@ -8,7 +8,7 @@ const Image = ({image, focusSetter}) => {
 
     const ClickHandler = () => {
         if(container.current.classList.toggle(Styles.focus)){
-            container.current.style.width = `${image.node.childImageSharp.fluid.aspectRatio * 40}vw`;
+            container.current.style.width = `${image.node.childImageSharp.fluid.aspectRatio * 45}%`;
             focusSetter(true);
         }else{
             container.current.style = null;
