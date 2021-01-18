@@ -13,6 +13,7 @@ const Header = ({onTop, isIndex}) => {
     }
 
     const handleServicesOpen = () => {
+        console.log(open);
         setOpen(isOpen => !isOpen);
     }
 
@@ -34,7 +35,7 @@ const Header = ({onTop, isIndex}) => {
                     </div>
                 </div>
                 <div className={Styles.image} >
-                    <div id={Styles.presentation} style={{opacity: onTop ? "1" : "0"}}>
+                    <div id={Styles.presentation} style={{opacity: onTop ? "1" : "0", zIndex: onTop ? "1" : "-1"}}>
                         <h1>Baracskai Petra</h1>
                         <h2>Pphotos</h2>
                     </div>
@@ -53,7 +54,7 @@ const Header = ({onTop, isIndex}) => {
             <div id={Styles.sideBar} className={sideBarOpen ? Styles.viewable : undefined}>
                 <Link to="/">Kezdőlap</Link>
                 <div onClick={handleServicesOpen} id={Styles.dropdown}>
-                    <p>Árak/Szolgáltatások</p>
+                    <p>Szolgáltatások</p>
                     <div id={Styles.services} className={open ? Styles.open : undefined}>
                         <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
                         <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 

@@ -46,16 +46,16 @@ export default function Home() {
   return (
     <>
           <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
-        <Layout onTop={onTop} isIndex={true}>
-              <Slider/>
-              <section className="section parallax" style={{height: `${60/backgroundImages.first.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>
-              <AboutMe/>
-              <section className="section parallax" style={{height: `${60/backgroundImages.second.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 2"/></section>
-              <Opinions/>
-              <section className="section parallax" style={{height: `${60/backgroundImages.third.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 3"/></section>
-              <NavigationBoxes/>
-              <Album />
-        </Layout>
+            <Layout onTop={onTop} isIndex={true}>
+                  <Slider/>
+                  <section className="section parallax" style={{height: `${60/backgroundImages.first.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>
+                  <AboutMe/>
+                  <section className="section parallax" style={{height: `${60/backgroundImages.second.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.second.childImageSharp.fluid} alt="background 2"/></section>
+                  <Opinions/>
+                  <section className="section parallax" style={{height: `${60/backgroundImages.third.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.third.childImageSharp.fluid} alt="background 3"/></section>
+                  <NavigationBoxes/>
+                  <Album />
+            </Layout>
           </main>
     </>
   )

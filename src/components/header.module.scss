@@ -19,18 +19,24 @@ header {
 
   &.index{
     position: sticky;
+    #dropdownMenu{
+      position: absolute;
+    }
   }
 
   &.sub{
     position: fixed;
     max-width: 80%;
     transform: translateX(-50%);
+    #dropdownMenu{
+      position: fixed;
+    }
   }
 
   &.on_top {
     background-color: white;
     transform: translateX(-50%);
-    height: 150px;
+    height: 135px;
     max-width: 100%;
     position: relative;
 
@@ -41,7 +47,7 @@ header {
 
     #dropdownMenu {
         background-color: white !important;
-        top: 150px !important;
+        top: 135px !important;
     }
     .image{
       img{
@@ -131,19 +137,20 @@ header {
 
 
 #dropdown {
-  cursor: default;
+  cursor: pointer;
 
   p {
+    cursor: pointer;
     margin: 25px 0;
   }
 
   #dropdownMenu {
-    position: fixed;
     display: flex;
     flex-direction: column;
     background-color: $header-color;
     padding: 0 20px;
     top: 85px;
+    transform: translateX(-10%);
     z-index: -1;
     max-height: 0;
     transition: max-height ease-in-out 0.5s, box-shadow 0.3s, top 0.5s;

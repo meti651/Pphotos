@@ -9,7 +9,7 @@ const Slider = ({images}) => {
     const [imageWidth, setImageWidth] = useState();
 
     useEffect(() => {
-        if(window.innerWidth > 1024)  setImageWidth(290 - (1920 - window.innerWidth)*0.9*0.3);
+        if(window.innerWidth > 1024)  setImageWidth(window.innerWidth/1920 * 0.8 + 290);
         else if(window.innerWidth < 1024 && window.innerWidth > 768) setImageWidth(190);
     }, [window.innerWidth])
     
