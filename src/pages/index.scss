@@ -41,7 +41,7 @@ p, div {
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(1.5);
     z-index: -2;
   }
 }
@@ -55,14 +55,14 @@ p, div {
 @include tablet{
   .section {
     &>div{
-      transform: translateZ(-1px) scale(2.2);
+      transform: translateZ(-1px) scale(1.7);
     }
   }
 }
 @include sided{
   .section {
     &>div{
-      transform: translateZ(-1px) scale(2.2);
+      transform: translateZ(-1px) scale(1.5);
     }
   }
 }
