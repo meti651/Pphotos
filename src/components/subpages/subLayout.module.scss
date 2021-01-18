@@ -1,4 +1,5 @@
 @import "../config";
+@import "../responsive";
 
 
 #container {
@@ -15,5 +16,39 @@
         padding-top: $font-size;
         margin-bottom: 2 * $font-size;
         font-size: 1.5 * $font-size;
+    }
+}
+
+@include sided{
+    $font-size: 20px;
+    #container {
+    
+        h1{
+            padding-top: $font-size;
+            margin-bottom: 2 * $font-size;
+            font-size: 1.5 * $font-size;
+        }
+    }
+}
+@include tablet{
+    $font-size: 18px;
+    #container {
+    
+        h1{
+            padding-top: $font-size;
+            margin-bottom: 2 * $font-size;
+            font-size: 1.5 * $font-size;
+        }
+    }
+}
+@include phone{
+    $font-size: 16px;
+    #container {
+    
+        h1{
+            padding-top: $font-size;
+            margin-bottom: 2 * $font-size;
+            font-size: 1.5 * $font-size;
+        }
     }
 }

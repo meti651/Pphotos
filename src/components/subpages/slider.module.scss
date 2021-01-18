@@ -1,8 +1,9 @@
 @import "../config";
+@import "../responsive";
 
 #container {
     width: 100%;
-    height: 370px;
+    padding: 20px 0;
     box-shadow: 0 20px 30px $slider-color, 0 -20px 30px $slider-color;
     background-color: $slider-color;
     margin: 20px 0;
@@ -28,6 +29,34 @@
             &>div {
                 margin: auto;
                 box-shadow: 2px 2px 3px $third-color;                
+            }
+        }
+    }
+}
+
+@include sided{
+    #container{
+        #images_container{
+            .image_wrapper{
+                min-width: 50%;
+            }
+        }
+    }
+}
+@include tablet{
+    #container{
+        #images_container{
+            .image_wrapper{
+                min-width: 50%;
+            }
+        }
+    }
+}
+@include phone{
+    #container{
+        #images_container{
+            .image_wrapper{
+                min-width: 100%;
             }
         }
     }
