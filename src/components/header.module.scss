@@ -11,17 +11,25 @@ header {
   place-items: center;
   height: 85px;
   width: 100%;
-  max-width: 80%;
   background-color: $header-color;
-  position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   z-index: 6;
   transition: height 0.5s, background-color 0.5s;
 
+  &.index{
+    position: sticky;
+  }
+
+  &.sub{
+    position: fixed;
+    max-width: 80%;
+    transform: translateX(-50%);
+  }
+
   &.on_top {
     background-color: white;
+    transform: translateX(-50%);
     height: 150px;
     max-width: 100%;
     position: relative;
@@ -166,7 +174,10 @@ header {
   $font-size: 20px;
   header{
     font-size: $font-size;
-    max-width: 100%;
+
+    &.sub{
+      max-width: 100%;
+    }
   }
   .image{
     #presentation{
@@ -201,7 +212,9 @@ header {
   $font-size: 18px;
   header{
     font-size: $font-size;
-    max-width: 100%;
+    &.sub{
+      max-width: 100%;
+    }
     &.on_top #links{
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -323,7 +336,9 @@ header {
   $font-size: 16px;
   header{
     font-size: $font-size;
-    max-width: 100%;
+    &.sub{
+      max-width: 100%;
+    }
     &.on_top #links{
       grid-template-columns: 1fr 1fr 1fr;
     }

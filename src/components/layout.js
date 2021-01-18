@@ -4,10 +4,10 @@ import Footer from './footer';
 import Header from "./header";
 import Styles from "./layout.module.scss";
 
-const Layout = ({children, onTop}) => {
+const Layout = ({children, onTop, isIndex}) => {
     return (
         <div id={Styles.container}>
-            <Header onTop={onTop}/>
+            <Header onTop={onTop} isIndex={isIndex}/>
                 {children}
             <Footer/>
         </div>

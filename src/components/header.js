@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Logo from "../images/pphotos-logo.png";
 import Styles from "./header.module.scss";
 
-const Header = ({onTop}) => {
+const Header = ({onTop, isIndex}) => {
     const [open, setOpen] = useState(false);
     const [sideBarOpen, setSideBarOpen] = useState(false);
 
@@ -17,7 +17,7 @@ const Header = ({onTop}) => {
     }
 
     return (
-        <header className={onTop ? Styles.on_top : undefined}>
+        <header className={`${onTop ? Styles.on_top : undefined} ${isIndex ? Styles.index : Styles.sub}`}>
             <div id={Styles.links} >
                 <div className={Styles.part} id={Styles.left_side}>
                     <Link to="/">Kezdőlap</Link>
