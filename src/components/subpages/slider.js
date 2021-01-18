@@ -9,17 +9,19 @@ const Slider = ({images}) => {
     const [imageWidth, setImageWidth] = useState();
 
     useEffect(() => {
+        const resizeHandler = () => {
+            if(window.innerWidth > 1024)  setImageWidth(window.innerWidth/1920 * 240);
+            else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidth(window.innerWidth/1024 * 250);
+            else if(window.innerWidth > 420 && window.innerWidth <= 768) setImageWidth(window.innerWidth/768 * 200);
+            else if(window.innerWidth <= 420) setImageWidth(window.innerWidth/420 * 200);
+        }
+        
         window.addEventListener("resize", resizeHandler);
         resizeHandler();
         return () => window.removeEventListener("resize", resizeHandler);
     }, [])
     
-    const resizeHandler = () => {
-        if(window.innerWidth > 1024)  setImageWidth(window.innerWidth/1920 * 240);
-        else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidth(window.innerWidth/1024 * 250);
-        else if(window.innerWidth > 420 && window.innerWidth <= 768) setImageWidth(window.innerWidth/768 * 200);
-        else if(window.innerWidth <= 420) setImageWidth(window.innerWidth/420 * 200);
-    }
+    
 
     return (
         <div id={Styles.container}>

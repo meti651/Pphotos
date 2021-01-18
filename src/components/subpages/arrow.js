@@ -12,17 +12,20 @@ const Arrow = ({direction, translate, setTranslate}) => {
     }, [direction])
 
     useEffect(() => {
+        const resizeHandler = () => {
+            if(typeof window === undefined) return null;
+            if(window.innerWidth > 1024)  setSlideAmount(3);
+            else if(window.innerWidth <= 1024 && window.innerWidth > 768) setSlideAmount(4);
+            else if(window.innerWidth > 420 && window.innerWidth <= 768) setSlideAmount(4);
+            else if(window.innerWidth <= 420) setSlideAmount(5);
+        }
+
         window.addEventListener("resize", resizeHandler);
         resizeHandler();
          return () => window.removeEventListener("resize", resizeHandler);
     }, [])
 
-    const resizeHandler = () => {
-        if(window.innerWidth > 1024)  setSlideAmount(3);
-        else if(window.innerWidth <= 1024 && window.innerWidth > 768) setSlideAmount(4);
-        else if(window.innerWidth > 420 && window.innerWidth <= 768) setSlideAmount(4);
-        else if(window.innerWidth <= 420) setSlideAmount(5);
-    }
+    
 
     const handleClick = () => {
         let resultTranslate = translate;
