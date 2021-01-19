@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Styles from "./content.module.scss";
 import Img from "gatsby-image";
@@ -14,6 +14,23 @@ const Content = () => {
             }
           }
     }`)
+
+    const [imageWidthProportion, setImageWidthProportion] = useState();
+
+
+    useEffect(() => {
+      const resizeHandler = () => {
+          if(window.innerWidth > 1024)  setImageWidthProportion(window.innerWidth/1920);
+          else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidthProportion(window.innerWidth/1500);
+          else if(window.innerWidth <= 768 && window.innerWidth > 480) setImageWidthProportion(window.innerWidth/1024);
+          else if(window.innerWidth <= 480) setImageWidthProportion(window.innerWidth/768);
+      }
+      
+      window.addEventListener("resize", resizeHandler);
+      resizeHandler();
+      return () => window.removeEventListener("resize", resizeHandler);
+  }, [])
+
     return (
         <div id={Styles.container}>
             <div className={Styles.strong}>Lepkék, első csók, titkos helyszínek, összenézések, viták, a nagy kibékülés, elfogadás és szeretet…</div>
@@ -24,7 +41,7 @@ const Content = () => {
                     <p>Ezt az egyediséget és a kettőtök közötti köteléket örökítem én meg.</p>
                 </div>
                 <div className={Styles.image_container}>
-                    <div className={Styles.blur_border} style={{width: `${image.first.childImageSharp.fluid.aspectRatio * 450}px`}}>
+                    <div className={Styles.blur_border} style={{width: `${image.first.childImageSharp.fluid.aspectRatio * 450 * imageWidthProportion}px`}}>
                         <Img fluid={image.first.childImageSharp.fluid} alt="couple" />
                     </div>
                 </div>

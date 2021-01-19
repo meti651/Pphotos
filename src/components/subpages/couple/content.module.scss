@@ -1,4 +1,5 @@
 @import "../../config";
+@import "../../responsive";
 
 
 #container {
@@ -16,19 +17,73 @@
     #content{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
         
         .paragraph{
             flex: 1;
             padding: 1.5 * $font-size;
             text-align: start;
+            min-width: 22%;
         }
 
         .image_container {
             flex: 1;
+            align-self: center
         }
     }
 }
 
 .image_container{
     @extend %blured-border-image;
+}
+
+@include sided{
+    $font-size: 20px;
+
+    #container {
+        font-size: $font-size;
+        &>div{
+            margin: 2 * $font-size 0;
+        }
+    
+        #content{
+            .paragraph{
+                padding: 1.5 * $font-size;
+            }
+        }
+    }
+}
+@include tablet{
+    $font-size: 20px;
+
+    #container {
+        font-size: $font-size;
+        &>div{
+            margin: 2 * $font-size 0;
+        }
+    
+        #content{
+            .paragraph{
+                padding: 1.5 * $font-size;
+                min-width: 30%;
+            }
+        }
+    }
+}
+@include phone{
+    $font-size: 20px;
+
+    #container {
+        font-size: $font-size;
+        &>div{
+            margin: 2 * $font-size 0;
+        }
+    
+        #content{
+            .paragraph{
+                padding: 1.5 * $font-size;
+            }
+        }
+    }
 }
