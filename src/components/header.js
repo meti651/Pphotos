@@ -13,7 +13,6 @@ const Header = ({onTop, isIndex}) => {
     }
 
     const handleServicesOpen = () => {
-        console.log(open);
         setOpen(isOpen => !isOpen);
     }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import Styles from "./content.module.scss";
 
@@ -37,6 +37,20 @@ const Content = () => {
             }
           }
     }`)
+    const [imageWidthProportion, setImageWidthProportion] = useState();
+
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            if(window.innerWidth > 1024)  setImageWidthProportion(window.innerWidth/1920);
+            else if(window.innerWidth <= 1024 && window.innerWidth > 420) setImageWidthProportion(window.innerWidth/924);
+            else if(window.innerWidth <= 420) setImageWidthProportion(window.innerWidth/650);
+        }
+        
+        window.addEventListener("resize", resizeHandler);
+        resizeHandler();
+        return () => window.removeEventListener("resize", resizeHandler);
+    }, [])
 
     return (
         <div id={Styles.container}>
@@ -60,7 +74,7 @@ const Content = () => {
             <div id={Styles.second_part}>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <div className={Styles.image} style={{width: `${images.content1.childImageSharp.fluid.aspectRatio * 20}vw`}}>
+                        <div className={Styles.image} style={{width: `${images.content1.childImageSharp.fluid.aspectRatio * 350 * imageWidthProportion}px`}}>
                             <Img fluid={images.content1.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
                         </div>
                     </div>
@@ -71,16 +85,16 @@ const Content = () => {
                 </div>
                 <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <div className={Styles.image} style={{width: `${images.content2.childImageSharp.fluid.aspectRatio * 20}vw`}}>
+                        <div className={Styles.image} style={{width: `${images.content2.childImageSharp.fluid.aspectRatio * 350 * imageWidthProportion}px`}}>
                             <Img fluid={images.content2.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
                         </div>
                     </div>
                 </div>
             </div>
             <div id={Styles.third_part}>
-            <div className={Styles.image_wrapper}>
+                <div className={Styles.image_wrapper}>
                     <div className={Styles.blur_border}>
-                        <div className={Styles.image} style={{width: `${images.content3.childImageSharp.fluid.aspectRatio * 30}vw`}}>
+                        <div className={Styles.image} style={{width: `${images.content3.childImageSharp.fluid.aspectRatio * 700 * (1/imageWidthProportion)}px`, maxWidth: "80vw"}}>
                             <Img fluid={images.content3.childImageSharp.fluid} className={Styles.wide_image} alt="portrait"/>
                         </div>
                     </div>
