@@ -263,7 +263,7 @@ header {
     }
   }
   #sideBar{
-    position: fixed;
+    position: absolute;
     top: 85px;
     right: 0;
     display: flex;
@@ -302,7 +302,7 @@ header {
   }
   header.on_top{
     #sideBar{
-      top: 150px;
+      top: 135px;
       background-color: white;
       #services{
         background-color: rgba(black, 0.05);
