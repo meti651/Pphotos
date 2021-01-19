@@ -1,4 +1,5 @@
 @import "../../config";
+@import "../../responsive";
 
 
 #container {
@@ -36,12 +37,13 @@
         #grid1{
             align-self: flex-end;
             justify-self: center;
+            grid-row: 2;
         }
 
         #grid2 {
             grid-row: 1/-1;
             grid-column: 2;
-            align-self: center;
+            align-self: end;
             justify-self: center;
         }
     }
@@ -49,9 +51,154 @@
     #second_part {
         display: flex;
         flex-direction: row;
+
+        &>div{
+            margin: $font-size;
+        }
     }
 }
 
 .image_container{
     @extend %blured-border-image;
+}
+
+@include sided{
+    $font-size: 20px;
+
+    #container {
+        padding: $font-size 2*$font-size;
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.25 * $font-size;
+        }
+    
+        &>div {
+            margin: $font-size 0;
+        }
+    
+        #first_part{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 250px 1fr;
+    
+            #paragraph {
+                justify-self: center;
+                align-self: center;
+                width: 80%;
+            }
+    
+            #grid1{
+                align-self: flex-end;
+                justify-self: center;
+            }
+    
+            #grid2 {
+                grid-row: 1/-1;
+                grid-column: 2;
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    
+        #second_part {
+            display: flex;
+            flex-direction: row;
+            
+        }
+    }
+}
+@include tablet{
+    $font-size: 18px;
+
+    #container {
+        padding: $font-size 2*$font-size;
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.25 * $font-size;
+        }
+    
+        &>div {
+            margin: $font-size 0;
+        }
+    
+        #first_part{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+    
+            #paragraph {
+                width: 80%;
+                margin: $font-size 0;
+                text-align: center;
+            }
+    
+            #grid1{
+                align-self: center;
+                justify-self: center;
+            }
+    
+            #grid2 {
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    }
+}
+@include phone{
+    $font-size: 16px;
+
+    #container {
+        padding: $font-size 2*$font-size;
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.25 * $font-size;
+        }
+    
+        &>div {
+            margin: $font-size 0;
+        }
+    
+        #first_part{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+    
+            #paragraph {
+                width: 80%;
+                margin: $font-size 0;
+                text-align: center;
+            }
+    
+            #grid1{
+                align-self: center;
+                justify-self: center;
+            }
+    
+            #grid2 {
+                align-self: center;
+                justify-self: center;
+            }
+        }
+    
+        #second_part {
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
 }

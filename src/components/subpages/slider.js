@@ -10,10 +10,10 @@ const Slider = ({images}) => {
 
     useEffect(() => {
         const resizeHandler = () => {
-            if(window.innerWidth > 1024)  setImageWidth(window.innerWidth/1920 * 240);
-            else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidth(window.innerWidth/1024 * 250);
-            else if(window.innerWidth > 420 && window.innerWidth <= 768) setImageWidth(window.innerWidth/768 * 200);
-            else if(window.innerWidth <= 420) setImageWidth(window.innerWidth/420 * 200);
+            if(window.innerWidth > 1024)  setImageWidth(window.innerWidth/1800 * 240);
+            else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidth(window.innerWidth/950 * 250);
+            else if(window.innerWidth > 480 && window.innerWidth <= 768) setImageWidth(window.innerWidth/768 * 200);
+            else if(window.innerWidth <= 480) setImageWidth(window.innerWidth/400 * 200);
         }
         
         window.addEventListener("resize", resizeHandler);
