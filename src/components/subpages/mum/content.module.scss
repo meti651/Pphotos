@@ -1,4 +1,5 @@
 @import "../../config";
+@import "../../responsive";
 
 
 #container {
@@ -28,7 +29,7 @@
         }
 
         .text {
-            width: 800px;
+            width: 100%;
             grid-column: 1;
         }
     }
@@ -44,7 +45,7 @@
         margin-bottom: 3 * $font-size;
         
         div{
-            max-width: 90vw;
+            max-width: 90%;
             padding-left: $font-size;
         }
     }
@@ -52,14 +53,18 @@
     #last_paragraph{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         margin-bottom: 3 * $font-size;
+        width: 100%;
+
+        .paragraph{
+            flex: 1;
+            justify-self: flex-start;
+        }
 
         .image_container{
-            margin-right: 4 * $font-size;
-        }
-        .paragraph{
-            max-width: 60vw;
+            flex: 1;
+            align-self: center;
+            text-align: center;
         }
     }
 
@@ -73,4 +78,163 @@
 
 .image_container{
     @extend %blured-border-image;
+}
+
+@include sided{
+    $font-size: 20px;
+
+    #container {
+        font-size: $font-size;
+        margin-left: 2 * $font-size;
+        margin-bottom: $font-size;
+    
+    
+        h1 {
+            font-size: 2 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.5 * $font-size;
+        }
+    
+        #first_part{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+    
+            .text {
+                width: 80%;
+                margin: $font-size 0;
+            }
+        }
+    
+        #second_part {
+            margin-bottom: 2 * $font-size;
+        }
+    
+        .paragraph {
+            margin-bottom: 3 * $font-size;
+            
+            div{
+                padding-left: $font-size;
+            }
+        }
+    
+        #last_paragraph{
+            margin-bottom: 3 * $font-size;
+    
+            .image_container{
+                align-self: center;
+            }
+            .paragraph{
+                max-width: 60vw;
+            }
+        }
+    }
+}
+@include tablet{
+    $font-size: 18px;
+
+    #container {
+        font-size: $font-size;
+        margin-left: 2 * $font-size;
+        margin-bottom: $font-size;
+    
+    
+        h1 {
+            font-size: 2 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.5 * $font-size;
+        }
+    
+        #first_part{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+    
+            .text {
+                width: 80%;
+                margin: $font-size 0;
+            }
+        }
+    
+        #second_part {
+            flex-direction: column;
+            place-items: center;
+            gap: $font-size;
+            margin-bottom: 2 * $font-size;
+        }
+    
+        .paragraph {
+            margin-bottom: 3 * $font-size;
+            
+            div{
+                padding-left: $font-size;
+            }
+        }
+    
+        #last_paragraph{
+            flex-direction: column;
+            margin-bottom: 3 * $font-size;
+    
+            .image_container{
+                align-self: center;
+            }
+        }
+    }
+}
+@include phone{
+    $font-size: 16px;
+
+    #container {
+        font-size: $font-size;
+        margin-left: 2 * $font-size;
+        margin-bottom: $font-size;
+    
+    
+        h1 {
+            font-size: 2 * $font-size;
+        }
+    
+        h2 {
+            font-size: 1.5 * $font-size;
+        }
+    
+        #first_part{
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+    
+            .text {
+                width: 80%;
+                margin: $font-size 0;
+            }
+        }
+    
+        #second_part {
+            flex-direction: column;
+            place-items: center;
+            gap: $font-size;
+            margin-bottom: 2 * $font-size;
+        }
+    
+        .paragraph {
+            margin-bottom: 3 * $font-size;
+            
+            div{
+                padding-left: $font-size;
+            }
+        }
+    
+        #last_paragraph{
+            flex-direction: column;
+            margin-bottom: 3 * $font-size;
+    
+            .image_container{
+                align-self: center;
+            }
+        }
+    }
 }
