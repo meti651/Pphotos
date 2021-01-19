@@ -1,4 +1,5 @@
 @import "../../config";
+@import "../../responsive";
 
 
 #container {
@@ -14,7 +15,7 @@
     align-items: center;
 
     h1{
-        width: 100vw;
+        width: 100%;
         text-align: center;
         font-size: 1.5 * $font-size;
     }
@@ -23,19 +24,22 @@
 
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
+        padding: 0 $font-size;
 
         .image_wrapper {
             margin: 0 $font-size;
+            align-self: center;
         }
 
         #first_paragraph, #second_paragraph {
-            width: 550px;
+            flex: 1;
         }
     
         #third_paragraph {
-            width: 840px;
+            max-width: 30%;
             align-self: center;
             display: flex;
             flex-direction: column;
@@ -56,4 +60,94 @@
 
 .image_wrapper{
     @extend %blured-border-image;
+}
+
+@include sided{
+    $font-size: 20px;
+
+    #container {
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        .part_wrapper{
+    
+            padding: 0 $font-size;
+    
+            .image_wrapper {
+                margin: 0 $font-size;
+            }
+        }
+    
+        
+    
+        .strong {
+            padding-left: 1.5*$font-size;
+        }
+    
+    }
+}
+@include tablet{
+    $font-size: 18px;
+
+    #container {
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        .part_wrapper{
+    
+            padding: 0 $font-size;
+    
+            .image_wrapper {
+                margin: 0 $font-size;
+            }
+
+            #third_paragraph{
+                max-width: 50%;
+            }
+        }
+    
+        
+    
+        .strong {
+            padding-left: 1.5*$font-size;
+        }
+    
+    }
+}
+@include phone{
+    $font-size: 16px;
+
+    #container {
+        font-size: $font-size;
+    
+        h1{
+            font-size: 1.5 * $font-size;
+        }
+    
+        .part_wrapper{
+            flex-direction: column;
+            padding: 0 $font-size;
+    
+            .image_wrapper {
+                margin: 0 $font-size;
+            }
+
+            #third_paragraph{
+                max-width: 90%;
+            }
+        }
+    
+        
+    
+        .strong {
+            padding-left: 1.5*$font-size;
+        }
+    
+    }
 }

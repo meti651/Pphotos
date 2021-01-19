@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Img from "gatsby-image";
 
 import Styles from "./content.module.scss";
@@ -28,6 +28,23 @@ const Content = () => {
             }
           }
     }`)
+
+    const [imageWidthProportion, setImageWidthProportion] = useState();
+
+
+    useEffect(() => {
+      const resizeHandler = () => {
+          if(window.innerWidth > 1024)  setImageWidthProportion(window.innerWidth/1920);
+          else if(window.innerWidth <= 1024 && window.innerWidth > 768) setImageWidthProportion(window.innerWidth/1300);
+          else if(window.innerWidth <= 768 && window.innerWidth > 480) setImageWidthProportion(window.innerWidth/900);
+          else if(window.innerWidth <= 480) setImageWidthProportion(window.innerWidth/600);
+      }
+      
+      window.addEventListener("resize", resizeHandler);
+      resizeHandler();
+      return () => window.removeEventListener("resize", resizeHandler);
+  }, [])
+
     return(
         <div id={Styles.container}>
             <h1>Kedves leendő Modellem!</h1>
@@ -37,7 +54,7 @@ const Content = () => {
                     <p className={Styles.strong}>Ezért is fontos, hogy milyen tartalmakat osztunk meg, milyen kép szerepel az önéletrajzunkban hiszen az első benyomás ereje megismételhetetlen.</p>
                 </div>
                 <div className={Styles.image_wrapper}>
-                    <div className={`${Styles.blur_border}`}  style={{width: `${images.wideCenter.childImageSharp.fluid.aspectRatio * 350}px`}}>
+                    <div className={`${Styles.blur_border}`}  style={{width: `${images.wideCenter.childImageSharp.fluid.aspectRatio * 350 * imageWidthProportion}px`}}>
                         <Img fluid={images.wideCenter.childImageSharp.fluid} alt="portrait"/>
                     </div>
                 </div>
@@ -47,7 +64,7 @@ const Content = () => {
             </div>
             <div className={Styles.part_wrapper}>
                 <div className={Styles.image_wrapper}>
-                    <div className={`${Styles.blur_border}`} style={{width: `${images.narrowLeft.childImageSharp.fluid.aspectRatio * 525}px`}}>
+                    <div className={`${Styles.blur_border}`} style={{width: `${images.narrowLeft.childImageSharp.fluid.aspectRatio * 525 * imageWidthProportion}px`}}>
                         <Img fluid={images.narrowLeft.childImageSharp.fluid} className={Styles.narrow_image} alt="portrait"/>
                     </div>
                 </div>
@@ -56,7 +73,7 @@ const Content = () => {
                     <p >Fotózásaim során a legszebb, de egybe a legvalódibb oldaladat örökítem meg, hiszen ez az, amitől Te kitűnhetsz a tömegből és az lehetsz, aki igazából vagy.</p>
                 </div>
                 <div className={Styles.image_wrapper}>
-                    <div className={`${Styles.blur_border}`} style={{width: `${525 * images.narrowRight.childImageSharp.fluid.aspectRatio}px`}}>
+                    <div className={`${Styles.blur_border}`} style={{width: `${525 * images.narrowRight.childImageSharp.fluid.aspectRatio * imageWidthProportion}px`}}>
                         <Img fluid={images.narrowRight.childImageSharp.fluid} alt="portrait" />
                     </div>
                 </div>
