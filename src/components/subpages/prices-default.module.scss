@@ -79,6 +79,7 @@
         #wrapper{
             .package{
                 max-width: 40%;
+                transform: scale(0.7);
             }
             #middle_image_wrapper{
                 display: none;
@@ -98,7 +99,6 @@
         }
 
         #wrapper{
-            flex-direction: column;
 
             &>*{
                 margin: 0 $font-size;
@@ -123,10 +123,8 @@
                 }
             }
             #middle_image_wrapper{
-                height: 500px;
-                display: flex;
-                flex: 1;
-                margin: $font-size;
+                display: none;
+                flex: 0;
             }
         }
     }
@@ -141,7 +139,6 @@
         }
 
         #wrapper{
-            flex-direction: column;
 
             &>*{
                 margin: 0 $font-size;
@@ -166,10 +163,8 @@
                 }
             }
             #middle_image_wrapper{
-                height: 100%;
-                display: flex;
-                flex: 1;
-                margin: $font-size;
+                display: none;
+                flex: 0;
             }
         }
     }

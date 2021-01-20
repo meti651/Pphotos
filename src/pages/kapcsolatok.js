@@ -1,12 +1,13 @@
 import React from 'react';
 import Layout from '../components/layout';
+import Contacts from "../components/contacts";
 
-const Contacts = () => {
+const ContactsPage = () => {
     return (
         <Layout>
-
+            <Contacts/>
         </Layout>
     )
 }
 
-export default Contacts;
+export default ContactsPage;

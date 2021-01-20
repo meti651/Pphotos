@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -26,6 +27,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
         name: 'images'
       }
-    }
+    },
+    
   ],
 }
