@@ -34,7 +34,7 @@ const Gallery = () => {
         <div id={Styles.container}>
             <h1>Galéria</h1>
             <div id={Styles.filter}>
-                <span>Szűrő: </span>
+                <span>Kategóriák: </span>
                 <select onChange={filterChangeHandler}>
                     <option value="" aria-selected>All</option>
                     <option value="family">Család</option>

@@ -14,11 +14,11 @@ const Footer = () => {
                 <h1>Elérhetőségek:</h1>
                 <div>
                     <img id={Styles.icon} src={PhoneIcon} alt="Phone" />
-                    <div>+36203907054</div>
+                    <div>+36204933245</div>
                 </div>
                 <div>
                     <img id={Styles.icon} src={EmailIcon} alt="Email" />
-                    <div><p>baracskai.petra@gmail.com</p></div>
+                    <div><p>pphotosofficial01@gmail.com</p></div>
                 </div>
             </div>
             <div id={Styles.placeholder}></div>

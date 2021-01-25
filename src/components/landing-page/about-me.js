@@ -20,11 +20,9 @@ const AboutMe = () =>{
             <div id={Styles.description}>
                 <h1>Magamról</h1>
                 <div>
-                    A tényszerűségek és az adatok napjainkban unalmassá váltak, tehát csak ennyit írok erről:<br/>
-                    Igen, minden iskolai végzettségem megvan.
+                    Mosolyok, nevetések, azok a bizonyos pillanatok, álmodozás, csoda, kacér összenézések, gyermeki ártatlanság, szépség és jóság. Ezek azok a szavak amik jellemezték eddigi életutamat, és képeimre is egyaránt jellemző. Fő motivációm az, hogy fotózásaim során a képek mellett élményt is nyújtsak számotokra. 
                 </div>
                 <div>
-                    Ami pedig valójában én vagyok:<br/>
                     Kamaszkorom meghatározó élménye volt mikor kerületi fotópályázatot nyertem, ekkor éreztem, hogy ez az, amivel foglalkozni szeretnék. A gyermeki lelkesedésem azóta és kitart és segít abban, hogy örök és megismételhetetlen pillanatokat varázsoljak neked.
                 </div>
             </div>
@@ -48,6 +46,9 @@ const AboutMe = () =>{
             </div>
             <div id={Styles.background_image_container}><Img fluid={backgroundImage.data.childImageSharp.fluid} alt="About me"/></div>
             <div id={Styles.end_description}>
+                <div>
+                    Mint minden téren, fotózásnál is fontos a bizalom,és a hozzáértés. Biztosíthatlak,minden szükséges papírral is rendelkezem.
+                </div>
                 <div>
                     Egy fotósnak szerencséje, hogy beszélnek helyette a képei is, úgyhogy további információt rólam a Galériában találhatsz.<br/>
                     Petra

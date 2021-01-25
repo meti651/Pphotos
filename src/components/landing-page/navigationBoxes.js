@@ -63,7 +63,7 @@ const NavigationBoxes = () => {
         {image: images.wedding, title: "Esküvői"},
         {image: images.family, title: "Családi"},
         {image: images.mum, title: "Kismama"},
-        {image: images.children, title: "Gyerek, baba"},
+        {image: images.children, title: "Gyermek, baba"},
         {image: images.couple, title: "Páros"},
         {image: images.portrait, title: "Portré"},
     ]

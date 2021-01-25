@@ -26,7 +26,7 @@ const Header = ({onTop, isIndex}) => {
                         <div id={Styles.dropdownMenu} className={open ? Styles.open : undefined}>
                             <Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link> 
                             <Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link> 
-                            <Link to="/szolgaltatasok/gyerek-fotozas">Gyerek fotózás</Link> 
+                            <Link to="/szolgaltatasok/gyerek-fotozas">Gyermek fotózás</Link> 
                             <Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link> 
                             <Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link> 
                             <Link to="/szolgaltatasok/portre-fotozas">Portré fotózás</Link>
