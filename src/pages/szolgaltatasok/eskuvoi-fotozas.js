@@ -6,6 +6,7 @@ import Prices from '../../components/subpages/prices-wedding';
 
 import SubLayout from "../../components/subpages/subLayout";
 import Content from '../../components/subpages/wedding/content';
+import WeddingBox from '../../components/subpages/wedding/weddingBox';
 
 const Wedding = () => {
     const data = useStaticQuery(graphql`{
@@ -67,6 +68,7 @@ const Wedding = () => {
             <Content/>
             <Prices/>
             <Album/>
+            <WeddingBox/>
         </SubLayout>
     )
 }

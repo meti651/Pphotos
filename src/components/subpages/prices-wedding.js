@@ -2,6 +2,7 @@ import React from 'react';
 
 import Styles from "./prices-wedding.module.scss";
 import AlbumStyles from "../landing-page/album.module.scss";
+import WeddingBoxStyles from "./wedding/weddingBox.module.scss";
 
 const Prices = () => {
     return(
@@ -45,7 +46,7 @@ const Prices = () => {
                         <li>30db prémium előhívatott fotó</li>
                         <li><a href={`#${AlbumStyles.container}`}>Fotóalbum</a> (Extra nagy)</li>
                         <li>Slideshow a legjobb képekből (általatok választott zenék)</li>
-                        <li><strong>EXTRA AJÁNDÉK:</strong> Egyedi készítésű díszdoboz + pendrive</li>
+                        <li><strong><a href={`#${WeddingBoxStyles.container}`}>EXTRA AJÁNDÉK:</a></strong> Egyedi készítésű díszdoboz + pendrive</li>
                     </ul>
                     <div className={Styles.price}>240.000 Ft/-</div>
                 </div>
