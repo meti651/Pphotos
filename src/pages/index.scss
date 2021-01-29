@@ -14,8 +14,24 @@ html {
   background-color: $primary-color;
 }
 
-*::-webkit-scrollbar {
-  width: 0;
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $primary-color; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary-color; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 * {

@@ -54,10 +54,14 @@
             margin: 0 $font-size;
         }
 
+        ul{
+            padding-inline-start: 0;
+        }
+
         li{
             width: 100%;
             list-style: inside;
-            padding-left: $font-size;
+            padding-left: $font-size/4;
             margin: $font-size 0;
             font-weight: bold;
         }
@@ -188,7 +192,6 @@
             }
     
             li{
-                padding-left: $font-size/4;
                 margin: $font-size 0;
             }
         }

@@ -26,7 +26,8 @@ header {
 
   &.sub{
     position: fixed;
-    max-width: 80%;
+    max-width: 80.5%;
+    margin-left: 5px;
     transform: translateX(-50%);
     #dropdownMenu{
       position: fixed;
@@ -183,6 +184,7 @@ header {
     font-size: $font-size;
 
     &.sub{
+      margin: 0;
       max-width: 100%;
     }
   }
@@ -220,6 +222,7 @@ header {
   header{
     font-size: $font-size;
     &.sub{
+      margin: 0;
       max-width: 100%;
     }
     &.on_top #links{
@@ -344,6 +347,7 @@ header {
   header{
     font-size: $font-size;
     &.sub{
+      margin: 0;
       max-width: 100%;
     }
     &.on_top #links{
