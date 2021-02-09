@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Fotózás | Pphotos",
+    description: "Fotózás egész Magyarország területén. Gyerek-, kisbaba-, család-, portré-, kismama-, esküvői fotózás Budapesten vagy akár az egész országon belül.",
+    baseUrl: "https://www.pphotos-official.com",
+  },
   plugins: [
     "gatsby-plugin-sass",
     `gatsby-transformer-sharp`, 
