@@ -29,7 +29,7 @@ const AboutMe = () =>{
             <div id={Styles.in_image_descriptions}>
                 <div id={Styles.in_image_description_1}>
                     <div>
-                        Különösen kedves számomra mikor egy család életútját ísérhetem végig, ezért
+                        Különösen kedves számomra mikor egy család életútját kísérhetem végig, ezért
                     </div>
                     <div className={Styles.strong}>
                         a kedvenc témáim közé tartozik az esküvő, a kismama fotózás, az újszülött fotózás és a családi képek, portrék megörökítése.
