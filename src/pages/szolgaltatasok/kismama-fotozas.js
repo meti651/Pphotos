@@ -3,6 +3,8 @@ import React from 'react';
 import Content from '../../components/subpages/mum/content';
 import Image from '../../components/subpages/mum/image';
 import Prices from '../../components/subpages/prices-default';
+import SEO from "../../components/seo";
+import {useLocation} from "@reach/router";
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -51,6 +53,14 @@ const Mum = () => {
           }
         }
       }`)
+
+      const { pathName } = useLocation();
+
+      const pageMetadata = {
+        title: "Kismama fotózás",
+        description: "Kismama, terhes fotózás. Budapesten és egész Magyarországon belül. Fotók a terhesség/kismamaság csodálatos pillanatairól.",
+        path: pathName
+      }
     
       const images = [
         data.first,
@@ -62,9 +72,10 @@ const Mum = () => {
       ];
 
     return (
-        <SubLayout title={"Kismama fotozás"} slideImages={images}>
-            <Content/>
-            <Prices Image={Image} />
+        <SubLayout title={"Kismama fotózás"} slideImages={images}>
+          <SEO pageMetadata={pageMetadata}/>
+          <Content/>
+          <Prices Image={Image} />
         </SubLayout>
     )
 }

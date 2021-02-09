@@ -9,6 +9,7 @@ import Img from "gatsby-image";
 import "./index.scss";
 import Album from "../components/landing-page/album";
 import { graphql, useStaticQuery } from "gatsby";
+import SEO from "../components/seo";
 
 export default function Home() {
   const [onTop, setOnTop] = useState(true);
@@ -46,6 +47,7 @@ export default function Home() {
   return (
     <>
           <main className="main" onScroll={handleScroll} ref={scrollDisplay}>
+            <SEO/>
             <Layout onTop={onTop} isIndex={true}>
                   <Slider/>
                   <section className="section parallax" style={{height: `${60/backgroundImages.first.childImageSharp.fluid.aspectRatio}vw`}}><Img fluid={backgroundImages.first.childImageSharp.fluid} alt="background 1"/></section>

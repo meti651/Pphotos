@@ -2,7 +2,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Album from '../../components/landing-page/album';
 import Prices from '../../components/subpages/prices-wedding';
-
+import SEO from "../../components/seo";
+import {useLocation} from "@reach/router";
 
 import SubLayout from "../../components/subpages/subLayout";
 import Content from '../../components/subpages/wedding/content';
@@ -53,6 +54,14 @@ const Wedding = () => {
           }
         }
       }`)
+
+      const { pathName } = useLocation();
+
+      const pageMetadata = {
+        title: "Esküvői fotózás",
+        description: "Esküvői fotózás. Budapesten és egész Magyarországon belül. Garantáltam a legszebb pillanatok megörökítése a házasságkötésetekről",
+        path: pathName
+      }
     
       const images = [
           data.second,
@@ -64,11 +73,12 @@ const Wedding = () => {
       ];
 
     return (
-        <SubLayout title={"Esküvői fotozás"} slideImages={images}>
-            <Content/>
-            <Prices/>
-            <Album/>
-            <WeddingBox/>
+        <SubLayout title={"Esküvői fotózás"} slideImages={images}>
+          <SEO pageMetadata={pageMetadata}/>
+          <Content/>
+          <Prices/>
+          <Album/>
+          <WeddingBox/>
         </SubLayout>
     )
 }

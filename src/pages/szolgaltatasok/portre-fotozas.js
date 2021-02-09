@@ -4,6 +4,8 @@ import SubLayout from "../../components/subpages/subLayout";
 import Content from "../../components/subpages/portrait/content";
 import Prices from '../../components/subpages/prices-default';
 import Image from "../../components/subpages/portrait/image";
+import SEO from "../../components/seo";
+import {useLocation} from "@reach/router";
 
 import { graphql, useStaticQuery } from 'gatsby';
 
@@ -52,6 +54,14 @@ const Portrait = () => {
           }
         }
       }`)
+
+      const { pathName } = useLocation();
+
+      const pageMetadata = {
+        title: "Portré fotózás",
+        description: "Portré fotózás. Budapesten és egész Magyarországon belül. Minőségi profilkép Facebookra vagy más közösségi médiára. Modell fotózás.",
+        path: pathName
+      }
     
       const images = [
           data.second,
@@ -63,9 +73,10 @@ const Portrait = () => {
       ];
 
     return (
-        <SubLayout title="Portré Fotózás" slideImages={images}>
-            <Content/>
-            <Prices Image={Image}/>
+        <SubLayout title="Portré fotózás" slideImages={images}>
+          <SEO pageMetadata={pageMetadata}/>
+          <Content/>
+          <Prices Image={Image}/>
         </SubLayout>
     )
 }

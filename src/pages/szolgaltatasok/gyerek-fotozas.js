@@ -3,6 +3,8 @@ import React from 'react';
 import Content from '../../components/subpages/child/content';
 import Image from '../../components/subpages/child/image';
 import Prices from "../../components/subpages/prices-default";
+import SEO from "../../components/seo";
+import {useLocation} from "@reach/router";
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -51,6 +53,14 @@ const Child = () => {
           }
         }
       }`)
+
+      const { pathName } = useLocation();
+
+      const pageMetadata = {
+        title: "Gyermek, baba fotózás",
+        description: "Gyermek/Gyerek, baba fotózás. Budapesten és egész Magyarországon belül. Gyerek képek készítése.",
+        path: pathName
+      }
     
       const images = [
         data.first,
@@ -61,9 +71,10 @@ const Child = () => {
         data.sixth
       ];
     return (
-        <SubLayout title={"Gyerek, baba fotozás"} slideImages={images}>
-            <Content />
-            <Prices Image={Image}/>
+        <SubLayout title={"Gyermek, baba fotózás"} slideImages={images}>
+          <SEO pageMetadata={pageMetadata}/>
+          <Content />
+          <Prices Image={Image}/>
         </SubLayout>
     )
 }

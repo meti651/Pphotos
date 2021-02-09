@@ -2,6 +2,8 @@ import React from 'react';
 import Image from '../../components/subpages/couple/image';
 import Prices from '../../components/subpages/prices-default';
 import Content from "../../components/subpages/couple/content";
+import SEO from "../../components/seo";
+import {useLocation} from "@reach/router";
 
 import SubLayout from "../../components/subpages/subLayout";
 
@@ -52,6 +54,14 @@ const Couple = () => {
           }
         }
       }`)
+
+      const { pathName } = useLocation();
+
+      const pageMetadata = {
+        title: "Páros fotózás",
+        description: "Páros fotózás. Budapesten és egész Magyarországon belül. Akár karácsonyi alkalmakra, képeslapokra.",
+        path: pathName
+      }
     
       const images = [
         data.first,
@@ -62,9 +72,10 @@ const Couple = () => {
         data.sixth
       ];
     return (
-        <SubLayout title={"Páros fotozás"} slideImages={images}>
-            <Content/>
-            <Prices Image={Image} />
+        <SubLayout title={"Páros fotózás"} slideImages={images}>
+          <SEO pageMetadata={pageMetadata}/>
+          <Content/>
+          <Prices Image={Image} />
         </SubLayout>
     )
 }

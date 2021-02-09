@@ -1,9 +1,11 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import SEO from "../../components/seo";
 import Content from "../../components/subpages/family/content";
 import Image from "../../components/subpages/family/image";
 import Prices from "../../components/subpages/prices-default";
 import SubLayout from "../../components/subpages/subLayout";
+import {useLocation} from "@reach/router";
 
 const FamilyPage = () => {
   const data = useStaticQuery(graphql`{
@@ -51,6 +53,14 @@ const FamilyPage = () => {
     }
   }`)
 
+  const { pathName } = useLocation();
+
+  const pageMetadata = {
+    title: "Családi fotózás",
+    description: "Családi fotózás. Budapesten és egész Magyarországon belül. Anyuka, apuka, gyerekek, nagymama, nagypapa. Karácsonyi fotózások az egész családnak.",
+    path: pathName
+  }
+
   const images = [
     data.first,
     data.fifth,
@@ -63,6 +73,7 @@ const FamilyPage = () => {
   return (
     <>
       <SubLayout title={"Családi fotózás"} slideImages={images}>
+        <SEO pageMetadata={pageMetadata}/>
         <Content />
         <Prices Image={Image} />
       </SubLayout>

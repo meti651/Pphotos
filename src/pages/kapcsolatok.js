@@ -5,6 +5,7 @@ import Contacts from "../components/contacts";
 const ContactsPage = () => {
     return (
         <Layout>
+            <SEO />
             <Contacts/>
         </Layout>
     )
