@@ -2,411 +2,392 @@
 @import "../../responsive";
 
 #container {
-    display: flex;
-    flex-direction: column;
-    font-size: $font-size;
-    place-items: center;
+	display: flex;
+	flex-direction: column;
+	font-size: $font-size;
+	place-items: center;
 
-    h1{
-        font-size: 1.5 * $font-size;
-        text-align: center;
-    }
+	h1 {
+		font-size: 1.5 * $font-size;
+		text-align: center;
+	}
 
-    h2{
-        font-size: 1.2 * $font-size;
-    }
+	h2 {
+		font-size: 1.2 * $font-size;
+	}
 
-    #lined {
-        position: relative;
+	#lined {
+		position: relative;
 
-        .blur_border {
-            box-shadow: inset 0 4px 4px $primary-color,
-                inset 0 -4px 4px $primary-color;
-        }
+		.blur_border {
+			box-shadow: inset 0 4px 4px $primary-color, inset 0 -4px 4px $primary-color;
+		}
 
-        .image{
-            width: 80vw;
-            opacity: 0.9;
-        }
+		.image {
+			width: 80vw;
+			opacity: 0.9;
+		}
 
-        #phrases{
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1;
+		#phrases {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			z-index: 1;
 
-            p{
-                font-weight: bold;
-                width: 100%;
-                text-align: center;
-                padding: 2px 0;
-                background-color: $primary-color;
-                box-shadow: 0 8px 8px $primary-color,
-                            0 -8px 8px $primary-color;
-            }
-        }
-    }
+			p {
+				font-weight: bold;
+				width: 100%;
+				text-align: center;
+				padding: 2px 0;
+				background-color: $primary-color;
+				box-shadow: 0 8px 8px $primary-color, 0 -8px 8px $primary-color;
+			}
+		}
+	}
 
-    #second_part{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+	#second_part {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
 
-        #text{
-            display: grid;
-            place-items: center;
-            width: 40%;
-            p{
-                width: 90%;
-            }
-        }
-    }
+		#text {
+			display: grid;
+			place-items: center;
+			width: 40%;
+			p {
+				width: 90%;
+			}
+		}
+	}
 
-    #third_part {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: max-content;
-        width: 100%;
-        margin: 50px 0;
-    
-        .text{
-            width: 80%;
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+	#third_part {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: max-content;
+		width: 100%;
+		margin: 50px 0;
 
-            p{
-                margin: 0;
-                background-color: $primary-color;
-                box-shadow: 0 15px 13px $primary-color,
-                0 -15px 13px $primary-color;
-            }
+		.text {
+			width: 80%;
+			z-index: 100;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-            &>*{
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90%;
-            }
+			p {
+				margin: 0;
+				background-color: $primary-color;
+				box-shadow: 0 15px 13px $primary-color, 0 -15px 13px $primary-color;
+			}
 
-            #top{
-                position: absolute;
-                top: 0;
-                margin-top: $font-size;
-            }
-            #bottom{
-                position: absolute;
+			& > * {
+				left: 50%;
+				transform: translateX(-50%);
+				width: 90%;
+			}
 
-                bottom: 0;
-                margin-bottom: $font-size;
-            }
-        }
+			#top {
+				position: absolute;
+				top: 0;
+				margin-top: $font-size;
+			}
+			#bottom {
+				position: absolute;
 
+				bottom: 0;
+				margin-bottom: $font-size;
+			}
+		}
+	}
 
-        
-    }
+	#photo_given {
+		display: grid;
+		place-items: center;
+		background-color: $secondary-color;
+		color: $primary-color;
+		padding-bottom: 2 * $font-size;
+		text-shadow: -2px -2px $third-color;
 
-    #photo_given {
-        display: grid;
-        place-items: center;
-        background-color: $secondary-color;
-        color: $primary-color;
-        padding-bottom: 2 * $font-size;
-        text-shadow: -2px -2px $third-color;
+		h2 {
+			margin: 2 * $font-size 0;
+		}
 
-        h2{
-            margin: 2 * $font-size 0;
-        }
-
-        p {
-            width: 80%;
-            margin: 0;
-        }
-    }
+		p {
+			width: 80%;
+			margin: 0;
+		}
+	}
 }
 
-.image_wrapper{
-    position: relative;
-    width: max-content;
-    height: max-content;
+.image_wrapper {
+	position: relative;
+	width: max-content;
+	height: max-content;
 
-    
-    .blur_border {
-        display: inline-block;
-        box-shadow: inset 0 0px 4px 4px $primary-color;
-        z-index: 1;
+	.blur_border {
+		display: inline-block;
+		box-shadow: inset 0 0px 4px 4px $primary-color;
+		z-index: 1;
 
-        .image {
-            display: block;
-            position: relative;
-            z-index: -1;
-        }
-    }
+		.image {
+			display: block;
+			position: relative;
+			z-index: -1;
+		}
+	}
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.2 * $font-size;
-        }
-    
-        #third_part {
-            .text{
-                #top{
-                    position: absolute;
-                    top: 0;
-                    margin-top: $font-size;
-                }
-                #bottom{
-                    position: absolute;
-                    bottom: 0;
-                    margin-bottom: $font-size;
-                }
-            }
-    
-    
-            
-        }
-    
-        #photo_given {
-            padding-bottom: 2 * $font-size;
-    
-            h2{
-                margin: 2 * $font-size 0;
-            }
-        }
+	#container {
+		font-size: $font-size;
 
-        #lined {
-            .image{
-                width: 100vw;
-                opacity: 0.9;
-            }
-    
-            #phrases{
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                z-index: 1;
-    
-                p{
-                    font-weight: bold;
-                    width: 100%;
-                    text-align: center;
-                    padding: 2px 0;
-                    background-color: $primary-color;
-                    box-shadow: 0 8px 8px $primary-color,
-                                0 -8px 8px $primary-color;
-                }
-            }
-        }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
 
-        #second_part{
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-    
-            #text{
-                display: grid;
-                place-items: center;
-                width: 80%;
-                p{
-                    width: 90%;
-                }
-            }
-        }
-    }
+		h2 {
+			font-size: 1.2 * $font-size;
+		}
+
+		#third_part {
+			.text {
+				#top {
+					position: absolute;
+					top: 0;
+					margin-top: $font-size;
+				}
+				#bottom {
+					position: absolute;
+					bottom: 0;
+					margin-bottom: $font-size;
+				}
+			}
+		}
+
+		#photo_given {
+			padding-bottom: 2 * $font-size;
+
+			h2 {
+				margin: 2 * $font-size 0;
+			}
+		}
+
+		#lined {
+			.image {
+				width: 100vw;
+				opacity: 0.9;
+			}
+
+			#phrases {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				z-index: 1;
+
+				p {
+					font-weight: bold;
+					width: 100%;
+					text-align: center;
+					padding: 2px 0;
+					background-color: $primary-color;
+					box-shadow: 0 8px 8px $primary-color, 0 -8px 8px $primary-color;
+				}
+			}
+		}
+
+		#second_part {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			#text {
+				display: grid;
+				place-items: center;
+				width: 80%;
+				p {
+					width: 90%;
+				}
+			}
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
+@include tablet {
+	$font-size: 18px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.2 * $font-size;
-        }
-    
-        #third_part {
-            .image_wrapper{
-                display: none;
-            }
-            .text{
-                #top{
-                    position: relative;
-                    top: 0;
-                    margin: $font-size;
-                }
-                #bottom{
-                    position: relative;
-                    bottom: 0;
-                    margin: $font-size;
-                }
-            }
-    
-    
-            
-        }
-    
-        #photo_given {
-            padding-bottom: 2 * $font-size;
-    
-            h2{
-                margin: 2 * $font-size 0;
-            }
-        }
+	#container {
+		font-size: $font-size;
 
-        #lined {
-            .image{
-                display: none;
-            }
-    
-            #phrases{
-                position: relative;
-                height: 100%;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                z-index: 1;
-                margin: auto;
-    
-                p{
-                    font-weight: bold;
-                    width: 100%;
-                    text-align: center;
-                    padding: 2px 0;
-                    background-color: $primary-color;
-                    box-shadow: 0 8px 8px $primary-color,
-                                0 -8px 8px $primary-color;
-                }
-            }
-        }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
 
-        #second_part{
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-    
-            #text{
-                display: grid;
-                place-items: center;
-                width: 80%;
-                p{
-                    width: 90%;
-                }
-            }
-        }
-    }
+		h2 {
+			font-size: 1.2 * $font-size;
+		}
+
+		#third_part {
+			.image_wrapper {
+				display: none;
+			}
+			.text {
+				#top {
+					position: relative;
+					top: 0;
+					margin: $font-size;
+				}
+				#bottom {
+					position: relative;
+					bottom: 0;
+					margin: $font-size;
+				}
+			}
+		}
+
+		#photo_given {
+			padding-bottom: 2 * $font-size;
+
+			h2 {
+				margin: 2 * $font-size 0;
+			}
+		}
+
+		#lined {
+			.image {
+				display: none;
+			}
+
+			#phrases {
+				position: relative;
+				height: 100%;
+				width: 90%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				z-index: 1;
+				margin: auto;
+
+				p {
+					font-weight: bold;
+					width: 100%;
+					text-align: center;
+					padding: 2px 0;
+					background-color: $primary-color;
+					box-shadow: 0 8px 8px $primary-color, 0 -8px 8px $primary-color;
+				}
+			}
+		}
+
+		#second_part {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			#text {
+				display: grid;
+				place-items: center;
+				width: 80%;
+				p {
+					width: 90%;
+				}
+			}
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
+@include phone {
+	$font-size: 16px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.2 * $font-size;
-        }
-    
-        #third_part {
-            .image_wrapper{
-                display: none;
-            }
-            .text{
-                #top{
-                    position: relative;
-                    top: 0;
-                    margin: $font-size;
-                }
-                #bottom{
-                    position: relative;
-                    bottom: 0;
-                    margin: $font-size;
-                }
-            }
-    
-    
-            
-        }
-    
-        #photo_given {
-            padding-bottom: 2 * $font-size;
-    
-            h2{
-                margin: 2 * $font-size 0;
-            }
-        }
+	#container {
+		font-size: $font-size;
 
-        #lined {
-            .image{
-                display: none;
-            }
-    
-            #phrases{
-                position: relative;
-                height: 100%;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                z-index: 1;
-                margin: auto;
-    
-                p{
-                    font-weight: bold;
-                    width: 100%;
-                    text-align: center;
-                    padding: 2px 0;
-                    background-color: $primary-color;
-                    box-shadow: 0 8px 8px $primary-color,
-                                0 -8px 8px $primary-color;
-                }
-            }
-        }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
 
-        #second_part{
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-    
-            #text{
-                display: grid;
-                place-items: center;
-                width: 80%;
-                p{
-                    width: 90%;
-                }
-            }
-        }
-    }
+		h2 {
+			font-size: 1.2 * $font-size;
+		}
+
+		#third_part {
+			.image_wrapper {
+				display: none;
+			}
+			.text {
+				#top {
+					position: relative;
+					top: 0;
+					margin: $font-size;
+				}
+				#bottom {
+					position: relative;
+					bottom: 0;
+					margin: $font-size;
+				}
+			}
+		}
+
+		#photo_given {
+			padding-bottom: 2 * $font-size;
+
+			h2 {
+				margin: 2 * $font-size 0;
+			}
+		}
+
+		#lined {
+			.image {
+				display: none;
+			}
+
+			#phrases {
+				position: relative;
+				height: 100%;
+				width: 90%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				z-index: 1;
+				margin: auto;
+
+				p {
+					font-weight: bold;
+					width: 100%;
+					text-align: center;
+					padding: 2px 0;
+					background-color: $primary-color;
+					box-shadow: 0 8px 8px $primary-color, 0 -8px 8px $primary-color;
+				}
+			}
+		}
+
+		#second_part {
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+
+			#text {
+				display: grid;
+				place-items: center;
+				width: 80%;
+				p {
+					width: 90%;
+				}
+			}
+		}
+	}
 }

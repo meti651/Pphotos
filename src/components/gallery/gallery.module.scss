@@ -1,35 +1,36 @@
 @import "../config";
 
-#container{
-    margin-top: 85px;
-    font-size: $font-size;
-    padding: 0.5 * $font-size;
-    background-color: $primary-color;
-    color: $primary-font-color;
+#container {
+	margin-top: 85px;
+	font-size: $font-size;
+	padding: 0.5 * $font-size;
+	background-color: $primary-color;
+	color: $primary-font-color;
 
-    h1{
-        font-size: 1.5 * $font-size;
-        width: 100%;
-        text-align: center;
-    }
+	h1 {
+		font-size: 1.5 * $font-size;
+		width: 100%;
+		text-align: center;
+	}
 
-    #filter{
-        text-align: start;
-        margin: $font-size;
+	#filter {
+		text-align: start;
+		margin: $font-size;
 
-        :active, :focus{
-            outline: 0;
-        }
+		:active,
+		:focus {
+			outline: 0;
+		}
 
-        select{
-            height: 2 * $font-size;
-            font-size: $font-size;
-            font: 400 $font-size "Merriweather";
-            color: $secondary-font-color;
-            background-color: $secondary-color;
-            text-align: center;
-            border: 0;
-            border-radius: 2px;
-        }
-    }
+		select {
+			height: 2 * $font-size;
+			font-size: $font-size;
+			font: 400 $font-size "Merriweather";
+			color: $secondary-font-color;
+			background-color: $secondary-color;
+			text-align: center;
+			border: 0;
+			border-radius: 2px;
+		}
+	}
 }

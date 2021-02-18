@@ -1,72 +1,71 @@
 @import "../config";
 @import "../responsive";
 
-
 #container {
-    width: 20%;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border: 5px solid $border-color;
-    box-shadow: 5px 5px 10px #808080;
-    font-style: normal;
-    text-decoration: none;
-    color: $secondary-font-color;
-    font-size: $font-size;
-    cursor: default;
-    transition: transform 0.5s;
-    margin: $font-size 2.5%;
+	width: 20%;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border: 5px solid $border-color;
+	box-shadow: 5px 5px 10px #808080;
+	font-style: normal;
+	text-decoration: none;
+	color: $secondary-font-color;
+	font-size: $font-size;
+	cursor: default;
+	transition: transform 0.5s;
+	margin: $font-size 2.5%;
 
-    &:hover {
-        transform: scale(1.2);
-    }
+	&:hover {
+		transform: scale(1.2);
+	}
 
-    #image_wrapper {
-        border-bottom: 2px solid $border-color;
-    }
+	#image_wrapper {
+		border-bottom: 2px solid $border-color;
+	}
 
-    #title {
-        flex: 1;
-        display: grid;
-        place-items: center;
-        margin: $font-size 0;
-    }
+	#title {
+		flex: 1;
+		display: grid;
+		place-items: center;
+		margin: $font-size 0;
+	}
 }
 
-@include sided{
-    $font-size: 20px;
-    #container{
-        width: 40%;
-        font-size: $font-size;
-        margin: $font-size 0;
+@include sided {
+	$font-size: 20px;
+	#container {
+		width: 40%;
+		font-size: $font-size;
+		margin: $font-size 0;
 
-        #title{
-            margin: $font-size 0;
-        }
-    }
+		#title {
+			margin: $font-size 0;
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
-    #container{
-        width: 70%;
-        font-size: $font-size;
-        margin: $font-size 0;
+@include tablet {
+	$font-size: 18px;
+	#container {
+		width: 70%;
+		font-size: $font-size;
+		margin: $font-size 0;
 
-        #title{
-            margin: $font-size 0;
-        }
-    }
+		#title {
+			margin: $font-size 0;
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
-    #container{
-        width: 70%;
-        font-size: $font-size;
-        margin: $font-size 0;
+@include phone {
+	$font-size: 16px;
+	#container {
+		width: 70%;
+		font-size: $font-size;
+		margin: $font-size 0;
 
-        #title{
-            margin: $font-size 0;
-        }
-    }
+		#title {
+			margin: $font-size 0;
+		}
+	}
 }

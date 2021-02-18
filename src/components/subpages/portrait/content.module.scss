@@ -1,153 +1,138 @@
 @import "../../config";
 @import "../../responsive";
 
-
 #container {
-    position: relative;
-    z-index: 1;
-    font-size: $font-size;
-    color: $primary-font-color;
+	position: relative;
+	z-index: 1;
+	font-size: $font-size;
+	color: $primary-font-color;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 
-    h1{
-        width: 100%;
-        text-align: center;
-        font-size: 1.5 * $font-size;
-    }
+	h1 {
+		width: 100%;
+		text-align: center;
+		font-size: 1.5 * $font-size;
+	}
 
-    .part_wrapper{
+	.part_wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 0 $font-size;
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 0 $font-size;
+		.image_wrapper {
+			margin: 0 $font-size;
+			align-self: center;
+		}
 
-        .image_wrapper {
-            margin: 0 $font-size;
-            align-self: center;
-        }
+		#first_paragraph,
+		#second_paragraph {
+			flex: 1;
+		}
 
-        #first_paragraph, #second_paragraph {
-            flex: 1;
-        }
-    
-        #third_paragraph {
-            max-width: 30%;
-            align-self: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-    }
+		#third_paragraph {
+			max-width: 30%;
+			align-self: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+	}
 
-    
-
-    .strong {
-        padding-left: 1.5*$font-size;
-        font-weight: bold;
-        border-left: 6px solid #ffd488;
-        border-radius: 5px;
-    }
-
+	.strong {
+		padding-left: 1.5 * $font-size;
+		font-weight: bold;
+		border-left: 6px solid #ffd488;
+		border-radius: 5px;
+	}
 }
 
-.image_wrapper{
-    @extend %blured-border-image;
+.image_wrapper {
+	@extend %blured-border-image;
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        .part_wrapper{
-    
-            padding: 0 $font-size;
-    
-            .image_wrapper {
-                margin: 0 $font-size;
-            }
-        }
-    
-        
-    
-        .strong {
-            padding-left: 1.5*$font-size;
-        }
-    
-    }
+	#container {
+		font-size: $font-size;
+
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		.part_wrapper {
+			padding: 0 $font-size;
+
+			.image_wrapper {
+				margin: 0 $font-size;
+			}
+		}
+
+		.strong {
+			padding-left: 1.5 * $font-size;
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
+@include tablet {
+	$font-size: 18px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        .part_wrapper{
-    
-            padding: 0 $font-size;
-    
-            .image_wrapper {
-                margin: 0 $font-size;
-            }
+	#container {
+		font-size: $font-size;
 
-            #third_paragraph{
-                max-width: 50%;
-            }
-        }
-    
-        
-    
-        .strong {
-            padding-left: 1.5*$font-size;
-        }
-    
-    }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		.part_wrapper {
+			padding: 0 $font-size;
+
+			.image_wrapper {
+				margin: 0 $font-size;
+			}
+
+			#third_paragraph {
+				max-width: 50%;
+			}
+		}
+
+		.strong {
+			padding-left: 1.5 * $font-size;
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
+@include phone {
+	$font-size: 16px;
 
-    #container {
-        font-size: $font-size;
-    
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        .part_wrapper{
-            flex-direction: column;
-            padding: 0 $font-size;
-    
-            .image_wrapper {
-                margin: 0 $font-size;
-            }
+	#container {
+		font-size: $font-size;
 
-            #third_paragraph{
-                max-width: 90%;
-            }
-        }
-    
-        
-    
-        .strong {
-            padding-left: 1.5*$font-size;
-        }
-    
-    }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		.part_wrapper {
+			flex-direction: column;
+			padding: 0 $font-size;
+
+			.image_wrapper {
+				margin: 0 $font-size;
+			}
+
+			#third_paragraph {
+				max-width: 90%;
+			}
+		}
+
+		.strong {
+			padding-left: 1.5 * $font-size;
+		}
+	}
 }

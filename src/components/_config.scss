@@ -7,33 +7,30 @@ $package-color3: $secondary-color;
 $package-color2: #e0be8f;
 $package-color1: #e6c69a;
 
-
-$primary-font-color:#caaf88;
+$primary-font-color: #caaf88;
 $secondary-font-color: #666666;
 
 $third-color: #999999;
-$border-color: #FFFF98;
-$slider-color: #FBF6BF;
+$border-color: #ffff98;
+$slider-color: #fbf6bf;
 
 $font-size: 24px;
 
-%blured-border-image{
-    position: relative;
-    width: max-content;
-    height: max-content;
+%blured-border-image {
+	position: relative;
+	width: max-content;
+	height: max-content;
 
-    img {
-        display: block;
-        position: relative;
-        z-index: -1;
-    }
+	img {
+		display: block;
+		position: relative;
+		z-index: -1;
+	}
 
-    .blur_border {
-        display: inline-block;
-        z-index:1;
-        box-shadow: inset 0 0 10px 15px $primary-color,
-                    inset 1px 1px 0 0 $primary-color,
-                    inset 2px 2px 0 0 $primary-color,
-                    inset 3px 3px 0 0 $primary-color,;
-    }
+	.blur_border {
+		display: inline-block;
+		z-index: 1;
+		box-shadow: inset 0 0 10px 15px $primary-color, inset 1px 1px 0 0 $primary-color, inset 2px 2px 0 0 $primary-color,
+			inset 3px 3px 0 0 $primary-color;
+	}
 }

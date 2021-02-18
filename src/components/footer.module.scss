@@ -1,105 +1,103 @@
 @import "config";
 @import "responsive";
 
-
 footer {
-    font-size: $font-size;
-    height: 240px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: $secondary-color;
-    border-top: 2px solid $primary-color;
+	font-size: $font-size;
+	height: 240px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $secondary-color;
+	border-top: 2px solid $primary-color;
 }
 
 #icons {
-    align-self: center;
-    justify-self: flex-end;
-    margin: 0 $font-size;
+	align-self: center;
+	justify-self: flex-end;
+	margin: 0 $font-size;
 
-    #icon {
-        margin: 0 2.5px;
-    }
+	#icon {
+		margin: 0 2.5px;
+	}
 }
 
 #icon {
-    width: 33px;
+	width: 33px;
 }
 
 #placeholder {
-    flex: 1;
+	flex: 1;
 }
 
 #contacts {
-    color: $secondary-font-color;
-    margin-left: $font-size;
-    align-self: center;
-    h1{
-        margin-top:0;
-        font-size: 1.5 * $font-size;
-    }
+	color: $secondary-font-color;
+	margin-left: $font-size;
+	align-self: center;
+	h1 {
+		margin-top: 0;
+		font-size: 1.5 * $font-size;
+	}
 
-    &>div {
-        margin-top: 10px;
-    }
+	& > div {
+		margin-top: 10px;
+	}
 
-    div{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: $font-size;
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-left: $font-size;
 
-        div{
-            margin-left: 5px;
-        }
-    }
-
+		div {
+			margin-left: 5px;
+		}
+	}
 }
 
-@include sided{
-    $font-size: 20px;
-    footer{
-        font-size: $font-size;
-    }
-    #contacts{
-        margin-left: $font-size;
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-        div{
-            margin-left: $font-size;
-        }
-    }
+@include sided {
+	$font-size: 20px;
+	footer {
+		font-size: $font-size;
+	}
+	#contacts {
+		margin-left: $font-size;
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+		div {
+			margin-left: $font-size;
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
-    footer{
-        font-size: $font-size;
-    }
-    #contacts{
-        margin-left: $font-size;
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-        div{
-            margin-left: $font-size;
-        }
-    }
+@include tablet {
+	$font-size: 18px;
+	footer {
+		font-size: $font-size;
+	}
+	#contacts {
+		margin-left: $font-size;
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+		div {
+			margin-left: $font-size;
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
-    footer{
-        font-size: $font-size;
-    }
-    #contacts{
-        margin-left: $font-size;
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-        div{
-            margin-left: $font-size;
-        }
-    }
+@include phone {
+	$font-size: 16px;
+	footer {
+		font-size: $font-size;
+	}
+	#contacts {
+		margin-left: $font-size;
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+		div {
+			margin-left: $font-size;
+		}
+	}
 }

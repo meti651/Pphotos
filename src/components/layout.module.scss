@@ -1,26 +1,26 @@
 @import "./config";
 @import "./responsive";
 
-#container{
-    max-width: 80%;
-    width: 100%;
-    margin: auto;
-    border-left: 2px solid $secondary-font-color;
-    border-right: 2px solid $secondary-font-color;
+#container {
+	max-width: 80%;
+	width: 100%;
+	margin: auto;
+	border-left: 2px solid $secondary-font-color;
+	border-right: 2px solid $secondary-font-color;
 }
 
-@include sided{
-    #container{
-        max-width: 100%;
-    }
+@include sided {
+	#container {
+		max-width: 100%;
+	}
 }
-@include tablet{
-    #container{
-        max-width: 100%;
-    }
+@include tablet {
+	#container {
+		max-width: 100%;
+	}
 }
-@include phone{
-    #container{
-        max-width: 100%;
-    }
+@include phone {
+	#container {
+		max-width: 100%;
+	}
 }

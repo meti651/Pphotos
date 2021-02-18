@@ -1,214 +1,206 @@
 @import "../config";
 @import "../responsive";
 
-
 #container {
-    max-width: 100%;
-    background-color: $secondary-color;
-    color: $primary-color;
-    font-size: $font-size;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    place-items: center;
-    gap: $font-size;
-    padding: $font-size 10px;
-    box-shadow: 0px -5px 10px $third-color;
+	max-width: 100%;
+	background-color: $secondary-color;
+	color: $primary-color;
+	font-size: $font-size;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	place-items: center;
+	gap: $font-size;
+	padding: $font-size 10px;
+	box-shadow: 0px -5px 10px $third-color;
 
-    h1{
-        font-size: 1.5 * $font-size;
-        margin-top: 0;
-    }
+	h1 {
+		font-size: 1.5 * $font-size;
+		margin-top: 0;
+	}
 
-    h2{
-        font-size: 1.25 * $font-size;
-    }
+	h2 {
+		font-size: 1.25 * $font-size;
+	}
 
-    p{
-        margin: 0;
-    }
+	p {
+		margin: 0;
+	}
 
-    #description {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        place-items: center;
+	#description {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		place-items: center;
 
-        #paragraph {
-            max-width: 50%;
+		#paragraph {
+			max-width: 50%;
 
-            p {
-                margin: $font-size 0;
+			p {
+				margin: $font-size 0;
+			}
+		}
 
-            }
-        }
+		.image_container {
+			align-self: flex-start;
+		}
+	}
 
-        .image_container{
-            align-self: flex-start;
-        }
-    }
+	#prices {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 100%;
 
-    #prices {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        width: 100%;
+		.package {
+			flex: 1;
+			min-width: 200px;
+			display: grid;
+			grid-template-rows: auto auto 1fr;
+			gap: 0.5 * $font-size;
+			background-color: $primary-color;
+			color: $secondary-color;
+			text-shadow: -1px -1px $third-color;
+			padding: $font-size;
+			margin: $font-size;
+			border-radius: 5px;
+			box-shadow: 5px 5px 10px $third-color;
 
-        .package{
-            flex: 1;
-            min-width: 200px;
-            display: grid;
-            grid-template-rows: auto auto 1fr;
-            gap: 0.5 * $font-size;
-            background-color: $primary-color;
-            color: $secondary-color;
-            text-shadow: -1px -1px $third-color;
-            padding: $font-size;
-            margin: $font-size;
-            border-radius: 5px;
-            box-shadow: 5px 5px 10px $third-color;
-            
-            h2{
-                justify-self: center;
-            }
+			h2 {
+				justify-self: center;
+			}
 
-            .price{
-                justify-self: center;
-                align-self: flex-end;
-                font-weight: bold;
-                font-size: 1.5 * $font-size;
-                margin-top: $font-size;
-            }
-        }
-    }
+			.price {
+				justify-self: center;
+				align-self: flex-end;
+				font-weight: bold;
+				font-size: 1.5 * $font-size;
+				margin-top: $font-size;
+			}
+		}
+	}
 
-    #last_part{
-        font-weight: bold;
-        width: 80%;
-        align-self: center;
-        p{
-            padding: 0.5 * $font-size 0;
-            margin: auto;
-            text-align: center;
-        }
-    }
-
+	#last_part {
+		font-weight: bold;
+		width: 80%;
+		align-self: center;
+		p {
+			padding: 0.5 * $font-size 0;
+			margin: auto;
+			text-align: center;
+		}
+	}
 }
 
-.image_container{
-    width: max-content;
-    height: max-content;
+.image_container {
+	width: max-content;
+	height: max-content;
 
-    .image{
-        background-image: url("../../images/photo-album.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 330px;
-        width: 600px;
-        box-shadow: inset 0 0 10px 15px $secondary-color,
-                    inset 1px 1px 0 0 $primary-color,
-                    inset 2px 2px 0 0 $primary-color,
-                    inset 3px 3px 0 0 $primary-color,;
-    }
+	.image {
+		background-image: url("../../images/photo-album.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		min-height: 330px;
+		width: 600px;
+		box-shadow: inset 0 0 10px 15px $secondary-color, inset 1px 1px 0 0 $primary-color, inset 2px 2px 0 0 $primary-color,
+			inset 3px 3px 0 0 $primary-color;
+	}
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container{
-        font-size: $font-size;
-        gap: $font-size;
-        padding: $font-size 0;
+	#container {
+		font-size: $font-size;
+		gap: $font-size;
+		padding: $font-size 0;
 
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.25 * $font-size;
-        }
-        #description {
-            flex-direction: column;
-            
-            .image_container{
-                align-self: center;
-            }
-            #paragraph {
-                max-width: 80%;
-    
-                p {
-                    margin: $font-size 0;
-    
-                }
-            }
-        }
-    }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.25 * $font-size;
+		}
+		#description {
+			flex-direction: column;
+
+			.image_container {
+				align-self: center;
+			}
+			#paragraph {
+				max-width: 80%;
+
+				p {
+					margin: $font-size 0;
+				}
+			}
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
+@include tablet {
+	$font-size: 18px;
 
-    #container{
-        font-size: $font-size;
-        gap: $font-size;
-        padding: $font-size 0;
+	#container {
+		font-size: $font-size;
+		gap: $font-size;
+		padding: $font-size 0;
 
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.25 * $font-size;
-        }
-        #description {
-            flex-direction: column;
-            
-            .image_container{
-                display: none;
-                align-self: center;
-            }
-            #paragraph {
-                max-width: 80%;
-    
-                p {
-                    margin: $font-size 0;
-    
-                }
-            }
-        }
-    }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.25 * $font-size;
+		}
+		#description {
+			flex-direction: column;
+
+			.image_container {
+				display: none;
+				align-self: center;
+			}
+			#paragraph {
+				max-width: 80%;
+
+				p {
+					margin: $font-size 0;
+				}
+			}
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
+@include phone {
+	$font-size: 16px;
 
-    #container{
-        font-size: $font-size;
-        gap: $font-size;
-        padding: $font-size 0;
+	#container {
+		font-size: $font-size;
+		gap: $font-size;
+		padding: $font-size 0;
 
-        h1{
-            font-size: 1.5 * $font-size;
-        }
-    
-        h2{
-            font-size: 1.25 * $font-size;
-        }
-        #description {
-            flex-direction: column;
-            
-            .image_container{
-                display: none;
-                align-self: center;
-            }
-            #paragraph {
-                max-width: 80%;
-    
-                p {
-                    margin: $font-size 0;
-    
-                }
-            }
-        }
-    }
+		h1 {
+			font-size: 1.5 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.25 * $font-size;
+		}
+		#description {
+			flex-direction: column;
+
+			.image_container {
+				display: none;
+				align-self: center;
+			}
+			#paragraph {
+				max-width: 80%;
+
+				p {
+					margin: $font-size 0;
+				}
+			}
+		}
+	}
 }

@@ -1,65 +1,64 @@
 @import "./config";
 
-#container{
-    margin-top: 85px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: $font-size;
-    color: $primary-font-color;
-    gap: $font-size;
-    .facebook_container{
-        max-width: 500px;
-        width: 100%;
-        min-width: 180px;
-    }
+#container {
+	margin-top: 85px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: $font-size;
+	color: $primary-font-color;
+	gap: $font-size;
+	.facebook_container {
+		max-width: 500px;
+		width: 100%;
+		min-width: 180px;
+	}
 
-    #text{
-        text-align: center;
-        width: 80%;
-        font-weight: bold;
-    }
+	#text {
+		text-align: center;
+		width: 80%;
+		font-weight: bold;
+	}
 }
 
-#instagram{
-    #icon{
-        width: 50px;
-    }
+#instagram {
+	#icon {
+		width: 50px;
+	}
 }
 
 #icons {
-    align-self: center;
-    justify-self: flex-end;
-    margin: 0 $font-size;
+	align-self: center;
+	justify-self: flex-end;
+	margin: 0 $font-size;
 
-    #icon {
-        margin: 0 2.5px;
-    }
+	#icon {
+		margin: 0 2.5px;
+	}
 }
 
 #contacts {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    max-width: 90%;
-    &>div {
-        margin-top: 10px;
-    }
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	max-width: 90%;
+	& > div {
+		margin-top: 10px;
+	}
 
-    div{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-left: $font-size;
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-left: $font-size;
 
-        div{
-            margin-left: 5px;
-        }
-    }
-    
-    #icon {
-        width: 33px;
-    }
+		div {
+			margin-left: 5px;
+		}
+	}
 
+	#icon {
+		width: 33px;
+	}
 }

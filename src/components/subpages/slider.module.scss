@@ -2,62 +2,62 @@
 @import "../responsive";
 
 #container {
-    width: 100%;
-    padding: 20px 0;
-    box-shadow: 0 20px 30px $slider-color, 0 -20px 30px $slider-color;
-    background-color: $slider-color;
-    margin: 20px 0;
-    display: flex;
-    place-items: center;
+	width: 100%;
+	padding: 20px 0;
+	box-shadow: 0 20px 30px $slider-color, 0 -20px 30px $slider-color;
+	background-color: $slider-color;
+	margin: 20px 0;
+	display: flex;
+	place-items: center;
 
-    #images_container {
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        place-items: center;
-        overflow-x: hidden;
+	#images_container {
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		place-items: center;
+		overflow-x: hidden;
 
-        .image_wrapper{
-            min-width: 33.3%;
-            transition: transform 0.5s;
-            padding: 5px 0;
+		.image_wrapper {
+			min-width: 33.3%;
+			transition: transform 0.5s;
+			padding: 5px 0;
 
-            *{
-                border-radius: 5px;
-            }
-            
-            &>div {
-                margin: auto;
-                box-shadow: 2px 2px 3px $third-color;                
-            }
-        }
-    }
+			* {
+				border-radius: 5px;
+			}
+
+			& > div {
+				margin: auto;
+				box-shadow: 2px 2px 3px $third-color;
+			}
+		}
+	}
 }
 
-@include sided{
-    #container{
-        #images_container{
-            .image_wrapper{
-                min-width: 50%;
-            }
-        }
-    }
+@include sided {
+	#container {
+		#images_container {
+			.image_wrapper {
+				min-width: 50%;
+			}
+		}
+	}
 }
-@include tablet{
-    #container{
-        #images_container{
-            .image_wrapper{
-                min-width: 50%;
-            }
-        }
-    }
+@include tablet {
+	#container {
+		#images_container {
+			.image_wrapper {
+				min-width: 50%;
+			}
+		}
+	}
 }
-@include phone{
-    #container{
-        #images_container{
-            .image_wrapper{
-                min-width: 100%;
-            }
-        }
-    }
+@include phone {
+	#container {
+		#images_container {
+			.image_wrapper {
+				min-width: 100%;
+			}
+		}
+	}
 }

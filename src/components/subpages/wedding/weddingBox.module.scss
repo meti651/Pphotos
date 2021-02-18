@@ -1,51 +1,51 @@
 @import "../../config";
 @import "../../responsive";
 
-#container{
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    text-align: center;
-    font-size: $font-size;
-    #text{
-        display: flex;
-        flex-direction: column;
-        gap: $font-size/2;
-        max-width: 95%;
-    }
+#container {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	text-align: center;
+	font-size: $font-size;
+	#text {
+		display: flex;
+		flex-direction: column;
+		gap: $font-size/2;
+		max-width: 95%;
+	}
 }
 
-.image_wrapper{
-    @extend %blured-border-image;
+.image_wrapper {
+	@extend %blured-border-image;
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container{
-        font-size: $font-size;
-        #text{
-            gap: $font-size/2;
-        }
-    }
+	#container {
+		font-size: $font-size;
+		#text {
+			gap: $font-size/2;
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
+@include tablet {
+	$font-size: 18px;
 
-    #container{
-        font-size: $font-size;
-        #text{
-            gap: $font-size/2;
-        }
-    }
+	#container {
+		font-size: $font-size;
+		#text {
+			gap: $font-size/2;
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
+@include phone {
+	$font-size: 16px;
 
-    #container{
-        font-size: $font-size;
-        #text{
-            gap: $font-size/2;
-        }
-    }
+	#container {
+		font-size: $font-size;
+		#text {
+			gap: $font-size/2;
+		}
+	}
 }

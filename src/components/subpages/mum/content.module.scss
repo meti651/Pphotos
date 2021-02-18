@@ -1,240 +1,233 @@
 @import "../../config";
 @import "../../responsive";
 
-
 #container {
-    font-size: $font-size;
-    margin-left: 2 * $font-size;
-    margin-bottom: $font-size;
+	font-size: $font-size;
+	margin-left: 2 * $font-size;
+	margin-bottom: $font-size;
 
+	h1 {
+		width: 100%;
+		text-align: center;
+		font-size: 2 * $font-size;
+	}
 
-    h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 2 * $font-size;
-    }
+	h2 {
+		font-size: 1.5 * $font-size;
+	}
 
-    h2 {
-        font-size: 1.5 * $font-size;
-    }
+	#first_part {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
 
-    #first_part{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        place-items: center;
+		.image_container {
+			grid-column: 2;
+			grid-row: 1/3;
+		}
 
-        .image_container{
-            grid-column: 2;
-            grid-row: 1/3;
-        }
+		.text {
+			width: 100%;
+			grid-column: 1;
+		}
+	}
 
-        .text {
-            width: 100%;
-            grid-column: 1;
-        }
-    }
+	#second_part {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 2 * $font-size;
+	}
 
-    #second_part {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        margin-bottom: 2 * $font-size;
-    }
+	.paragraph {
+		margin-bottom: 3 * $font-size;
 
-    .paragraph {
-        margin-bottom: 3 * $font-size;
-        
-        div{
-            max-width: 90%;
-            padding-left: $font-size;
-        }
-    }
+		div {
+			max-width: 90%;
+			padding-left: $font-size;
+		}
+	}
 
-    #last_paragraph{
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 3 * $font-size;
-        width: 100%;
+	#last_paragraph {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 3 * $font-size;
+		width: 100%;
 
-        .paragraph{
-            flex: 1;
-            justify-self: flex-start;
-        }
+		.paragraph {
+			flex: 1;
+			justify-self: flex-start;
+		}
 
-        .image_container{
-            flex: 1;
-            align-self: center;
-            text-align: center;
-        }
-    }
+		.image_container {
+			flex: 1;
+			align-self: center;
+			text-align: center;
+		}
+	}
 
-    #last_part {
-        text-align: center;
-        font-weight: bold;
-
-    }
-    
+	#last_part {
+		text-align: center;
+		font-weight: bold;
+	}
 }
 
-.image_container{
-    @extend %blured-border-image;
+.image_container {
+	@extend %blured-border-image;
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-        margin-left: 2 * $font-size;
-        margin-bottom: $font-size;
-    
-    
-        h1 {
-            font-size: 2 * $font-size;
-        }
-    
-        h2 {
-            font-size: 1.5 * $font-size;
-        }
-    
-        #first_part{
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-    
-            .text {
-                width: 80%;
-                margin: $font-size 0;
-            }
-        }
-    
-        #second_part {
-            margin-bottom: 2 * $font-size;
-        }
-    
-        .paragraph {
-            margin-bottom: 3 * $font-size;
-            
-            div{
-                padding-left: $font-size;
-            }
-        }
-    
-        #last_paragraph{
-            margin-bottom: 3 * $font-size;
-    
-            .image_container{
-                align-self: center;
-            }
-            .paragraph{
-                max-width: 60vw;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		margin-left: 2 * $font-size;
+		margin-bottom: $font-size;
+
+		h1 {
+			font-size: 2 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.5 * $font-size;
+		}
+
+		#first_part {
+			display: flex;
+			flex-direction: column;
+			place-items: center;
+
+			.text {
+				width: 80%;
+				margin: $font-size 0;
+			}
+		}
+
+		#second_part {
+			margin-bottom: 2 * $font-size;
+		}
+
+		.paragraph {
+			margin-bottom: 3 * $font-size;
+
+			div {
+				padding-left: $font-size;
+			}
+		}
+
+		#last_paragraph {
+			margin-bottom: 3 * $font-size;
+
+			.image_container {
+				align-self: center;
+			}
+			.paragraph {
+				max-width: 60vw;
+			}
+		}
+	}
 }
-@include tablet{
-    $font-size: 18px;
+@include tablet {
+	$font-size: 18px;
 
-    #container {
-        font-size: $font-size;
-        margin-left: 2 * $font-size;
-        margin-bottom: $font-size;
-    
-    
-        h1 {
-            font-size: 2 * $font-size;
-        }
-    
-        h2 {
-            font-size: 1.5 * $font-size;
-        }
-    
-        #first_part{
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-    
-            .text {
-                width: 80%;
-                margin: $font-size 0;
-            }
-        }
-    
-        #second_part {
-            flex-direction: column;
-            place-items: center;
-            gap: $font-size;
-            margin-bottom: 2 * $font-size;
-        }
-    
-        .paragraph {
-            margin-bottom: 3 * $font-size;
-            
-            div{
-                padding-left: $font-size;
-            }
-        }
-    
-        #last_paragraph{
-            flex-direction: column;
-            margin-bottom: 3 * $font-size;
-    
-            .image_container{
-                align-self: center;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		margin-left: 2 * $font-size;
+		margin-bottom: $font-size;
+
+		h1 {
+			font-size: 2 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.5 * $font-size;
+		}
+
+		#first_part {
+			display: flex;
+			flex-direction: column;
+			place-items: center;
+
+			.text {
+				width: 80%;
+				margin: $font-size 0;
+			}
+		}
+
+		#second_part {
+			flex-direction: column;
+			place-items: center;
+			gap: $font-size;
+			margin-bottom: 2 * $font-size;
+		}
+
+		.paragraph {
+			margin-bottom: 3 * $font-size;
+
+			div {
+				padding-left: $font-size;
+			}
+		}
+
+		#last_paragraph {
+			flex-direction: column;
+			margin-bottom: 3 * $font-size;
+
+			.image_container {
+				align-self: center;
+			}
+		}
+	}
 }
-@include phone{
-    $font-size: 16px;
+@include phone {
+	$font-size: 16px;
 
-    #container {
-        font-size: $font-size;
-        margin-left: 2 * $font-size;
-        margin-bottom: $font-size;
-    
-    
-        h1 {
-            font-size: 2 * $font-size;
-        }
-    
-        h2 {
-            font-size: 1.5 * $font-size;
-        }
-    
-        #first_part{
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-    
-            .text {
-                width: 80%;
-                margin: $font-size 0;
-            }
-        }
-    
-        #second_part {
-            flex-direction: column;
-            place-items: center;
-            gap: $font-size;
-            margin-bottom: 2 * $font-size;
-        }
-    
-        .paragraph {
-            margin-bottom: 3 * $font-size;
-            
-            div{
-                padding-left: $font-size;
-            }
-        }
-    
-        #last_paragraph{
-            flex-direction: column;
-            margin-bottom: 3 * $font-size;
-    
-            .image_container{
-                align-self: center;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		margin-left: 2 * $font-size;
+		margin-bottom: $font-size;
+
+		h1 {
+			font-size: 2 * $font-size;
+		}
+
+		h2 {
+			font-size: 1.5 * $font-size;
+		}
+
+		#first_part {
+			display: flex;
+			flex-direction: column;
+			place-items: center;
+
+			.text {
+				width: 80%;
+				margin: $font-size 0;
+			}
+		}
+
+		#second_part {
+			flex-direction: column;
+			place-items: center;
+			gap: $font-size;
+			margin-bottom: 2 * $font-size;
+		}
+
+		.paragraph {
+			margin-bottom: 3 * $font-size;
+
+			div {
+				padding-left: $font-size;
+			}
+		}
+
+		#last_paragraph {
+			flex-direction: column;
+			margin-bottom: 3 * $font-size;
+
+			.image_container {
+				align-self: center;
+			}
+		}
+	}
 }

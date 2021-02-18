@@ -5,34 +5,34 @@ $phone: 480px;
 $header-menu-breakpoint: 920px;
 
 @mixin phone {
-    @media (max-width: #{$phone - 1px}) {
-        $font-size: 16px;
-        @content;
-    }
+	@media (max-width: #{$phone - 1px}) {
+		$font-size: 16px;
+		@content;
+	}
 }
 
 @mixin tablet {
-    @media (min-width: #{$phone}) and (max-width: #{$tablet - 1px}) {
-        $font-size: 18px;
-        @content;
-    }
+	@media (min-width: #{$phone}) and (max-width: #{$tablet - 1px}) {
+		$font-size: 18px;
+		@content;
+	}
 }
 
-@mixin sided{
-    @media (min-width: #{$tablet}) and (max-width: #{$desktop}){
-        $font-size: 20px;
-        @content;
-    }
+@mixin sided {
+	@media (min-width: #{$tablet}) and (max-width: #{$desktop}) {
+		$font-size: 20px;
+		@content;
+	}
 }
 
-@mixin betweenDesktops{
-    @media (min-width: #{$desktop + 1px}) and (max-width: 1919px) {
-        @content;
-    }
+@mixin betweenDesktops {
+	@media (min-width: #{$desktop + 1px}) and (max-width: 1919px) {
+		@content;
+	}
 }
 
-@mixin menuBreakDown{
-    @media (max-width: #{$header-menu-breakpoint}) {
-        @content;
-    }
+@mixin menuBreakDown {
+	@media (max-width: #{$header-menu-breakpoint}) {
+		@content;
+	}
 }

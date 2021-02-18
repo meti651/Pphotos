@@ -1,89 +1,88 @@
 @import "../../config";
 @import "../../responsive";
 
-
 #container {
-    font-size: $font-size;
-    text-align: center;
-    &>div{
-        margin: 2 * $font-size 0;
-    }
+	font-size: $font-size;
+	text-align: center;
+	& > div {
+		margin: 2 * $font-size 0;
+	}
 
-    .strong {
-        font-weight: bold;
-        font-style: italic;
-    }
+	.strong {
+		font-weight: bold;
+		font-style: italic;
+	}
 
-    #content{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        
-        .paragraph{
-            flex: 1;
-            padding: 1.5 * $font-size;
-            text-align: start;
-            min-width: 22%;
-        }
+	#content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
 
-        .image_container {
-            flex: 1;
-            align-self: center
-        }
-    }
+		.paragraph {
+			flex: 1;
+			padding: 1.5 * $font-size;
+			text-align: start;
+			min-width: 22%;
+		}
+
+		.image_container {
+			flex: 1;
+			align-self: center;
+		}
+	}
 }
 
-.image_container{
-    @extend %blured-border-image;
+.image_container {
+	@extend %blured-border-image;
 }
 
-@include sided{
-    $font-size: 20px;
+@include sided {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-        &>div{
-            margin: 2 * $font-size 0;
-        }
-    
-        #content{
-            .paragraph{
-                padding: 1.5 * $font-size;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		& > div {
+			margin: 2 * $font-size 0;
+		}
+
+		#content {
+			.paragraph {
+				padding: 1.5 * $font-size;
+			}
+		}
+	}
 }
-@include tablet{
-    $font-size: 20px;
+@include tablet {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-        &>div{
-            margin: 2 * $font-size 0;
-        }
-    
-        #content{
-            .paragraph{
-                padding: 1.5 * $font-size;
-                min-width: 30%;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		& > div {
+			margin: 2 * $font-size 0;
+		}
+
+		#content {
+			.paragraph {
+				padding: 1.5 * $font-size;
+				min-width: 30%;
+			}
+		}
+	}
 }
-@include phone{
-    $font-size: 20px;
+@include phone {
+	$font-size: 20px;
 
-    #container {
-        font-size: $font-size;
-        &>div{
-            margin: 2 * $font-size 0;
-        }
-    
-        #content{
-            .paragraph{
-                padding: 1.5 * $font-size;
-            }
-        }
-    }
+	#container {
+		font-size: $font-size;
+		& > div {
+			margin: 2 * $font-size 0;
+		}
+
+		#content {
+			.paragraph {
+				padding: 1.5 * $font-size;
+			}
+		}
+	}
 }
