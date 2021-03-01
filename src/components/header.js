@@ -22,7 +22,7 @@ const Header = ({ onTop, isIndex }) => {
 				<div className={Styles.part} id={Styles.left_side}>
 					<Link to="/">Kezdőlap</Link>
 					<div onClick={handleServicesOpen} id={Styles.dropdown}>
-						<p>Szolgáltatások</p>
+						<p>Szolgáltatások/Árak</p>
 						<div id={Styles.dropdownMenu} className={open ? Styles.open : undefined}>
 							<Link to="/szolgaltatasok/csaladi-fotozas">Családi fotózás</Link>
 							<Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link>
