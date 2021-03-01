@@ -14,7 +14,7 @@ const Prices = ({ Image }) => {
 						<div>25db retusált kép – professzionális egyedi kézi szerkesztés</div>
 						<div>7 napon beüli képátadás online felületen</div>
 					</div>
-					<div className={Styles.price}>25.000 Ft/-</div>
+					<div className={Styles.price}>28.000 Ft/-</div>
 				</div>
 				<div id={Styles.middle_image_wrapper}>
 					<Image />
