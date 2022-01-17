@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 
-import Styles from "./about-me.module.scss";
+import * as Styles from "./about-me.module.scss";
 import { graphql, useStaticQuery } from "gatsby";
 
 const AboutMe = () => {

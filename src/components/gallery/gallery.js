@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby";
 import React, { useState, useEffect } from "react";
 
-import Styles from "./gallery.module.scss";
+import * as Styles from "./gallery.module.scss";
 import Images from "./images";
 
 const Gallery = () => {

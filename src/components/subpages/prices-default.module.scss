@@ -2,206 +2,206 @@
 @import "../responsive";
 
 #container {
-	display: flex;
-	flex-direction: column;
-	font-size: $font-size;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size;
 
-	h2 {
-		text-align: center;
-		font-size: 1.5 * $font-size;
-	}
+  h2 {
+    text-align: center;
+    font-size: 1.5 * $font-size;
+  }
 
-	.description {
-		width: 100%;
-		padding-left: 0.5 * $font-size;
+  .description {
+    width: 100%;
+    padding-left: 0.5 * $font-size;
 
-		div {
-			margin: $font-size 0;
-		}
-	}
+    div {
+      margin: $font-size 0;
+    }
+  }
 
-	#wrapper {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		& > * {
-			flex: 1;
-			margin: 0 $font-size;
-		}
-	}
+  #wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    & > * {
+      flex: 1;
+      margin: 0 $font-size;
+    }
+  }
 
-	#middle_image_wrapper {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-content: flex-end;
-		min-width: 400px;
-	}
+  #middle_image_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    min-width: 400px;
+  }
 
-	.package {
-		max-width: 25%;
-		display: grid;
-		grid-template-rows: auto auto 1fr;
+  .packs {
+    max-width: 25%;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
 
-		.price {
-			align-self: flex-end;
-			justify-self: center;
-			margin-left: $font-size;
-			margin-bottom: $font-size;
-			font-size: 1.5 * $font-size;
-			font-weight: bold;
-		}
-	}
+    .price {
+      align-self: flex-end;
+      justify-self: center;
+      margin-left: $font-size;
+      margin-bottom: $font-size;
+      font-size: 1.5 * $font-size;
+      font-weight: bold;
+    }
+  }
 }
 
-.package {
-	background-color: $secondary-color;
-	min-height: 750px;
-	padding: 0 $font-size;
-	border-radius: 5px;
-	box-shadow: 5px 5px 10px $third-color;
-	color: $primary-color;
-	text-shadow: -2px -2px $third-color;
+.packs {
+  background-color: $secondary-color;
+  min-height: 750px;
+  padding: 0 $font-size;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px $third-color;
+  color: $primary-color;
+  text-shadow: -2px -2px $third-color;
 }
 
 #studio {
-	text-align: center;
-	margin: $font-size 0;
+  text-align: center;
+  margin: $font-size 0;
 }
 
 @media (max-width: 1400px) {
-	#container {
-		#wrapper {
-			.package {
-				max-width: 40%;
-				transform: scale(0.7);
-			}
-			#middle_image_wrapper {
-				display: none;
-				flex: 0;
-			}
-		}
-	}
+  #container {
+    #wrapper {
+      .packs {
+        max-width: 40%;
+        transform: scale(0.7);
+      }
+      #middle_image_wrapper {
+        display: none;
+        flex: 0;
+      }
+    }
+  }
 }
 
 @include sided {
-	$font-size: 20px;
-	#container {
-		font-size: $font-size;
+  $font-size: 20px;
+  #container {
+    font-size: $font-size;
 
-		h2 {
-			font-size: 1.5 * $font-size;
-		}
+    h2 {
+      font-size: 1.5 * $font-size;
+    }
 
-		#wrapper {
-			& > * {
-				margin: 0 $font-size;
-			}
-			.package {
-				align-self: center;
-				min-height: 500px;
-				max-width: 60%;
+    #wrapper {
+      & > * {
+        margin: 0 $font-size;
+      }
+      .packs {
+        align-self: center;
+        min-height: 500px;
+        max-width: 60%;
 
-				.price {
-					margin-left: $font-size;
-					margin-bottom: $font-size;
-					font-size: 1.5 * $font-size;
-				}
+        .price {
+          margin-left: $font-size;
+          margin-bottom: $font-size;
+          font-size: 1.5 * $font-size;
+        }
 
-				.description {
-					padding-left: 0.5 * $font-size;
+        .description {
+          padding-left: 0.5 * $font-size;
 
-					div {
-						margin: $font-size 0;
-					}
-				}
-			}
-			#middle_image_wrapper {
-				display: none;
-				flex: 0;
-			}
-		}
-	}
+          div {
+            margin: $font-size 0;
+          }
+        }
+      }
+      #middle_image_wrapper {
+        display: none;
+        flex: 0;
+      }
+    }
+  }
 }
 @include tablet {
-	$font-size: 18px;
-	#container {
-		font-size: $font-size;
+  $font-size: 18px;
+  #container {
+    font-size: $font-size;
 
-		h2 {
-			font-size: 1.5 * $font-size;
-		}
+    h2 {
+      font-size: 1.5 * $font-size;
+    }
 
-		#wrapper {
-			& > * {
-				margin: 0 $font-size;
-			}
-			.package {
-				align-self: center;
-				min-height: 500px;
-				max-width: 60%;
+    #wrapper {
+      & > * {
+        margin: 0 $font-size;
+      }
+      .packs {
+        align-self: center;
+        min-height: 500px;
+        max-width: 60%;
 
-				.price {
-					margin-left: $font-size;
-					margin-bottom: $font-size;
-					font-size: 1.5 * $font-size;
-				}
+        .price {
+          margin-left: $font-size;
+          margin-bottom: $font-size;
+          font-size: 1.5 * $font-size;
+        }
 
-				.description {
-					padding-left: 0.5 * $font-size;
+        .description {
+          padding-left: 0.5 * $font-size;
 
-					div {
-						margin: $font-size 0;
-					}
-				}
-			}
-			#middle_image_wrapper {
-				display: none;
-				flex: 0;
-			}
-		}
-	}
+          div {
+            margin: $font-size 0;
+          }
+        }
+      }
+      #middle_image_wrapper {
+        display: none;
+        flex: 0;
+      }
+    }
+  }
 }
 @include phone {
-	$font-size: 16px;
-	#container {
-		font-size: $font-size;
+  $font-size: 16px;
+  #container {
+    font-size: $font-size;
 
-		h2 {
-			font-size: 1.5 * $font-size;
-		}
+    h2 {
+      font-size: 1.5 * $font-size;
+    }
 
-		#wrapper {
-			flex-direction: column;
+    #wrapper {
+      flex-direction: column;
 
-			& > * {
-				margin: 0 $font-size;
-			}
-			.package {
-				align-self: center;
-				min-height: 500px;
-				max-width: 60%;
-				margin: $font-size 0;
+      & > * {
+        margin: 0 $font-size;
+      }
+      .packs {
+        align-self: center;
+        min-height: 500px;
+        max-width: 60%;
+        margin: $font-size 0;
 
-				.price {
-					margin-left: $font-size;
-					margin-bottom: $font-size;
-					font-size: 1.5 * $font-size;
-				}
+        .price {
+          margin-left: $font-size;
+          margin-bottom: $font-size;
+          font-size: 1.5 * $font-size;
+        }
 
-				.description {
-					padding-left: 0.5 * $font-size;
+        .description {
+          padding-left: 0.5 * $font-size;
 
-					div {
-						margin: $font-size 0;
-					}
-				}
-			}
-			#middle_image_wrapper {
-				display: none;
-			}
-		}
-	}
+          div {
+            margin: $font-size 0;
+          }
+        }
+      }
+      #middle_image_wrapper {
+        display: none;
+      }
+    }
+  }
 }

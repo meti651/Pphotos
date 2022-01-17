@@ -1,15 +1,15 @@
 import React from "react"
 
-import Styles from "./prices-wedding.module.scss"
-import AlbumStyles from "../landing-page/album.module.scss"
-import WeddingBoxStyles from "./wedding/weddingBox.module.scss"
+import * as Styles from "./prices-wedding.module.scss"
+import * as AlbumStyles from "../landing-page/album.module.scss"
+import * as WeddingBoxStyles from "./wedding/weddingBox.module.scss"
 
 const Prices = () => {
   return (
     <div id={Styles.container}>
       <h1>Árak</h1>
       <div id={Styles.packages}>
-        <div className={Styles.package} id={Styles.silver}>
+        <div className={Styles.wedding_package} id={Styles.silver}>
           <h2>Ezüst</h2>
           <ul>
             <li>1 szertartás fotózása</li>
@@ -20,7 +20,7 @@ const Prices = () => {
           </ul>
           <div className={Styles.price}>80.000 Ft/-</div>
         </div>
-        <div className={Styles.package} id={Styles.gold}>
+        <div className={Styles.wedding_package} id={Styles.gold}>
           <h2>Arany</h2>
           <ul>
             <li>1 vagy 2 szertartás fotózása</li>
@@ -36,7 +36,7 @@ const Prices = () => {
           </ul>
           <div className={Styles.price}>160.000 Ft/-</div>
         </div>
-        <div className={Styles.package} id={Styles.diamond}>
+        <div className={Styles.wedding_package} id={Styles.diamond}>
           <h2>Gyémánt</h2>
           <ul>
             <li>Készülődés</li>

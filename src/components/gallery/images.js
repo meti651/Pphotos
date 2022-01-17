@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Styles from "./images.module.scss";
+import * as Styles from "./images.module.scss";
 
 import Image from "./image";
 

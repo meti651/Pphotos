@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Styles from "./content.module.scss";
+import * as Styles from "./content.module.scss";
 import Img from "gatsby-image";
 
 import { graphql, useStaticQuery } from "gatsby";

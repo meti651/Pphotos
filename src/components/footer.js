@@ -5,7 +5,7 @@ import EmailIcon from "../images/email-icon.svg";
 import Instagram from "../images/instagram.svg";
 import Facebook from "../images/facebook.svg";
 
-import Styles from "./footer.module.scss";
+import * as Styles from "./footer.module.scss";
 
 const Footer = () => {
 	return (

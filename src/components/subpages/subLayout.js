@@ -3,7 +3,7 @@ import Charity from "./charity";
 import Layout from "../layout";
 import Slider from "./slider";
 
-import Styles from "./subLayout.module.scss";
+import * as Styles from "./subLayout.module.scss";
 
 const SubLayout = ({ children, title, slideImages }) => {
 	return (

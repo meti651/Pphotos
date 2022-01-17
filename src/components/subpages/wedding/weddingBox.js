@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useEffect } from "react";
-import Styles from "./weddingBox.module.scss";
+import * as Styles from "./weddingBox.module.scss";
 import Img from "gatsby-image";
 
 const WeddingBox = () => {

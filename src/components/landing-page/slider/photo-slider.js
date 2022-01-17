@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { useState, useEffect } from "react";
 
-import Styles from "./photo-slider.module.scss";
+import * as Styles from "./photo-slider.module.scss";
 import Slide from "./slide";
 
 const Slider = () => {

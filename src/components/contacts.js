@@ -4,7 +4,7 @@ import Instagram from "../images/instagram.svg";
 import PhoneIcon from "../images/phone-icon.svg";
 import EmailIcon from "../images/email-icon.svg";
 
-import Styles from "./contacts.module.scss";
+import * as Styles from "./contacts.module.scss";
 
 const Contacts = () => {
 	return (
@@ -29,7 +29,7 @@ const Contacts = () => {
 				data-hide-cover="false"
 				data-show-facepile="true"
 			>
-				<blockquote cite="https://www.facebook.com/pphotosofficial" class="fb-xfbml-parse-ignore">
+				<blockquote cite="https://www.facebook.com/pphotosofficial" className="fb-xfbml-parse-ignore">
 					<a href="https://www.facebook.com/pphotosofficial">Pphotos</a>
 				</blockquote>
 			</div>

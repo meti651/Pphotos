@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import Logo from "../images/pphotos-logo.png";
-import Styles from "./header.module.scss";
+import * as Styles from "./header.module.scss";
 
 const Header = ({ onTop, isIndex }) => {
 	const [open, setOpen] = useState(false);

@@ -1,13 +1,13 @@
 import React from "react"
 
-import Styles from "./prices-default.module.scss"
+import * as Styles from "./prices-default.module.scss"
 
 const Prices = ({ Image }) => {
   return (
     <div id={Styles.container}>
       <h1>Árak</h1>
       <div id={Styles.wrapper}>
-        <div className={Styles.package}>
+        <div className={Styles.packs}>
           <h2>Alap csomag</h2>
           <div className={Styles.description}>
             <div>
@@ -23,7 +23,7 @@ const Prices = ({ Image }) => {
         <div id={Styles.middle_image_wrapper}>
           <Image />
         </div>
-        <div className={Styles.package}>
+        <div className={Styles.packs}>
           <h2>Extra csomag</h2>
           <div className={Styles.description}>
             <div>

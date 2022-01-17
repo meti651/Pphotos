@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Styles from "./image.module.scss";
+import * as Styles from "./image.module.scss";
 
 import MiddleImage from "../../../images/portrait-middle.png";
 

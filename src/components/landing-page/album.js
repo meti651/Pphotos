@@ -1,6 +1,6 @@
 import React from "react";
 
-import Styles from "./album.module.scss";
+import * as Styles from "./album.module.scss";
 
 const Album = () => {
 	return (
@@ -22,19 +22,19 @@ const Album = () => {
 				</div>
 			</div>
 			<div id={Styles.prices}>
-				<div className={Styles.package}>
+				<div className={Styles.pack}>
 					<h2>Közepes fotóalbum</h2>
 					<div className={Styles.description}>Közkedvelt kisebb fotózások után vagy ajándéknak.</div>
 					<div className={Styles.price}>12000 Ft/-</div>
 				</div>
-				<div className={Styles.package}>
+				<div className={Styles.pack}>
 					<h2>Nagy fotóalbum</h2>
 					<div className={Styles.description}>
 						Klasszikus A4-es formátumú, ideális lehet családi fotózásoknál, pároknak és esküvőkön.
 					</div>
 					<div className={Styles.price}>18000 Ft/-</div>
 				</div>
-				<div className={Styles.package}>
+				<div className={Styles.pack}>
 					<h2>Extra nagy fotóalbum</h2>
 					<div className={Styles.description}>
 						Abszolút esküvői kedvenc, ámulatos nagyságú és minőségű képek. Azok számára akik olyan fotóalbumot

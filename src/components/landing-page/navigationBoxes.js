@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationBox from "./navigationBox";
 
-import Styles from "./navigationBoxes.module.scss";
+import * as Styles from "./navigationBoxes.module.scss";
 import { graphql, useStaticQuery } from "gatsby";
 
 const links = [

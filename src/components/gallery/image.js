@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Img from "gatsby-image";
 
-import Styles from "./images.module.scss";
+import * as Styles from "./images.module.scss";
 
 const Image = ({ image, focusSetter }) => {
 	const container = useRef();

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Styles from "./charity.module.scss";
+import * as Styles from "./charity.module.scss";
 
 const Charity = () => {
 	return (

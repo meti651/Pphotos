@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import Img from "gatsby-image";
 
-import Styles from "./navigationBox.module.scss";
+import * as Styles from "./navigationBox.module.scss";
 
 const NavigationBox = ({ link, image }) => {
 	return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 
-import Styles from "./slide.module.scss";
+import * as Styles from "./slide.module.scss";
 
 const Slide = ({ image, slide }) => {
 	return (

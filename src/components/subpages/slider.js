@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Arrow from "./arrow";
 import Img from "gatsby-image";
 
-import Styles from "./slider.module.scss";
+import * as Styles from "./slider.module.scss";
 
 const Slider = ({ images }) => {
 	const [translate, setTranslate] = useState(0);
