@@ -46,7 +46,7 @@ const Gallery = () => {
 					<option value="wedding">Esküvő</option>
 					<option value="child">Gyerek, baba</option>
 					<option value="mum">Kismama</option>
-					<option value="couple">Páros</option>
+					<option value="couple">Páros/Jegyes</option>
 					<option value="portrait">Portré</option>
 				</select>
 			</div>

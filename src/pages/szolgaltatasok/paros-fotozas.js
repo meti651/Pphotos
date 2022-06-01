@@ -75,7 +75,7 @@ const Couple = () => {
     data.sixth,
   ]
   return (
-    <SubLayout title={"Páros fotózás"} slideImages={images}>
+    <SubLayout title={"Páros/Jegyes fotózás"} slideImages={images}>
       <SEO pageMetadata={pageMetadata} />
       <Content />
       <Prices Image={Image} />

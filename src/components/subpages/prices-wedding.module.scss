@@ -75,6 +75,13 @@
       }
     }
   }
+
+  .plus_info {
+    margin-top: 16px;
+    p {
+      font-size: $font-size;
+    }
+  }
 }
 
 @include sided {

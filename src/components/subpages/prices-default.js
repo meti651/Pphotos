@@ -13,12 +13,11 @@ const Prices = ({ Image }) => {
             <div>
               1 óra fotózás általad választott/közösen megbeszélt helyszínen
             </div>
-            <div>
-              25db retusált kép – professzionális egyedi kézi szerkesztés
-            </div>
-            <div>7 napon beüli képátadás online felületen</div>
+            <div>30 db szerkesztett kép</div>
+            <div>1 héten belüli képátadás</div>
+            <div>Online képgaléria</div>
           </div>
-          <div className={Styles.price}>32.000 Ft/-</div>
+          <div className={Styles.price}>ÁRA: 36000 Ft</div>
         </div>
         <div id={Styles.middle_image_wrapper}>
           <Image />
@@ -27,14 +26,14 @@ const Prices = ({ Image }) => {
           <h2>Extra csomag</h2>
           <div className={Styles.description}>
             <div>
-              1,5-2 óra fotózás általad választott/közösen megbeszélt helyszínen
+            1.5-2 óra fotózás általad választott/közösen megbeszélt helyszínen
             </div>
-            <div>40db retusált kép- professzionális egyedi kézi készítés</div>
-            <div>7 napon belüli képátadás online felületen</div>
-            <div>10db prémium előhívatott fotó (postázva)</div>
-            <div>1db AJÁNDÉK képkeret</div>
+            <div>50 db szerkesztett kép</div>
+            <div>10 db előhívott fotó+ képkeret</div>
+            <div>1 héten belüli képátadás</div>
+            <div>Online képgaléria</div>
           </div>
-          <div className={Styles.price}>40.000 Ft/-</div>
+          <div className={Styles.price}>ÁRA: 50000 Ft</div>
         </div>
       </div>
       <div id={Styles.studio}>

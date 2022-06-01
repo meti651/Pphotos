@@ -28,7 +28,7 @@ const Header = ({ onTop, isIndex }) => {
 							<Link to="/szolgaltatasok/eskuvoi-fotozas">Esküvői fotózás</Link>
 							<Link to="/szolgaltatasok/gyerek-fotozas">Gyermek fotózás</Link>
 							<Link to="/szolgaltatasok/kismama-fotozas">Kismama fotózás</Link>
-							<Link to="/szolgaltatasok/paros-fotozas">Páros fotózás</Link>
+							<Link to="/szolgaltatasok/paros-fotozas">Páros/Jegyes fotózás</Link>
 							<Link to="/szolgaltatasok/portre-fotozas">Portré fotózás</Link>
 						</div>
 					</div>
