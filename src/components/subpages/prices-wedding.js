@@ -19,7 +19,7 @@ const Prices = () => {
             <li>1 óra kreatív fotózás</li>
             <li>120 db szerkesztett fotó</li>
           </ul>
-          <div className={Styles.price}>ÁRA: 90000 Ft</div>
+          <div className={Styles.price}>ÁRA: 95000 Ft</div>
         </div>
         <div className={Styles.wedding_package} id={Styles.gold}>
           <h2>Arany</h2>
