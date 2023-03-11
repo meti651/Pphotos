@@ -19,7 +19,7 @@ const Prices = () => {
             <li>1 óra kreatív fotózás</li>
             <li>120 db szerkesztett fotó</li>
           </ul>
-          <div className={Styles.price}>ÁRA: 95000 Ft</div>
+          <div className={Styles.price}>ÁRA: 105000 Ft</div>
         </div>
         <div className={Styles.wedding_package} id={Styles.gold}>
           <h2>Arany</h2>
@@ -37,7 +37,7 @@ const Prices = () => {
               <strong>AJÁNDÉK</strong> A4 fotókönyv
             </li>
           </ul>
-          <div className={Styles.price}>ÁRA: 190000 Ft</div>
+          <div className={Styles.price}>ÁRA: 200000 Ft</div>
         </div>
         <div className={Styles.wedding_package} id={Styles.diamond}>
           <h2>Gyémánt</h2>
@@ -65,7 +65,7 @@ const Prices = () => {
               Egyedi készítésű díszdoboz + pendrive
             </li>
           </ul>
-          <div className={Styles.price}>ÁRA: 250000 Ft</div>
+          <div className={Styles.price}>ÁRA: 260000 Ft</div>
         </div>
       </div>
       <div className={Styles.plus_info}>
